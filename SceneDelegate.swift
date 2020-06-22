@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  Animation
+//  CreatUItableViewCell
 //
-//  Created by Cata on 6/19/20.
+//  Created by Cata on 6/21/20.
 //  Copyright © 2020 Cata. All rights reserved.
 //
 

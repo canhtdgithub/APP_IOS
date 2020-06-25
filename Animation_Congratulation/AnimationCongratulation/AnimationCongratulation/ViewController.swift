@@ -26,7 +26,7 @@ class ViewController: UIViewController {
         anima.backgroundColor = .white
         anima.loopMode = .loop
         anima.play()
-        view1.addSubview(anima)
+        view1.addSubview(anima)gi
     }
 
 }

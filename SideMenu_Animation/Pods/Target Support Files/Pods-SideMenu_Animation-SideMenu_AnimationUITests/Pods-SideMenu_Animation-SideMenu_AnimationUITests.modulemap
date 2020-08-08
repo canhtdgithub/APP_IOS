@@ -1,0 +1,6 @@
+framework module Pods_SideMenu_Animation_SideMenu_AnimationUITests {
+  umbrella header "Pods-SideMenu_Animation-SideMenu_AnimationUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

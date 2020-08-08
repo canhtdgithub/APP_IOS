@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController" customModule="EditDatabase_Realm" customModuleProvider="target">
+            <connections>
+                <outlet property="enterTextField" destination="EHZ-7O-1RQ" id="TQY-aw-vCv"/>
+                <outlet property="table" destination="5Ee-m9-vDW" id="Ngs-re-Xm9"/>
+                <outlet property="view" destination="iN0-l3-epB" id="BWA-qa-mrj"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the text" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EHZ-7O-1RQ">
+                    <rect key="frame" x="20" y="48" width="294" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="QjY-nw-2J7"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VKa-5Z-tif">
+                    <rect key="frame" x="354" y="48" width="45" height="40"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                    <state key="normal" title="ADD"/>
+                    <connections>
+                        <action selector="addButtom:" destination="-1" eventType="touchUpInside" id="cyB-5u-Z6o"/>
+                    </connections>
+                </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5Ee-m9-vDW">
+                    <rect key="frame" x="0.0" y="108" width="414" height="754"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="EHZ-7O-1RQ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="1xT-5P-b8r"/>
+                <constraint firstItem="EHZ-7O-1RQ" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="4" id="FY3-vx-Ezb"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="5Ee-m9-vDW" secondAttribute="bottom" id="RxV-IR-AhC"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="5Ee-m9-vDW" secondAttribute="trailing" id="aGh-R8-CaW"/>
+                <constraint firstItem="VKa-5Z-tif" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="4" id="flX-AL-8GN"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="EHZ-7O-1RQ" secondAttribute="trailing" constant="100" id="foy-zs-6wD"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="VKa-5Z-tif" secondAttribute="trailing" constant="15" id="jbE-3c-k2e"/>
+                <constraint firstItem="VKa-5Z-tif" firstAttribute="centerY" secondItem="EHZ-7O-1RQ" secondAttribute="centerY" id="kY9-AP-4Td"/>
+                <constraint firstItem="5Ee-m9-vDW" firstAttribute="top" secondItem="EHZ-7O-1RQ" secondAttribute="bottom" constant="20" id="kai-75-lcq"/>
+                <constraint firstItem="5Ee-m9-vDW" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="oP2-NZ-uZY"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="139" y="120"/>
+        </view>
+    </objects>
+</document>

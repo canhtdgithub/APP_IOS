@@ -62,18 +62,33 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         let title = show[indexPath.row]
         let cell = table.dequeueReusableCell(withIdentifier: "cell") as? MyTableViewCell
         cell!.title?.text = title
-        print("1")
+//        cell?.title?.layer.cornerRadius = 10
+//        cell?.contentView.layer.borderWidth = 3
+//        cell?.contentView.layer.borderColor = UIColor.blue.cgColor
         return cell!
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 40.0
+        return 60
     }
     
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return show.count
     }
     
+    // delete
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            show.remove(at: indexPath.row)
+            table.beginUpdates()
+            table.deleteRows(at: [indexPath], with:  .automatic )
+            table.endUpdates()
+        }
+    }
     
 }
 

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController" customModule="VocabularyEnglish" customModuleProvider="target">
+            <connections>
+                <outlet property="layerButtom" destination="Bvd-zw-4j0" id="cho-qp-4CC"/>
+                <outlet property="table" destination="RRQ-07-4Jb" id="Pg5-mA-2hX"/>
+                <outlet property="tableContraint" destination="8C1-RR-QK7" id="JXa-Q1-b06"/>
+                <outlet property="textVocab" destination="Qsw-aj-ExS" id="v7T-f9-otV"/>
+                <outlet property="view" destination="iN0-l3-epB" id="L1j-TS-TuA"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qsw-aj-ExS">
+                    <rect key="frame" x="14" y="49" width="334" height="38"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="38" id="VkC-Qw-huQ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bvd-zw-4j0">
+                    <rect key="frame" x="362" y="49" width="38" height="38"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="38" id="TEL-ON-14t"/>
+                        <constraint firstAttribute="height" constant="38" id="tTN-2Z-cMm"/>
+                    </constraints>
+                    <state key="normal" title="Button" image="plus"/>
+                    <connections>
+                        <action selector="insert:" destination="-1" eventType="touchUpInside" id="cbd-Ed-cvJ"/>
+                    </connections>
+                </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RRQ-07-4Jb">
+                    <rect key="frame" x="0.0" y="92" width="414" height="770"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fGx-yU-eHl">
+                    <rect key="frame" x="315" y="56" width="23" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="23" id="02I-dX-hzh"/>
+                    </constraints>
+                    <state key="normal" title="Button" image="microphone"/>
+                    <connections>
+                        <action selector="microphone:" destination="-1" eventType="touchUpInside" id="9yr-vn-RPg"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="0.68585782048111699" blue="0.89635164242453447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fGx-yU-eHl" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="12" id="1Vr-P9-1Bf"/>
+                <constraint firstItem="Bvd-zw-4j0" firstAttribute="leading" secondItem="Qsw-aj-ExS" secondAttribute="trailing" constant="14" id="2F9-Ve-Juf"/>
+                <constraint firstAttribute="bottom" secondItem="RRQ-07-4Jb" secondAttribute="bottom" constant="34" id="8C1-RR-QK7"/>
+                <constraint firstItem="RRQ-07-4Jb" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="9nM-JQ-QuU"/>
+                <constraint firstItem="RRQ-07-4Jb" firstAttribute="top" secondItem="Qsw-aj-ExS" secondAttribute="bottom" constant="5" id="AAh-RO-i1e"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="RRQ-07-4Jb" secondAttribute="trailing" id="GSY-8q-G1D"/>
+                <constraint firstItem="RRQ-07-4Jb" firstAttribute="top" secondItem="fGx-yU-eHl" secondAttribute="bottom" constant="12" id="Ver-ke-F5O"/>
+                <constraint firstItem="Qsw-aj-ExS" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="14" id="YZf-D6-nWh"/>
+                <constraint firstItem="fGx-yU-eHl" firstAttribute="centerY" secondItem="Qsw-aj-ExS" secondAttribute="centerY" id="jaw-0k-6yj"/>
+                <constraint firstItem="Qsw-aj-ExS" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="5" id="mBr-wX-ieV"/>
+                <constraint firstItem="Bvd-zw-4j0" firstAttribute="centerY" secondItem="Qsw-aj-ExS" secondAttribute="centerY" id="qbJ-3f-VIY"/>
+                <constraint firstItem="Bvd-zw-4j0" firstAttribute="leading" secondItem="fGx-yU-eHl" secondAttribute="trailing" constant="24" id="vPH-JB-AUe"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Bvd-zw-4j0" secondAttribute="trailing" constant="14" id="xNY-Qy-jT1"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="137.68115942028987" y="114.50892857142857"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="microphone" width="50" height="50"/>
+        <image name="plus" width="50" height="50"/>
+    </resources>
+</document>

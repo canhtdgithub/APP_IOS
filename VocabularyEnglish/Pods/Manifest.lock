@@ -1,0 +1,26 @@
+PODS:
+  - InstantSearchVoiceOverlay (1.1.0)
+  - Realm (5.2.0):
+    - Realm/Headers (= 5.2.0)
+  - Realm/Headers (5.2.0)
+  - RealmSwift (5.2.0):
+    - Realm (= 5.2.0)
+
+DEPENDENCIES:
+  - InstantSearchVoiceOverlay
+  - RealmSwift
+
+SPEC REPOS:
+  trunk:
+    - InstantSearchVoiceOverlay
+    - Realm
+    - RealmSwift
+
+SPEC CHECKSUMS:
+  InstantSearchVoiceOverlay: 8fcbd0c143c872e6b39ef9b6475f1dfeb9ebfbcf
+  Realm: f749c723e272f08fdf1939af5e61d2bd09b203e8
+  RealmSwift: bf0ab78b52c5bafba8b3ad73be8dfb4c1ea5cf01
+
+PODFILE CHECKSUM: 499b8fbcc819c9580e587d8174af7ac05e41c9f5
+
+COCOAPODS: 1.9.3

@@ -1,0 +1,5 @@
+#import <Foundation/Foundation.h>
+@interface PodsDummy_Pods_SideMenu_Animation_SideMenu_AnimationUITests : NSObject
+@end
+@implementation PodsDummy_Pods_SideMenu_Animation_SideMenu_AnimationUITests
+@end

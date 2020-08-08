@@ -1,0 +1,20 @@
+PODS:
+  - Comets (0.3.1)
+  - SideMenu (6.4.8)
+
+DEPENDENCIES:
+  - Comets
+  - SideMenu
+
+SPEC REPOS:
+  trunk:
+    - Comets
+    - SideMenu
+
+SPEC CHECKSUMS:
+  Comets: ff75eb4658d612af66073bf9fcf6e8bef274817b
+  SideMenu: 4a891be552d30bb6fa87ad404d62e485f8450c34
+
+PODFILE CHECKSUM: 57e094c01b5e4d1b917a3140666a15817c9476f2
+
+COCOAPODS: 1.9.3

@@ -1,0 +1,6 @@
+framework module Pods_EditDatabase_RealmTests {
+  umbrella header "Pods-EditDatabase_RealmTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

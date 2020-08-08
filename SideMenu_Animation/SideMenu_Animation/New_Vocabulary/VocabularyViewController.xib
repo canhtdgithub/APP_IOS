@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VocabularyViewController" customModule="SideMenu_Animation" customModuleProvider="target">
+            <connections>
+                <outlet property="creatLayout" destination="ziR-EM-7br" id="3JO-bw-Wha"/>
+                <outlet property="newVocab" destination="Fbo-HH-sCk" id="Nzk-1E-Qgj"/>
+                <outlet property="table" destination="DSU-Qu-Gcg" id="ZVU-WK-kc0"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Enter The New Vocabulary" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fbo-HH-sCk">
+                    <rect key="frame" x="70" y="49" width="244" height="40"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="RUw-6O-fgf"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ziR-EM-7br">
+                    <rect key="frame" x="334" y="49" width="60" height="40"/>
+                    <color key="backgroundColor" systemColor="systemGray3Color" red="0.78039215689999997" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="N36-v0-Dhi"/>
+                        <constraint firstAttribute="height" constant="40" id="nUe-Dn-eVY"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <state key="normal" title="Creat">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="creat" destination="-1" eventType="touchUpInside" id="pXb-Pt-8n9"/>
+                    </connections>
+                </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DSU-Qu-Gcg">
+                    <rect key="frame" x="0.0" y="94" width="414" height="768"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zur-Ds-iCw">
+                    <rect key="frame" x="10" y="49" width="30" height="40"/>
+                    <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" title="Edit">
+                        <color key="titleColor" red="0.97300406679999996" green="0.01182577055" blue="0.023410744859999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="editButtom:" destination="-1" eventType="touchUpInside" id="A7v-9u-Hyo"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QMo-WU-rte">
+                    <rect key="frame" x="367" y="807" width="30" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Button" image="icon_setting"/>
+                </button>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fnq-vG-Uu6">
+                    <rect key="frame" x="107" y="504" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="DSU-Qu-Gcg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="DS0-LO-hAK"/>
+                <constraint firstItem="Zur-Ds-iCw" firstAttribute="centerY" secondItem="Fbo-HH-sCk" secondAttribute="centerY" id="IBp-Y8-JNW"/>
+                <constraint firstItem="ziR-EM-7br" firstAttribute="centerY" secondItem="Fbo-HH-sCk" secondAttribute="centerY" id="KDu-5f-R9X"/>
+                <constraint firstItem="Zur-Ds-iCw" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="5" id="MsU-np-S1I"/>
+                <constraint firstItem="ziR-EM-7br" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailingMargin" id="NUl-5Y-d0S"/>
+                <constraint firstItem="Fbo-HH-sCk" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="5" id="OAr-nP-uFj"/>
+                <constraint firstItem="DSU-Qu-Gcg" firstAttribute="top" secondItem="Fbo-HH-sCk" secondAttribute="bottom" constant="5" id="S3X-Br-D3Y"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Fbo-HH-sCk" secondAttribute="trailing" constant="100" id="XWe-op-E7E"/>
+                <constraint firstItem="Fbo-HH-sCk" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="70" id="XmH-O9-gkZ"/>
+                <constraint firstItem="Zur-Ds-iCw" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="bva-DS-vPR"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="DSU-Qu-Gcg" secondAttribute="bottom" id="cW6-EE-HbC"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="DSU-Qu-Gcg" secondAttribute="trailing" id="jsH-a3-UtB"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="234.78260869565219" y="-104.46428571428571"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_setting" width="50" height="50"/>
+    </resources>
+</document>

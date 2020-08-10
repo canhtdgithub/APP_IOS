@@ -10,6 +10,7 @@ import Foundation
 import RealmSwift
 import InstantSearchVoiceOverlay
 import AVFoundation
+import SystemConfiguration
 
 //MARK: - PROPERTIES
 // declare microphone
@@ -18,6 +19,8 @@ var cellcount = 0
 let voice = VoiceOverlayController()
 let realm = try! Realm()
 var vocabularys: Results<Vocab>?
+
+var list = [ListVocab]()
 //let value = Vocab()
 let fileManager = FileManager.default
 
@@ -31,7 +34,7 @@ class Vocab: Object {
 }
 
 class ModelViewController {
-    static let share = ModelViewController()
+    static let shared = ModelViewController()
     
     private init() {}
     func insertVocab(newVocab: UITextField, tableView: UITableView) {
@@ -50,6 +53,40 @@ class ModelViewController {
             newVocab.text = ""
         }
     }
+    
+    func isConnectedToNetwork() -> Bool {
+
+            var zeroAddress = sockaddr_in(sin_len: 0, sin_family: 0, sin_port: 0, sin_addr: in_addr(s_addr: 0), sin_zero: (0, 0, 0, 0, 0, 0, 0, 0))
+        
+            zeroAddress.sin_len = UInt8(MemoryLayout.size(ofValue: zeroAddress))
+        
+            zeroAddress.sin_family = sa_family_t(AF_INET)
+        
+            let defaultRouteReachability = withUnsafePointer(to: &zeroAddress) {
+        
+                $0.withMemoryRebound(to: sockaddr.self, capacity: 1) {zeroSockAddress in
+        
+                    SCNetworkReachabilityCreateWithAddress(nil, zeroSockAddress)
+        
+                }
+        
+            }
+        
+            var flags = SCNetworkReachabilityFlags()
+        
+            if !SCNetworkReachabilityGetFlags(defaultRouteReachability!, &flags) {
+        
+                return false
+        
+            }
+        
+            let isReachable = (flags.rawValue & UInt32(kSCNetworkFlagsReachable)) != 0
+        
+            let needsConnection = (flags.rawValue & UInt32(kSCNetworkFlagsConnectionRequired)) != 0
+        
+            return (isReachable && !needsConnection)
+        
+        }
     
 }
 
@@ -81,12 +118,18 @@ class ModelExetendViewController {
     
     func deletePatchImage(deleteVocab: String) {
         
-        let imagePath = urlPathImage?.appendingPathComponent("\(deleteVocab).png").absoluteString
-        if fileManager.fileExists(atPath: imagePath!) {
-            try? fileManager.removeItem(atPath: imagePath!)
-        } else {
-            print("file not exist")
+        guard let imagePath = urlPathImage?.appendingPathComponent("\(deleteVocab).png").absoluteString else {
+            return
         }
+        guard fileManager.fileExists(atPath: imagePath) else {
+            return
+        }
+        try? fileManager.removeItem(atPath: imagePath)
+//        if fileManager.fileExists(atPath: imagePath!) {
+//            try? fileManager.removeItem(atPath: imagePath!)
+//        } else {
+//            print("file not exist")
+//        }
     
     }
 }

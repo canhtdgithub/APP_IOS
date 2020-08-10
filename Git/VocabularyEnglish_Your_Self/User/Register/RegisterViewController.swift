@@ -29,6 +29,16 @@ class RegisterViewController: UIViewController {
         registerButtomTapped()
 
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        self.firstNameField.resignFirstResponder()
+        self.lastNameField.resignFirstResponder()
+        self.emailField.resignFirstResponder()
+        self.passwordField.resignFirstResponder()
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.isNavigationBarHidden = false
@@ -143,6 +153,7 @@ extension RegisterViewController: UITextFieldDelegate {
         passwordField.becomeFirstResponder()
         } else if textField == passwordField {
             registerButtomTapped()
+            self.passwordField.endEditing(true)
         }
         return true
     }

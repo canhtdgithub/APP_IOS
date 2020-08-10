@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4E0C1F9124DCE66A00DA3DE4 /* wrong3.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4E0C1F9024DCE66A00DA3DE4 /* wrong3.gif */; };
 		4E0C1F9724DCE8B700DA3DE4 /* congratulation1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4E0C1F9224DCE8B300DA3DE4 /* congratulation1.gif */; };
 		4E0C1F9824DCE8B700DA3DE4 /* congratulation.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4E0C1F9324DCE8B400DA3DE4 /* congratulation.gif */; };
 		4E0C1F9924DCE8B700DA3DE4 /* congratulation3.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4E0C1F9424DCE8B500DA3DE4 /* congratulation3.gif */; };
@@ -18,8 +17,6 @@
 		4E10A2E924CB126300C0B2AA /* wrong2.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4E10A2E524CB126200C0B2AA /* wrong2.gif */; };
 		4E10A2EB24CB126300C0B2AA /* wrong1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4E10A2E724CB126300C0B2AA /* wrong1.gif */; };
 		4E10A2EC24CB126300C0B2AA /* wrong.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4E10A2E824CB126300C0B2AA /* wrong.gif */; };
-		4E1119AD24D97C9A00FF425F /* DictionaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1119AB24D97C9A00FF425F /* DictionaryViewController.swift */; };
-		4E1119AE24D97C9A00FF425F /* DictionaryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E1119AC24D97C9A00FF425F /* DictionaryViewController.xib */; };
 		4E208DE024D2788B0079C277 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E208DDF24D2788B0079C277 /* DatabaseManager.swift */; };
 		4E208DE224D2BF390079C277 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E208DE124D2BF390079C277 /* StorageManager.swift */; };
 		4E305D1424C40A2A0014CCFE /* GamesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E305D1224C40A2A0014CCFE /* GamesCollectionViewCell.swift */; };
@@ -74,7 +71,6 @@
 
 /* Begin PBXFileReference section */
 		4AA69E4804B3E1F47065F053 /* Pods_VocabularyEnglish.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VocabularyEnglish.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4E0C1F9024DCE66A00DA3DE4 /* wrong3.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = wrong3.gif; path = ../../../iconApp/animaiton/wrong3.gif; sourceTree = "<group>"; };
 		4E0C1F9224DCE8B300DA3DE4 /* congratulation1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = congratulation1.gif; sourceTree = "<group>"; };
 		4E0C1F9324DCE8B400DA3DE4 /* congratulation.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = congratulation.gif; sourceTree = "<group>"; };
 		4E0C1F9424DCE8B500DA3DE4 /* congratulation3.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = congratulation3.gif; sourceTree = "<group>"; };
@@ -85,8 +81,6 @@
 		4E10A2E524CB126200C0B2AA /* wrong2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = wrong2.gif; sourceTree = "<group>"; };
 		4E10A2E724CB126300C0B2AA /* wrong1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = wrong1.gif; sourceTree = "<group>"; };
 		4E10A2E824CB126300C0B2AA /* wrong.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = wrong.gif; sourceTree = "<group>"; };
-		4E1119AB24D97C9A00FF425F /* DictionaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryViewController.swift; sourceTree = "<group>"; };
-		4E1119AC24D97C9A00FF425F /* DictionaryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DictionaryViewController.xib; sourceTree = "<group>"; };
 		4E208DDF24D2788B0079C277 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		4E208DE124D2BF390079C277 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		4E305D1224C40A2A0014CCFE /* GamesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -214,7 +208,6 @@
 				4E10A2E824CB126300C0B2AA /* wrong.gif */,
 				4E10A2E724CB126300C0B2AA /* wrong1.gif */,
 				4E10A2E524CB126200C0B2AA /* wrong2.gif */,
-				4E0C1F9024DCE66A00DA3DE4 /* wrong3.gif */,
 				4E35326624BD87D200415CC9 /* LaunchScreen.storyboard */,
 				4E35326924BD87D200415CC9 /* Info.plist */,
 			);
@@ -332,8 +325,6 @@
 			children = (
 				4ECD670324D932B300F65ED5 /* SearchViewController.swift */,
 				4ECD670424D932B300F65ED5 /* SearchViewController.xib */,
-				4E1119AB24D97C9A00FF425F /* DictionaryViewController.swift */,
-				4E1119AC24D97C9A00FF425F /* DictionaryViewController.xib */,
 			);
 			path = SearchVocabulary;
 			sourceTree = "<group>";
@@ -478,7 +469,6 @@
 				4EBEE58B24BDAC24007820B4 /* VocabularyTableViewCell.xib in Resources */,
 				4E10A2EB24CB126300C0B2AA /* wrong1.gif in Resources */,
 				4EBEE58624BD95DA007820B4 /* SettingViewController.xib in Resources */,
-				4E1119AE24D97C9A00FF425F /* DictionaryViewController.xib in Resources */,
 				4E10A2EC24CB126300C0B2AA /* wrong.gif in Resources */,
 				4E9A938424BED2CB00F00F4C /* ExetendViewController.xib in Resources */,
 				4E10A2E924CB126300C0B2AA /* wrong2.gif in Resources */,
@@ -486,7 +476,6 @@
 				4E0C1F9B24DCE8B700DA3DE4 /* congratulation4.gif in Resources */,
 				4E305D1524C40A2A0014CCFE /* GamesCollectionViewCell.xib in Resources */,
 				4E35326524BD87D200415CC9 /* Assets.xcassets in Resources */,
-				4E0C1F9124DCE66A00DA3DE4 /* wrong3.gif in Resources */,
 				4E0C1F9724DCE8B700DA3DE4 /* congratulation1.gif in Resources */,
 				4E0C1F9824DCE8B700DA3DE4 /* congratulation.gif in Resources */,
 				4E9B493324D1197B00BC94C6 /* RegisterViewController.xib in Resources */,
@@ -625,7 +614,6 @@
 				4E5F915C24C97489004FFBB0 /* ModelViewController.swift in Sources */,
 				4E208DE024D2788B0079C277 /* DatabaseManager.swift in Sources */,
 				4E208DE224D2BF390079C277 /* StorageManager.swift in Sources */,
-				4E1119AD24D97C9A00FF425F /* DictionaryViewController.swift in Sources */,
 				4E109CBE24CAF597007A509F /* gif.swift in Sources */,
 				4E9B493224D1197B00BC94C6 /* RegisterViewController.swift in Sources */,
 				4EBEE57F24BD8CAA007820B4 /* GamesViewController.swift in Sources */,

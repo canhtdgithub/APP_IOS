@@ -15,6 +15,7 @@ class SearchViewController: UIViewController {
     
     @IBOutlet weak var dictionaryWeb: UIWebView!
     
+    @IBOutlet weak var viewContent: UIView!
     
     @IBOutlet weak var selecteSegment: UISegmentedControl!
     var url: URL?
@@ -52,6 +53,10 @@ class SearchViewController: UIViewController {
         self.navigationController?.isNavigationBarHidden = true
         
         searchTextField.delegate = self
+        
+        viewContent.layer.cornerRadius = 5
+        viewContent.layer.borderColor = UIColor.gray.cgColor
+        viewContent.layer.borderWidth = 1
         
         layerSearch.layerButtom(cornerRadius: layerSearch.frame.size.height / 2, borderColor: UIColor.gray.cgColor, borderWidth: 1)
         

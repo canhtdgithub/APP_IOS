@@ -68,7 +68,7 @@ class GamesViewController: UIViewController {
       
     //MARK: - PROPERTIES
     
-    let imageWrong = ["wrong","wrong1","wrong2","wrong3"]
+    let imageWrong = ["wrong","wrong1","wrong2"]
     let imageCorrect = ["congratulation", "congratulation1", "congratulation2", "congratulation3", "congratulation4"]
     var stringAfterRandom: String?
     var stringAfterShuffled = [Character]()

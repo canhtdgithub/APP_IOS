@@ -28,6 +28,13 @@ class ExetendViewController: UIViewController {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
+        
+        DatabaseManager.shared.insertDefine(text: descripTextView.text, index: cellcount) { (success) in
+            if success {
+                print("success insert")
+            }
+        }
+        
         if descripTextView.text.isEmpty {
             realm.beginWrite()
             vocabularys![cellcount].descripVocab = ""
@@ -55,6 +62,10 @@ class ExetendViewController: UIViewController {
         
         layerImage()
         layerDesciption()
+        if ModelViewController.shared.isConnectedToNetwork() {
+            vocabLabel.text = list[cellcount].vocab
+            descripTextView.text! = list[cellcount].define
+        }
         vocabLabel.text = vocabularys![cellcount].vocabulary
         inserImage()
         ModelExetendViewController.shared.testShowImage(label: vocabLabel, image: showImages)

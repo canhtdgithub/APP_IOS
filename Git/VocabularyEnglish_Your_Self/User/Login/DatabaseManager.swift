@@ -114,6 +114,53 @@ extension DatabaseManager {
         })
         
     }
+    func insertDefine(text: String, index: Int, compiletion: @escaping (Bool) -> Void) {
+        guard let email = UserDefaults.standard.value(forKey: "email") as? String else {
+            return
+        }
+        var changeEmail = email.replacingOccurrences(of: ".", with: "_")
+        changeEmail = changeEmail.replacingOccurrences(of: "@", with: "_")
+        let ref = database.child("\(changeEmail)/vocabulary")
+        ref.observeSingleEvent(of: .value) { (snapshot) in
+            var textDefine = snapshot.value as? [[String: Any]]
+            textDefine![index]["define"] = text
+            ref.setValue(textDefine) { (error, _) in
+                guard error == nil else {
+                    print("error when insert define")
+                    compiletion(false)
+                    return
+                }
+                    print("success insert")
+                    compiletion(true)
+                    
+                
+            }
+        }
+    }
+    
+    func deleteVocabulary(indexvocab: Int, compiletion: @escaping (Bool) -> Void) {
+        guard let email = UserDefaults.standard.value(forKey: "email") as? String else {
+            return
+        }
+        var changeEmail = email.replacingOccurrences(of: ".", with: "_")
+        changeEmail = changeEmail.replacingOccurrences(of: "@", with: "_")
+        let ref = database.child("\(changeEmail)/vocabulary")
+        ref.observeSingleEvent(of: .value) { (snapshot) in
+            var indexvocabs = snapshot.value as? [[String: Any]]
+            indexvocabs?.remove(at: indexvocab)
+            
+            ref.setValue(indexvocabs) { (error, _) in
+                guard error == nil else {
+                    print("fail when set value")
+                    compiletion(false)
+                    return
+                }
+                print("delete success")
+                compiletion(true)
+            }
+        }
+        
+    }
 
 }
 

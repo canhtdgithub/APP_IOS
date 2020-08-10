@@ -14,6 +14,10 @@ import Firebase
 class LoginViewController: UIViewController {
     @IBOutlet weak var imageLogo: UIImageView!
     
+    
+    
+    @IBOutlet weak var showLabelConnectInternet: UILabel!
+    
     @IBOutlet weak var emailField: UITextField!
     
     @IBOutlet weak var passwordField: UITextField!
@@ -27,10 +31,21 @@ class LoginViewController: UIViewController {
         let a = RegisterViewController()
         self.navigationController?.pushViewController(a, animated: true)
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        
+        self.emailField.resignFirstResponder()
+        self.passwordField.resignFirstResponder()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Log In"
-        self.navigationController?.isNavigationBarHidden = true
         
         emailField.delegate = self
         passwordField.delegate = self
@@ -48,8 +63,12 @@ class LoginViewController: UIViewController {
             guard let strongSelf = self else {
                 return
             }
-            guard AuthDataResult != nil, Error == nil else {
+            guard AuthDataResult != nil, Error == nil, ModelViewController.shared.isConnectedToNetwork() else {
                 print("Error long in ")
+                self!.showLabelConnectInternet.isHidden = false
+                let _ = Timer.scheduledTimer(withTimeInterval: 2, repeats: false) { (timer) in
+                    self?.showLabelConnectInternet.isHidden = true
+                }
                 return
             }
             
@@ -100,6 +119,7 @@ extension LoginViewController: UITextFieldDelegate {
             passwordField.becomeFirstResponder()
         } else if textField == passwordField {
             loginButtomTapped()
+//            self.passwordField.endEditing(true)
         }
         return true
     }

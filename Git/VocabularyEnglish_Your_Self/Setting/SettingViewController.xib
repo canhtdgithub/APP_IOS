@@ -10,7 +10,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingViewController" customModule="VocabularyEnglish" customModuleProvider="target">
             <connections>
-                <outlet property="endLabel" destination="sTW-pI-bU6" id="BtE-cv-VDM"/>
                 <outlet property="startLabel" destination="ygn-HA-oD5" id="ghp-Ro-7pz"/>
                 <outlet property="tick" destination="qtR-mf-2hQ" id="1fz-d5-UnK"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -120,18 +119,18 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selecte week day" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S70-nj-79T">
-                            <rect key="frame" x="0.0" y="74" width="404" height="36"/>
+                            <rect key="frame" x="5" y="37" width="394" height="36"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="36" id="9tM-rS-5Ll"/>
+                                <constraint firstAttribute="height" constant="36" id="6On-5d-I0b"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <stackView opaque="NO" contentMode="scaleToFill" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="L1Y-ZP-Ot0">
-                            <rect key="frame" x="20" y="110" width="333" height="33"/>
+                            <rect key="frame" x="20" y="78" width="333" height="33"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5T1-RJ-lEM">
+                                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5T1-RJ-lEM">
                                     <rect key="frame" x="0.0" y="0.0" width="33" height="33"/>
                                     <color key="backgroundColor" red="1" green="0.15379463660000001" blue="0.02557526102" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
@@ -142,10 +141,11 @@
                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
                                     <connections>
-                                        <action selector="weekDay" destination="-1" eventType="touchUpInside" id="94f-Rd-GfF"/>
+                                        <action selector="monDay:" destination="-1" eventType="touchUpInside" id="60s-fS-YdK"/>
+                                        <action selector="weekDay:" destination="-1" eventType="touchUpInside" id="tBb-wd-1FS"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wqD-fH-6y0">
+                                <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wqD-fH-6y0">
                                     <rect key="frame" x="50" y="0.0" width="33" height="33"/>
                                     <color key="backgroundColor" red="1" green="0.15379463660000001" blue="0.02557526102" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
@@ -156,10 +156,11 @@
                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
                                     <connections>
-                                        <action selector="weekDay" destination="-1" eventType="touchUpInside" id="4Qh-uH-QxU"/>
+                                        <action selector="tuesDay:" destination="-1" eventType="touchUpInside" id="VRA-Cz-lp4"/>
+                                        <action selector="weekDay:" destination="-1" eventType="touchUpInside" id="6cp-9t-bci"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jY1-yl-sst">
+                                <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jY1-yl-sst">
                                     <rect key="frame" x="100" y="0.0" width="33" height="33"/>
                                     <color key="backgroundColor" red="1" green="0.15379463660000001" blue="0.02557526102" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
@@ -170,10 +171,11 @@
                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
                                     <connections>
-                                        <action selector="weekDay" destination="-1" eventType="touchUpInside" id="4bb-4Z-LyB"/>
+                                        <action selector="wednessDay:" destination="-1" eventType="touchUpInside" id="iHf-bf-LGt"/>
+                                        <action selector="weekDay:" destination="-1" eventType="touchUpInside" id="vkJ-zo-JD4"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XHO-NK-07X">
+                                <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XHO-NK-07X">
                                     <rect key="frame" x="150" y="0.0" width="33" height="33"/>
                                     <color key="backgroundColor" red="1" green="0.15379463660000001" blue="0.02557526102" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
@@ -184,10 +186,11 @@
                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
                                     <connections>
-                                        <action selector="weekDay" destination="-1" eventType="touchUpInside" id="NiA-Of-bIO"/>
+                                        <action selector="thursDay:" destination="-1" eventType="touchUpInside" id="8hN-Cb-BKq"/>
+                                        <action selector="weekDay:" destination="-1" eventType="touchUpInside" id="OVF-Op-pAW"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mrZ-oJ-AnU">
+                                <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mrZ-oJ-AnU">
                                     <rect key="frame" x="200" y="0.0" width="33" height="33"/>
                                     <color key="backgroundColor" red="1" green="0.15379463660000001" blue="0.02557526102" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
@@ -198,10 +201,11 @@
                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
                                     <connections>
-                                        <action selector="weekDay" destination="-1" eventType="touchUpInside" id="7IE-wC-JdB"/>
+                                        <action selector="friDay:" destination="-1" eventType="touchUpInside" id="8wm-mE-Toq"/>
+                                        <action selector="weekDay:" destination="-1" eventType="touchUpInside" id="XDe-Rh-x4d"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JFu-xj-etk">
+                                <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JFu-xj-etk">
                                     <rect key="frame" x="250" y="0.0" width="33" height="33"/>
                                     <color key="backgroundColor" red="1" green="0.15379463660000001" blue="0.02557526102" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
@@ -212,10 +216,11 @@
                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
                                     <connections>
-                                        <action selector="weekDay" destination="-1" eventType="touchUpInside" id="iqP-96-oez"/>
+                                        <action selector="satDay:" destination="-1" eventType="touchUpInside" id="aZ5-KV-ZkI"/>
+                                        <action selector="weekDay:" destination="-1" eventType="touchUpInside" id="XNJ-YC-P0D"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zsg-E6-QQn">
+                                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zsg-E6-QQn">
                                     <rect key="frame" x="300" y="0.0" width="33" height="33"/>
                                     <color key="backgroundColor" red="1" green="0.15379463660000001" blue="0.02557526102" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
@@ -226,12 +231,13 @@
                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
                                     <connections>
-                                        <action selector="weekDay" destination="-1" eventType="touchUpInside" id="o16-mO-2n2"/>
+                                        <action selector="sunDay:" destination="-1" eventType="touchUpInside" id="8Ua-fp-RZT"/>
+                                        <action selector="weekDay:" destination="-1" eventType="touchUpInside" id="VEe-qI-hDj"/>
                                     </connections>
                                 </button>
                             </subviews>
                             <constraints>
-                                <constraint firstAttribute="height" constant="33" id="iHA-0O-tGC"/>
+                                <constraint firstAttribute="height" constant="33" id="4pL-c3-cUm"/>
                             </constraints>
                         </stackView>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bZa-l6-L7a">
@@ -241,58 +247,23 @@
                                 <constraint firstAttribute="height" constant="1" id="vMS-NT-PsF"/>
                             </constraints>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gxv-6N-Z3J">
-                            <rect key="frame" x="10" y="73" width="394" height="1"/>
-                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <constraints>
-                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1" id="Mdj-cf-R7o"/>
-                                <constraint firstAttribute="height" constant="1" id="zEL-Fd-4Lk"/>
-                            </constraints>
-                        </view>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tim-Fa-kpC">
-                            <rect key="frame" x="0.0" y="37" width="404" height="36"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="36" id="tQJ-l8-yUf"/>
-                            </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <state key="normal" title="End Time">
-                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </state>
-                            <connections>
-                                <action selector="endTime:" destination="-1" eventType="touchUpInside" id="DwV-JA-Xj2"/>
-                            </connections>
-                        </button>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="21:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sTW-pI-bU6">
-                            <rect key="frame" x="341.66666666666669" y="43.666666666666657" width="52.333333333333314" height="23"/>
-                            <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <constraints>
+                        <constraint firstAttribute="trailing" secondItem="S70-nj-79T" secondAttribute="trailing" constant="5" id="1Zz-9s-Be4"/>
                         <constraint firstItem="ygn-HA-oD5" firstAttribute="centerY" secondItem="m4O-Zr-Lny" secondAttribute="centerY" id="35Y-db-ja7"/>
                         <constraint firstAttribute="trailing" secondItem="ygn-HA-oD5" secondAttribute="trailing" constant="10" id="3FQ-uR-2N6"/>
-                        <constraint firstItem="S70-nj-79T" firstAttribute="leading" secondItem="11a-X6-gDx" secondAttribute="leading" id="3YU-GL-C4D"/>
-                        <constraint firstAttribute="trailing" secondItem="Tim-Fa-kpC" secondAttribute="trailing" id="4UG-9o-b1V"/>
                         <constraint firstItem="m4O-Zr-Lny" firstAttribute="top" secondItem="11a-X6-gDx" secondAttribute="top" id="8tq-9V-LMq"/>
-                        <constraint firstAttribute="trailing" secondItem="S70-nj-79T" secondAttribute="trailing" id="950-zX-t9K"/>
                         <constraint firstItem="bZa-l6-L7a" firstAttribute="top" secondItem="m4O-Zr-Lny" secondAttribute="bottom" id="AXv-cs-Ld1"/>
                         <constraint firstAttribute="trailing" secondItem="m4O-Zr-Lny" secondAttribute="trailing" id="CGI-C6-Wqb"/>
+                        <constraint firstItem="S70-nj-79T" firstAttribute="top" secondItem="bZa-l6-L7a" secondAttribute="bottom" id="Cu4-qc-u55"/>
                         <constraint firstAttribute="trailing" secondItem="bZa-l6-L7a" secondAttribute="trailing" id="Dim-aD-fQL"/>
-                        <constraint firstItem="sTW-pI-bU6" firstAttribute="centerY" secondItem="Tim-Fa-kpC" secondAttribute="centerY" id="Gwt-lH-t1z"/>
-                        <constraint firstItem="L1Y-ZP-Ot0" firstAttribute="leading" secondItem="11a-X6-gDx" secondAttribute="leading" constant="20" id="Nhv-UX-pnd"/>
-                        <constraint firstItem="Tim-Fa-kpC" firstAttribute="top" secondItem="bZa-l6-L7a" secondAttribute="bottom" id="Qyg-Aa-Ro2"/>
-                        <constraint firstAttribute="trailing" secondItem="sTW-pI-bU6" secondAttribute="trailing" constant="10" id="YJl-zQ-SEP"/>
                         <constraint firstItem="bZa-l6-L7a" firstAttribute="leading" secondItem="11a-X6-gDx" secondAttribute="leading" constant="10" id="Z2Q-y1-2zw"/>
                         <constraint firstAttribute="height" constant="156" id="aSB-8b-Exx"/>
-                        <constraint firstItem="Gxv-6N-Z3J" firstAttribute="leading" secondItem="11a-X6-gDx" secondAttribute="leading" constant="10" id="kf2-5I-jjO"/>
+                        <constraint firstItem="L1Y-ZP-Ot0" firstAttribute="leading" secondItem="11a-X6-gDx" secondAttribute="leading" constant="20" id="edJ-9L-0sB"/>
+                        <constraint firstItem="L1Y-ZP-Ot0" firstAttribute="top" secondItem="S70-nj-79T" secondAttribute="bottom" constant="5" id="kLi-0C-aw1"/>
                         <constraint firstItem="m4O-Zr-Lny" firstAttribute="leading" secondItem="11a-X6-gDx" secondAttribute="leading" id="p3T-68-i3L"/>
-                        <constraint firstItem="Tim-Fa-kpC" firstAttribute="leading" secondItem="11a-X6-gDx" secondAttribute="leading" id="qqg-Q5-1fS"/>
-                        <constraint firstItem="L1Y-ZP-Ot0" firstAttribute="top" secondItem="S70-nj-79T" secondAttribute="bottom" id="rbt-pV-a1e"/>
-                        <constraint firstItem="Gxv-6N-Z3J" firstAttribute="top" secondItem="Tim-Fa-kpC" secondAttribute="bottom" id="sl9-Vn-tjc"/>
-                        <constraint firstItem="S70-nj-79T" firstAttribute="top" secondItem="Gxv-6N-Z3J" secondAttribute="bottom" id="t6B-6A-z7I"/>
-                        <constraint firstAttribute="trailing" secondItem="Gxv-6N-Z3J" secondAttribute="trailing" id="wXE-Zg-W2o"/>
+                        <constraint firstItem="S70-nj-79T" firstAttribute="leading" secondItem="11a-X6-gDx" secondAttribute="leading" constant="5" id="uVH-ga-HqU"/>
                     </constraints>
                 </view>
             </subviews>

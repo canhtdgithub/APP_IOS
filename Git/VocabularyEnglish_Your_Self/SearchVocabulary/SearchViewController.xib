@@ -15,6 +15,7 @@
                 <outlet property="searchTextField" destination="hUU-1o-wao" id="h5N-x4-36R"/>
                 <outlet property="selecteSegment" destination="nzI-Si-C4y" id="lfI-63-TcI"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewContent" destination="JF5-Bb-75X" id="OAu-iU-FH1"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -32,16 +33,20 @@
                     </segments>
                     <color key="selectedSegmentTintColor" red="0.29893697297018806" green="0.9972206317963952" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </segmentedControl>
+                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Ny-wn-k94">
+                    <rect key="frame" x="0.0" y="150" width="414" height="712"/>
+                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </webView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JF5-Bb-75X">
                     <rect key="frame" x="52" y="133" width="310" height="34"/>
                     <subviews>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hUU-1o-wao">
-                            <rect key="frame" x="0.0" y="0.0" width="250" height="34"/>
+                            <rect key="frame" x="10" y="3" width="236" height="28"/>
                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="St8-zj-9zb">
-                            <rect key="frame" x="250" y="0.0" width="60" height="34"/>
+                            <rect key="frame" x="250" y="3" width="60" height="28"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="60" id="nvv-2b-oKr"/>
                             </constraints>
@@ -53,21 +58,17 @@
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <constraints>
-                        <constraint firstAttribute="bottom" secondItem="hUU-1o-wao" secondAttribute="bottom" id="0wT-Gr-rhc"/>
-                        <constraint firstItem="hUU-1o-wao" firstAttribute="top" secondItem="JF5-Bb-75X" secondAttribute="top" id="BHc-Mr-i9U"/>
+                        <constraint firstAttribute="bottom" secondItem="hUU-1o-wao" secondAttribute="bottom" constant="3" id="0wT-Gr-rhc"/>
+                        <constraint firstItem="hUU-1o-wao" firstAttribute="top" secondItem="JF5-Bb-75X" secondAttribute="top" constant="3" id="BHc-Mr-i9U"/>
                         <constraint firstAttribute="width" constant="310" id="BMm-yl-BbI"/>
-                        <constraint firstItem="St8-zj-9zb" firstAttribute="leading" secondItem="hUU-1o-wao" secondAttribute="trailing" id="G1k-Aj-2HE"/>
+                        <constraint firstItem="St8-zj-9zb" firstAttribute="leading" secondItem="hUU-1o-wao" secondAttribute="trailing" constant="4" id="G1k-Aj-2HE"/>
                         <constraint firstAttribute="height" constant="34" id="HTf-Zj-dUJ"/>
-                        <constraint firstItem="hUU-1o-wao" firstAttribute="leading" secondItem="JF5-Bb-75X" secondAttribute="leading" id="PWH-Zv-fH1"/>
-                        <constraint firstItem="St8-zj-9zb" firstAttribute="top" secondItem="JF5-Bb-75X" secondAttribute="top" id="gWp-Wa-Wco"/>
-                        <constraint firstAttribute="bottom" secondItem="St8-zj-9zb" secondAttribute="bottom" id="ilW-CZ-Lu9"/>
+                        <constraint firstItem="hUU-1o-wao" firstAttribute="leading" secondItem="JF5-Bb-75X" secondAttribute="leading" constant="10" id="PWH-Zv-fH1"/>
+                        <constraint firstItem="St8-zj-9zb" firstAttribute="top" secondItem="JF5-Bb-75X" secondAttribute="top" constant="3" id="gWp-Wa-Wco"/>
+                        <constraint firstAttribute="bottom" secondItem="St8-zj-9zb" secondAttribute="bottom" constant="3" id="ilW-CZ-Lu9"/>
                         <constraint firstAttribute="trailing" secondItem="St8-zj-9zb" secondAttribute="trailing" id="nXO-U4-172"/>
                     </constraints>
                 </view>
-                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Ny-wn-k94">
-                    <rect key="frame" x="0.0" y="150" width="414" height="712"/>
-                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                </webView>
             </subviews>
             <color key="backgroundColor" red="0.58431372549019611" green="0.45882352941176469" blue="0.80392156862745101" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>

@@ -13,6 +13,7 @@ class SettingViewController: UIViewController {
     
     let defaults = UserDefaults.standard
     
+    var arrayBool = [Bool]()
     @IBOutlet weak var tick: UIButton!
     
     
@@ -20,9 +21,13 @@ class SettingViewController: UIViewController {
         if self.tick.isHidden {
             
             self.tick.isHidden = false
+            for _ in 0...6 {
+                arrayBool.append(true)
+            }
             defaults.set(false, forKey: "show")
-        } else {
             
+        } else {
+            arrayBool.removeAll()
             self.tick.isHidden = true
             defaults.set(true, forKey: "show")
         }
@@ -34,16 +39,66 @@ class SettingViewController: UIViewController {
     
     @IBOutlet weak var startLabel: UILabel!
     
-    @IBAction func endTime(_ sender: Any) {
-    }
-    
-    
-    @IBOutlet weak var endLabel: UILabel!
-    
-    @IBAction func weekDay() {
+    @IBAction func sunDay(_ sender: UIButton) {
+        self.arrayBool[0] = false
+        testShowNotification()
         
     }
     
+    @IBAction func monDay(_ sender: UIButton) {
+        self.arrayBool[1] = false
+        testShowNotification()
+    }
+    
+    @IBAction func tuesDay(_ sender: UIButton) {
+        self.arrayBool[2] = false
+        testShowNotification()
+    }
+    
+    @IBAction func wednessDay(_ sender: UIButton) {
+        self.arrayBool[3] = false
+        testShowNotification()
+    }
+    
+    @IBAction func thursDay(_ sender: UIButton) {
+        self.arrayBool[4] = false
+        testShowNotification()
+    }
+    
+    @IBAction func friDay(_ sender: UIButton) {
+        self.arrayBool[5] = false
+        testShowNotification()
+    }
+    
+    @IBAction func satDay(_ sender: UIButton) {
+        self.arrayBool[6] = false
+        testShowNotification()
+    }
+    
+    
+    
+    
+    @IBAction func weekDay(_ sender: UIButton) {
+        switch sender.tag {
+            case 1:
+                sender.backgroundColor = .gray
+            case 2:
+                sender.backgroundColor = .gray
+            case 3:
+                sender.backgroundColor = .gray
+            case 4:
+                sender.backgroundColor = .gray
+            case 5:
+                sender.backgroundColor = .gray
+            case 6:
+                sender.backgroundColor = .gray
+            case 7:
+                sender.backgroundColor = .gray
+        default:
+            print("finish")
+        }
+        
+    }
     
     @IBAction func tapSetting(_ sender: UISwitch) {
         if sender.isOn == false {
@@ -59,13 +114,20 @@ class SettingViewController: UIViewController {
         super.viewDidLoad()
         navigationItem.title = "Setting"
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert,.badge, .sound], completionHandler: {(didAllow, error) in })
-        test()
-        
-        noti()
+        testShowReminder()
         
     }
     
-    func test() {
+    func testShowNotification() {
+        let date = Date()
+             let a = Calendar.current
+             let b = a.component(.weekday, from: date)
+        if arrayBool[b - 1] {
+            noti()
+        }
+    }
+    
+    func testShowReminder() {
         let a = defaults.bool(forKey: "show")
         if a {
             self.tick.isHidden = true
@@ -99,21 +161,20 @@ class SettingViewController: UIViewController {
     func noti() {
         let content = UNMutableNotificationContent()
                content.title = "Learn a new vocabulary!!!!"
-               content.body = "You have 30 seconds. Never give up!!! "
+               content.body = "Let's go learning vocabulary. Never give up!!! "
                content.sound = UNNotificationSound.default
-        let weekdayset = [1,2,3,4,5,7]
-        for i in weekdayset {
+         
             var dateInfo = DateComponents()
-            dateInfo.hour = 11
-            dateInfo.minute = 18
-            dateInfo.weekday = i
+            dateInfo.hour = 07
+            dateInfo.minute = 00
+        
             dateInfo.timeZone = .current
-            print(i)
+           
         let trig = UNCalendarNotificationTrigger(dateMatching: dateInfo, repeats: true)
         let request = UNNotificationRequest(identifier: "thu", content: content, trigger: trig)
         
         UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
-    }
+    
     }
     
     

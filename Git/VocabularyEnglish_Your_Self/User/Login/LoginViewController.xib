@@ -12,6 +12,7 @@
                 <outlet property="emailField" destination="mpQ-gw-kg9" id="Sie-Ma-7qc"/>
                 <outlet property="imageLogo" destination="Qcv-AQ-t3B" id="X5z-tR-QkH"/>
                 <outlet property="passwordField" destination="bi0-QV-eZ5" id="d9j-aQ-91f"/>
+                <outlet property="showLabelConnectInternet" destination="rF0-A1-g7M" id="rAK-Oh-QYu"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -39,7 +40,7 @@
                         <constraint firstAttribute="height" constant="40" id="RQd-RX-4m0"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                 </textField>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bi0-QV-eZ5">
                     <rect key="frame" x="40" y="321" width="334" height="40"/>
@@ -47,7 +48,7 @@
                         <constraint firstAttribute="height" constant="40" id="G0H-IF-8wp"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                    <textInputTraits key="textInputTraits" textContentType="password"/>
+                    <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="password"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hfn-5d-lZY">
                     <rect key="frame" x="40" y="426" width="334" height="40"/>
@@ -73,6 +74,13 @@
                         <action selector="tapRegister:" destination="-1" eventType="touchUpInside" id="Ced-JK-7O1"/>
                     </connections>
                 </button>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not internet. Please connect to internet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rF0-A1-g7M">
+                    <rect key="frame" x="79.666666666666671" y="704" width="254.66666666666663" height="17"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
@@ -88,8 +96,10 @@
                 <constraint firstItem="bi0-QV-eZ5" firstAttribute="height" secondItem="mpQ-gw-kg9" secondAttribute="height" id="Nlb-Cw-6j3"/>
                 <constraint firstItem="Qcv-AQ-t3B" firstAttribute="top" secondItem="fsl-5I-1QW" secondAttribute="bottom" constant="20" id="Rf0-mH-tUM"/>
                 <constraint firstAttribute="trailing" secondItem="mpQ-gw-kg9" secondAttribute="trailing" constant="40" id="UuN-fV-pBq"/>
+                <constraint firstItem="rF0-A1-g7M" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="VdV-nb-bnu"/>
                 <constraint firstItem="SCI-Ym-h43" firstAttribute="width" secondItem="hfn-5d-lZY" secondAttribute="width" id="Zhy-e1-c17"/>
                 <constraint firstItem="SCI-Ym-h43" firstAttribute="height" secondItem="hfn-5d-lZY" secondAttribute="height" id="eb0-7b-j5F"/>
+                <constraint firstAttribute="bottom" secondItem="rF0-A1-g7M" secondAttribute="bottom" constant="15" id="fzJ-Fs-JxD"/>
                 <constraint firstItem="Qcv-AQ-t3B" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="g72-iW-ABr"/>
                 <constraint firstItem="bi0-QV-eZ5" firstAttribute="width" secondItem="mpQ-gw-kg9" secondAttribute="width" id="hdo-KG-Ubg"/>
                 <constraint firstItem="SCI-Ym-h43" firstAttribute="top" secondItem="8zJ-qP-rgW" secondAttribute="bottom" constant="30" id="hmb-q2-j6G"/>

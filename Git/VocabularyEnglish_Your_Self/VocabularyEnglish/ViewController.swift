@@ -12,12 +12,10 @@ import Firebase
 
 
 
+
 class ViewController: UIViewController {
     
     //MARK: - @IBOUTLET
-    
-    var list = [ListVocab]()
-    
     
     @IBOutlet weak var viewLayer: UIView!
     
@@ -35,13 +33,11 @@ class ViewController: UIViewController {
     
     
     @IBAction func insert(_ sender: Any) {
-//        guard let myEmail = UserDefaults.standard.value(forKey: "email") as? String else {
-//            return
-//        }
-//
-//
-//        DatabaseManager.shared.addVocab(email: myEmail, text: textVocab.text!)
-        ModelViewController.share.insertVocab(newVocab: textVocab, tableView: table)
+        guard let myEmail = UserDefaults.standard.value(forKey: "email") as? String else {
+            return
+        }
+        DatabaseManager.shared.addVocab(email: myEmail, text: textVocab.text!)
+        ModelViewController.shared.insertVocab(newVocab: textVocab, tableView: table)
 
     }
     
@@ -97,7 +93,7 @@ class ViewController: UIViewController {
             switch result {
             case .success(let listvocab):
                 
-                self.list = listvocab
+                list = listvocab
                 
                 DispatchQueue.main.async {
                     self.table.reloadData()
@@ -178,8 +174,11 @@ class ViewController: UIViewController {
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if ModelViewController.shared.isConnectedToNetwork() {
+            return list.count
+        }
         return vocabularys?.count ?? 0
-//        return list.count
+        
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -189,9 +188,12 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = table.dequeueReusableCell(withIdentifier: VocabularyTableViewCell.identifier, for: indexPath) as! VocabularyTableViewCell
+        if ModelViewController.shared.isConnectedToNetwork() {
+            cell.config(text: list[indexPath.row].vocab)
+        } else {
+            cell.config(text: vocabularys![indexPath.row].vocabulary)
+        }
         
-//        cell.config(text: list[indexPath.row].vocab)
-        cell.config(text: vocabularys![indexPath.row].vocabulary)
        
         cell.showSpeaker()
         
@@ -220,6 +222,13 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
                 self.table.reloadData()
             }
             
+            let index = indexPath.row
+            DatabaseManager.shared.deleteVocabulary(indexvocab: index) { (success) in
+//                if success {
+//                    self.table.reloadData()
+//                    print("detlete success")
+//                }
+            }
         }
     }
     
@@ -237,43 +246,4 @@ extension ViewController: UITextFieldDelegate {
 
 
 
-//
-//func isConnectedToNetwork() -> Bool {
-//
-//    
-//
-//    var zeroAddress = sockaddr_in(sin_len: 0, sin_family: 0, sin_port: 0, sin_addr: in_addr(s_addr: 0), sin_zero: (0, 0, 0, 0, 0, 0, 0, 0))
-//
-//    zeroAddress.sin_len = UInt8(MemoryLayout.size(ofValue: zeroAddress))
-//
-//    zeroAddress.sin_family = sa_family_t(AF_INET)
-//
-//    let defaultRouteReachability = withUnsafePointer(to: &zeroAddress) {
-//
-//        $0.withMemoryRebound(to: sockaddr.self, capacity: 1) {zeroSockAddress in
-//
-//            SCNetworkReachabilityCreateWithAddress(nil, zeroSockAddress)
-//
-//        }
-//
-//    }
-//
-//    
-//
-//    var flags = SCNetworkReachabilityFlags()
-//
-//    if !SCNetworkReachabilityGetFlags(defaultRouteReachability!, &flags) {
-//
-//        return false
-//
-//    }
-//
-//    let isReachable = (flags.rawValue & UInt32(kSCNetworkFlagsReachable)) != 0
-//
-//    let needsConnection = (flags.rawValue & UInt32(kSCNetworkFlagsConnectionRequired)) != 0
-//
-//    
-//
-//    return (isReachable && !needsConnection)
-//
-//}
+

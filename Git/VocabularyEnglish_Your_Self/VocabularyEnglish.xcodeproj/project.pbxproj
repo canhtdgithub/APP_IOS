@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E089CAD24E6D01000AFC380 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E089CAC24E6D01000AFC380 /* Extension.swift */; };
 		4E0C1F9724DCE8B700DA3DE4 /* congratulation1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4E0C1F9224DCE8B300DA3DE4 /* congratulation1.gif */; };
 		4E0C1F9824DCE8B700DA3DE4 /* congratulation.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4E0C1F9324DCE8B400DA3DE4 /* congratulation.gif */; };
 		4E0C1F9924DCE8B700DA3DE4 /* congratulation3.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4E0C1F9424DCE8B500DA3DE4 /* congratulation3.gif */; };
@@ -71,6 +72,7 @@
 
 /* Begin PBXFileReference section */
 		4AA69E4804B3E1F47065F053 /* Pods_VocabularyEnglish.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VocabularyEnglish.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E089CAC24E6D01000AFC380 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		4E0C1F9224DCE8B300DA3DE4 /* congratulation1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = congratulation1.gif; sourceTree = "<group>"; };
 		4E0C1F9324DCE8B400DA3DE4 /* congratulation.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = congratulation.gif; sourceTree = "<group>"; };
 		4E0C1F9424DCE8B500DA3DE4 /* congratulation3.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = congratulation3.gif; sourceTree = "<group>"; };
@@ -155,6 +157,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E089CAB24E6CFDE00AFC380 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				4E089CAC24E6D01000AFC380 /* Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		4E109CB224CAE69D007A509F /* ModelQuizGames */ = {
 			isa = PBXGroup;
 			children = (
@@ -166,6 +176,7 @@
 		4E35324F24BD87CD00415CC9 = {
 			isa = PBXGroup;
 			children = (
+				4E089CAB24E6CFDE00AFC380 /* Extension */,
 				4E9B492824D118BA00BC94C6 /* User */,
 				4E6A3FB724C1FABE00345714 /* vocabulary.png */,
 				4ECD670224D9326E00F65ED5 /* SearchVocabulary */,
@@ -620,6 +631,7 @@
 				4ECD670024D91A9700F65ED5 /* SpeakGameViewController.swift in Sources */,
 				4E9A938324BED2CB00F00F4C /* ExetendViewController.swift in Sources */,
 				4E305D1424C40A2A0014CCFE /* GamesCollectionViewCell.swift in Sources */,
+				4E089CAD24E6D01000AFC380 /* Extension.swift in Sources */,
 				4ECD670524D932B300F65ED5 /* SearchViewController.swift in Sources */,
 				4E35325C24BD87CD00415CC9 /* AppDelegate.swift in Sources */,
 				4EBEE58524BD95DA007820B4 /* SettingViewController.swift in Sources */,

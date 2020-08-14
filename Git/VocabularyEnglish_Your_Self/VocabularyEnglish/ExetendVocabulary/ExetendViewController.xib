@@ -26,8 +26,13 @@
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ko1-k4-bVr">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <color key="backgroundColor" white="1" alpha="0.12989619006849315" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
                 <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image" translatesAutoresizingMaskIntoConstraints="NO" id="g9G-9X-7Wd">
                     <rect key="frame" x="82" y="56" width="250" height="210"/>
+                    <color key="tintColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="250" id="GQR-3b-Yv3"/>
                         <constraint firstAttribute="height" constant="210" id="lv4-us-gNi"/>
@@ -62,6 +67,8 @@
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
+                <constraint firstItem="ko1-k4-bVr" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="3dp-Xn-B2o"/>
+                <constraint firstAttribute="bottom" secondItem="ko1-k4-bVr" secondAttribute="bottom" id="4wf-ZZ-qgl"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="7Ar-c4-sSg" secondAttribute="trailing" constant="40" id="Fxk-NS-4U3"/>
                 <constraint firstItem="i9A-7e-XVD" firstAttribute="top" secondItem="7Ar-c4-sSg" secondAttribute="bottom" constant="14" id="GRU-Cq-FAn"/>
                 <constraint firstItem="qhh-Zy-LW4" firstAttribute="top" secondItem="i9A-7e-XVD" secondAttribute="bottom" constant="6" id="GTB-YG-yfQ"/>
@@ -69,10 +76,12 @@
                 <constraint firstItem="7Ar-c4-sSg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="U3z-h6-zwY"/>
                 <constraint firstItem="qhh-Zy-LW4" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="ehp-XU-Ngn"/>
                 <constraint firstItem="i9A-7e-XVD" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="emz-JM-gWA"/>
+                <constraint firstItem="ko1-k4-bVr" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="nxj-4z-QOf"/>
                 <constraint firstItem="g9G-9X-7Wd" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="12" id="oVu-Pc-WOr"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="qhh-Zy-LW4" secondAttribute="trailing" constant="20" id="pQz-QE-6y1"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="qhh-Zy-LW4" secondAttribute="bottom" constant="5" id="tqx-60-7sL"/>
                 <constraint firstItem="7Ar-c4-sSg" firstAttribute="top" secondItem="g9G-9X-7Wd" secondAttribute="bottom" constant="12" id="wni-Ic-Q0M"/>
+                <constraint firstItem="ko1-k4-bVr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="xlJ-xx-Tcr"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="137.68115942028987" y="95.758928571428569"/>

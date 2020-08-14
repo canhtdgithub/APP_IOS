@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import SystemConfiguration
+import IQKeyboardManagerSwift
 
 @available(iOS 11.0, *)
 
@@ -18,7 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
-        
+        test()
+        IQKeyboardManager.shared.enable = true
         window = UIWindow(frame: UIScreen.main.bounds)
         
         if FirebaseAuth.Auth.auth().currentUser == nil {
@@ -109,6 +111,44 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          return (isReachable && !needsConnection)
      
      }
+    
+    func noti() {
+        let content = UNMutableNotificationContent()
+               content.title = "Learn a new vocabulary!!!!"
+               content.body = "Let's go learning vocabulary. Never give up!!! "
+               content.sound = UNNotificationSound.default
+         
+            var dateInfo = DateComponents()
+            dateInfo.hour = 07
+            dateInfo.minute = 00
+        
+            dateInfo.timeZone = .current
+           
+        let trig = UNCalendarNotificationTrigger(dateMatching: dateInfo, repeats: true)
+        let request = UNNotificationRequest(identifier: "thu", content: content, trigger: trig)
+        
+        UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+    
+    }
+    
+    func test() {
+        guard let show = UserDefaults.standard.value(forKey: "show") as? Bool, let arr = UserDefaults.standard.value(forKey: "arrayBool") as? Array<Bool> else {
+            return
+        }
+        print(show)
+        print(arr)
+      
+        print(arr)
+        if show == false {
+            let date = Date()
+                 let a = Calendar.current
+                 let b = a.component(.weekday, from: date)
+            if arr[b - 1] {
+                noti()
+            }
+        }
+        
+    }
 
 }
 

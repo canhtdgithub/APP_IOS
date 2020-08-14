@@ -22,41 +22,4 @@ class ModelQuizGames {
     }
 }
 
-extension UIButton {
-    func tapAnimation() {
-        let tap = CASpringAnimation(keyPath: "opacity")
-        tap.damping = 0.5
-        tap.fromValue = 1
-        tap.toValue = 0.7
-        tap.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
-        tap.autoreverses = true
-        tap.repeatCount = 1
-        layer.add(tap, forKey: nil)
-    }
-    
-    func layerButtom(cornerRadius: CGFloat?, borderColor: CGColor, borderWidth: CGFloat? ) {
-        layer.cornerRadius = cornerRadius ?? 0
-        layer.borderColor = borderColor
-        layer.borderWidth = borderWidth ?? 0
-    }
-    
-}
-extension UICollectionViewCell {
-    func tapAnimation() {
-        let tap = CASpringAnimation(keyPath: "opacity")
-        tap.damping = 5
-        tap.fromValue = 1
-        tap.toValue = 0.7
-        tap.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
-        tap.autoreverses = true
-        tap.repeatCount = 1
-        contentView.layer.add(tap, forKey: nil)
-    }
-    
-    func layerCollectionViewCell(cornerRadius: CGFloat?, borderColor: CGColor, borderWidth: CGFloat? ) {
-        layer.cornerRadius = cornerRadius ?? 0
-        layer.borderColor = borderColor
-        layer.borderWidth = borderWidth ?? 0
-    }
 
-}

@@ -65,13 +65,13 @@ class ExetendViewController: UIViewController {
         if ModelViewController.shared.isConnectedToNetwork() {
             vocabLabel.text = list[cellcount].vocab
             descripTextView.text! = list[cellcount].define
-        }
+        } else {
         vocabLabel.text = vocabularys![cellcount].vocabulary
         inserImage()
         ModelExetendViewController.shared.testShowImage(label: vocabLabel, image: showImages)
         
         descripTextView.text! = vocabularys![cellcount].descripVocab
-        
+        }
     }
     
     //MARK: - METHOD

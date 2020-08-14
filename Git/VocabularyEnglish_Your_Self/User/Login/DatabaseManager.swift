@@ -83,7 +83,9 @@ extension DatabaseManager {
     
 
     func addVocab(email: String, text: String!) {
-        
+        if text.isEmpty {
+            
+        } else {
         var changeEmail = email.replacingOccurrences(of: ".", with: "_")
         changeEmail = changeEmail.replacingOccurrences(of: "@", with: "_")
         let ref = Database.database().reference().child("\(changeEmail)/vocabulary")
@@ -112,7 +114,7 @@ extension DatabaseManager {
             }
             ref.setValue(databaseEntryConversations)
         })
-        
+        }
     }
     func insertDefine(text: String, index: Int, compiletion: @escaping (Bool) -> Void) {
         guard let email = UserDefaults.standard.value(forKey: "email") as? String else {

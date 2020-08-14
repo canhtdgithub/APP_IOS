@@ -53,7 +53,7 @@ class GamesViewController: UIViewController {
       
       override func viewDidLoad() {
           super.viewDidLoad()
-          navigationItem.title = "Quiz"
+          navigationItem.title = "Brain Trainig"
           registTable(collectionView: collectionView)
         layerSpeakerQuestion.layerButtom(cornerRadius: layerSpeakerQuestion.frame.height / 2, borderColor: UIColor.black.cgColor , borderWidth: 2)
         vocabularys = realm.objects(Vocab.self)

@@ -41,7 +41,7 @@ class ModelViewController {
         if newVocab.text!.isEmpty {
         } else {
             let value = Vocab()
-            value.vocabulary = newVocab.text!
+            value.vocabulary = newVocab.text!.lowercased()
             value.descripVocab = ""
             realm.beginWrite()
             realm.add(value)

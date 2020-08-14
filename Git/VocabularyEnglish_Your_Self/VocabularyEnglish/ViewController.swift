@@ -9,10 +9,6 @@
 import UIKit
 import Firebase
 
-
-
-
-
 class ViewController: UIViewController {
     
     //MARK: - @IBOUTLET
@@ -36,7 +32,7 @@ class ViewController: UIViewController {
         guard let myEmail = UserDefaults.standard.value(forKey: "email") as? String else {
             return
         }
-        DatabaseManager.shared.addVocab(email: myEmail, text: textVocab.text!)
+        DatabaseManager.shared.addVocab(email: myEmail, text: textVocab.text!.lowercased())
         ModelViewController.shared.insertVocab(newVocab: textVocab, tableView: table)
 
     }
@@ -64,21 +60,13 @@ class ViewController: UIViewController {
         // delegate and datasource tableview
         registTable(tableView: table)
         // layer View
-        layerView()
+        viewLayer.layerViews(cornerRadius: 19, borderColor: UIColor.black.cgColor, borderWidth: 1 )
        
         // layer Buttom
 //        layerAdd()
-        
-        let origImage = UIImage(named: "plus")
-        let tintedImage = origImage?.withRenderingMode(.alwaysTemplate)
-        layerButtom.setImage(tintedImage, for: .normal)
-        layerButtom.tintColor = .orange
-        
+        layerButtom.setColorIcon(btn: layerButtom, nameImage: "plus", colorIcon: .orange)
         
         vocabularys = realm.objects(Vocab.self)
-       
-        
-        
         listen()
         
         
@@ -136,19 +124,6 @@ class ViewController: UIViewController {
     
     @objc func keyboardWillHide(notification: NSNotification) {
         self.tableContraint.constant = 0
-        
-    }
-    
-    func layerView() {
-        viewLayer.layer.cornerRadius = 19
-        viewLayer.layer.borderWidth = 1
-        viewLayer.layer.borderColor = UIColor.black.cgColor
-    }
-    
-    func layerAdd() {
-        layerButtom.layer.cornerRadius = 19
-        layerButtom.layer.borderWidth = 0.5
-        layerButtom.layer.borderColor = UIColor.black.cgColor
         
     }
     

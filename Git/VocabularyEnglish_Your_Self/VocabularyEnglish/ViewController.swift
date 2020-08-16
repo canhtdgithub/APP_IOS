@@ -39,7 +39,7 @@ class ViewController: UIViewController {
     
     
     @IBAction func microphone(_ sender: Any) {
-        startMicrophone()
+        ModelViewController.shared.startMicrophone(viewController: self, showText: textVocab)
         
     }
     
@@ -48,9 +48,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Any code you put in here will be called when the keyboard is about to display
-        notifiShowKeyboard()
+        let notifiKeyboard = NotificationKeyboard(edgeContrains: tableContraint)
+        notifiKeyboard.notifiShowKeyboard()
         // Any code you put in here will be called when the keyboard is about to hide
-        notifiHideKeyboard()
+        notifiKeyboard.notifiHideKeyboard()
         // set title for view controller
         navigationItem.title = "News Vocabulary"
         
@@ -60,12 +61,12 @@ class ViewController: UIViewController {
         // delegate and datasource tableview
         registTable(tableView: table)
         // layer View
-        viewLayer.layerViews(cornerRadius: 19, borderColor: UIColor.black.cgColor, borderWidth: 1 )
-       
-        // layer Buttom
-//        layerAdd()
-        layerButtom.setColorIcon(btn: layerButtom, nameImage: "plus", colorIcon: .orange)
-        
+        viewLayer.layerViews(cornerRadius: 19,
+                             borderColor: UIColor.black.cgColor,
+                             borderWidth: 1 )
+        layerButtom.setColorIcon(btn: layerButtom,
+                                 nameImage: "plus",
+                                 colorIcon: .orange)
         vocabularys = realm.objects(Vocab.self)
         listen()
         
@@ -102,45 +103,7 @@ class ViewController: UIViewController {
         tableView.register(VocabularyTableViewCell.nib(), forCellReuseIdentifier: VocabularyTableViewCell.identifier)
         
     }
-    func notifiShowKeyboard() {
-        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
-    }
-    
-    @objc func keyboardWillShow(notification: NSNotification) {
-        
-        if let userInfo = notification.userInfo as? Dictionary<String, AnyObject> {
-            let frame = userInfo[UIResponder.keyboardFrameEndUserInfoKey]
-            let keyBoardRect = frame?.cgRectValue
-            if let keyBoardHeight = keyBoardRect?.height {
-                self.tableContraint.constant = keyBoardHeight
-            }
-        }
-        
-    }
-    
-    func notifiHideKeyboard() {
-        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
-    }
-    
-    @objc func keyboardWillHide(notification: NSNotification) {
-        self.tableContraint.constant = 0
-        
-    }
-    
-    func startMicrophone() {
-        voice.start(on: self,
-                    textHandler: { (text, finish, nil) in
-                        if finish {
-                            print("thất bại")
-                        } else {
-                            print(text)
-                                self.textVocab.text! = text
-                        }
-        }, errorHandler: {error in
-            
-        })
-        
-    }
+   
 }
 
 

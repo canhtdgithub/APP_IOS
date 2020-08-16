@@ -14,15 +14,14 @@ import SystemConfiguration
 
 //MARK: - PROPERTIES
 // declare microphone
-var urlPathImage: URL?
+
 var cellcount = 0
-let voice = VoiceOverlayController()
+
 let realm = try! Realm()
 var vocabularys: Results<Vocab>?
 
 var list = [ListVocab]()
-//let value = Vocab()
-let fileManager = FileManager.default
+
 
 
 // MARK: - CLASS
@@ -30,7 +29,7 @@ let fileManager = FileManager.default
 class Vocab: Object {
     @objc dynamic var vocabulary = ""
     @objc dynamic var descripVocab = ""
-    
+ 
 }
 
 class ModelViewController {
@@ -53,6 +52,21 @@ class ModelViewController {
             newVocab.text = ""
         }
     }
+    func startMicrophone(viewController: UIViewController, showText: UITextField ) {
+        let voice = VoiceOverlayController()
+          voice.start(on: viewController,
+                      textHandler: { (text, finish, nil) in
+                          if finish {
+                              print("fail voice")
+                          } else {
+                              print(text)
+                                  showText.text! = text
+                          }
+          }, errorHandler: {error in
+              
+          })
+          
+      }
     
     func isConnectedToNetwork() -> Bool {
 
@@ -90,48 +104,41 @@ class ModelViewController {
     
 }
 
-class ModelExetendViewController {
+
+
+class NotificationKeyboard {
     
-     private init() {}
-    static var shared = ModelExetendViewController()
-    func testShowImage(label: UILabel, image: UIImageView) {
-        let PathWithFolderName = (NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as NSString).appendingPathComponent("FolderName")
-        
-        print("Document Directory Folder Path :- ",PathWithFolderName)
-        
-        if !fileManager.fileExists(atPath: PathWithFolderName)
-        {
-            try! fileManager.createDirectory(atPath: PathWithFolderName, withIntermediateDirectories: true, attributes: nil)
-        }
-        
-        let url = URL(string: PathWithFolderName)
-        urlPathImage = url
-        let imagePath = url?.appendingPathComponent("\(label.text!).png").absoluteString
-        
-        if fileManager.fileExists(atPath: imagePath!) {
-            image.image = UIImage(contentsOfFile: imagePath!)
-            
-        }
-        
-        
+    var edgeContrains: NSLayoutConstraint!
+    
+    init(edgeContrains: NSLayoutConstraint) {
+        self.edgeContrains = edgeContrains
     }
     
-    func deletePatchImage(deleteVocab: String) {
-        
-        guard let imagePath = urlPathImage?.appendingPathComponent("\(deleteVocab).png").absoluteString else {
-            return
-        }
-        guard fileManager.fileExists(atPath: imagePath) else {
-            return
-        }
-        try? fileManager.removeItem(atPath: imagePath)
-//        if fileManager.fileExists(atPath: imagePath!) {
-//            try? fileManager.removeItem(atPath: imagePath!)
-//        } else {
-//            print("file not exist")
-//        }
+    func notifiShowKeyboard() {
+           NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+       }
+       
+       @objc func keyboardWillShow(notification: NSNotification) {
+           
+           if let userInfo = notification.userInfo as? Dictionary<String, AnyObject> {
+               let frame = userInfo[UIResponder.keyboardFrameEndUserInfoKey]
+               let keyBoardRect = frame?.cgRectValue
+               if let keyBoardHeight = keyBoardRect?.height {
+                   self.edgeContrains.constant = keyBoardHeight
+               }
+           }
+           
+       }
+       
+       func notifiHideKeyboard() {
+           NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+       }
+       
+       @objc func keyboardWillHide(notification: NSNotification) {
+           self.edgeContrains.constant = 0
+           
+       }
     
-    }
 }
 
 

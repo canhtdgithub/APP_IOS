@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
-        test()
+        testShowNoti()
         IQKeyboardManager.shared.enable = true
         window = UIWindow(frame: UIScreen.main.bounds)
         
@@ -121,7 +121,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             var dateInfo = DateComponents()
             dateInfo.hour = 07
             dateInfo.minute = 00
-        
+            
             dateInfo.timeZone = .current
            
         let trig = UNCalendarNotificationTrigger(dateMatching: dateInfo, repeats: true)
@@ -131,14 +131,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     }
     
-    func test() {
+    func testShowNoti() {
         guard let show = UserDefaults.standard.value(forKey: "show") as? Bool, let arr = UserDefaults.standard.value(forKey: "arrayBool") as? Array<Bool> else {
             return
         }
         print(show)
         print(arr)
-      
-        print(arr)
+        
         if show == false {
             let date = Date()
                  let a = Calendar.current
@@ -148,6 +147,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
         
+    }
+    func testShowHour() -> Int {
+        guard let hour = UserDefaults.value(forKey: "hour") as? Int else {
+            return 07
+        }
+        return hour
     }
 
 }

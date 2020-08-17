@@ -38,6 +38,8 @@ class SettingViewController: UIViewController {
     @IBOutlet weak var startLabel: UILabel!
     
 
+    @IBOutlet weak var tapSettingSwitch: UISwitch!
+    
     @IBAction func weekDay(_ sender: UIButton) {
        
         switch sender.tag {
@@ -63,9 +65,9 @@ class SettingViewController: UIViewController {
     
     @IBAction func tapSetting(_ sender: UISwitch) {
         if sender.isOn == false {
-            
+            UserDefaults.standard.set(false, forKey: "showvocab")
         } else {
-            
+            UserDefaults.standard.set(true, forKey: "showvocab")
             ModelSetting.shared.notifiDetail()
         }
         
@@ -75,13 +77,14 @@ class SettingViewController: UIViewController {
         super.viewDidLoad()
         navigationItem.title = "Setting"
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert,.badge, .sound], completionHandler: {(didAllow, error) in })
-        
+        ModelSetting.shared.testShowVocab(tapSettingSwitch: tapSettingSwitch)
         ModelSetting.shared.testShowReminder(tick: tick)
         ModelSetting.shared.setColorButton(btn: btn)
         ModelSetting.shared.testShowTime(startLabel: startLabel)
         tapViewPicker()
         datePicker.addTarget(self, action: #selector(handl(sender:)), for: .valueChanged)
-//        UserDefaults.value(forKey: "hour")
+        
+        
     }
     
     func tapViewPicker() {
@@ -95,28 +98,8 @@ class SettingViewController: UIViewController {
     }
     
     @objc func handl(sender: UIDatePicker) {
-        
-               let timeFormatterHour = DateFormatter()
-                timeFormatterHour.dateFormat = "hh"
-                let strDateHour = timeFormatterHour.string(from: sender.date)
-                     UserDefaults.standard.set(strDateHour, forKey: "hour")
-      
-                let timeFormatterMinute = DateFormatter()
-                timeFormatterMinute.dateFormat = "mm"
-                let strDateMinute = timeFormatterMinute.string(from: sender.date)
-                     UserDefaults.standard.set(strDateMinute, forKey: "minute")
-               
-                let timeFormatterAMPM = DateFormatter()
-                timeFormatterAMPM.dateFormat = "a"
-                let strAMPM = timeFormatterAMPM.string(from: sender.date)
-                     UserDefaults.standard.set(strAMPM, forKey: "ampm")
-               
-               let timeFormatter = DateFormatter()
-               timeFormatter.dateStyle = .short
-                let strDate = timeFormatter.string(from: sender.date)
-                     UserDefaults.standard.set(strDate, forKey: "datePicker")
-               
-                startLabel.text = "\(strDateHour):\(strDateMinute) \(strAMPM)"
+        ModelSetting.shared.setTimePicker(sender: sender, startLabel: startLabel)
     
     }
+  
 }

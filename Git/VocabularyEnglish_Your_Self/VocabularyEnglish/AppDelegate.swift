@@ -119,8 +119,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                content.sound = UNNotificationSound.default
          
             var dateInfo = DateComponents()
-            dateInfo.hour = 07
-            dateInfo.minute = 00
+        
+            dateInfo.hour = testShowHour()
+            dateInfo.minute = testShowMinute()
             
             dateInfo.timeZone = .current
            
@@ -149,10 +150,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
     }
     func testShowHour() -> Int {
-        guard let hour = UserDefaults.value(forKey: "hour") as? Int else {
+        guard let hour = UserDefaults.standard.value(forKey: "hour") as? String,
+            let ampm = UserDefaults.standard.value(forKey: "ampm") as? String else {
             return 07
         }
-        return hour
+        if ampm == "AM" {
+            return Int(hour)!
+        }
+        
+        return 12 + Int(hour)!
+    }
+    
+    func testShowMinute() -> Int {
+        guard let minute = UserDefaults.standard.value(forKey: "minute") as? String else {
+            return 00
+        }
+        return Int(minute)!
     }
 
 }

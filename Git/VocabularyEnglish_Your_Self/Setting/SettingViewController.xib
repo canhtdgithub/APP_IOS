@@ -12,6 +12,7 @@
             <connections>
                 <outlet property="datePicker" destination="uOS-hP-YX5" id="KEm-LZ-4t2"/>
                 <outlet property="startLabel" destination="ygn-HA-oD5" id="ghp-Ro-7pz"/>
+                <outlet property="tapSettingSwitch" destination="MwX-Df-ayB" id="PqV-ZT-ulJ"/>
                 <outlet property="tick" destination="qtR-mf-2hQ" id="1fz-d5-UnK"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="viewPicker" destination="d9f-aN-tUH" id="rwL-o1-aip"/>

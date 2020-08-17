@@ -29,6 +29,7 @@ class ModelSetting {
         }
     }
     
+    
     func testShowReminder(tick: UIButton) {
         guard let show = defaults.value(forKey: "show") as? Bool else {
             return
@@ -75,7 +76,41 @@ class ModelSetting {
         }
     }
     
-   
+    func testShowVocab(tapSettingSwitch: UISwitch) {
+        guard let show = defaults.bool(forKey: "showvocab") as? Bool else {
+            return
+        }
+        if show {
+            tapSettingSwitch.isOn = true
+        } else {
+            tapSettingSwitch.isOn = false
+        }
+    }
+    
+    func setTimePicker(sender: UIDatePicker, startLabel: UILabel) {
+          let timeFormatterHour = DateFormatter()
+                timeFormatterHour.dateFormat = "hh"
+                let strDateHour = timeFormatterHour.string(from: sender.date)
+                     UserDefaults.standard.set(strDateHour, forKey: "hour")
+
+                let timeFormatterMinute = DateFormatter()
+                timeFormatterMinute.dateFormat = "mm"
+                let strDateMinute = timeFormatterMinute.string(from: sender.date)
+                     UserDefaults.standard.set(strDateMinute, forKey: "minute")
+
+                let timeFormatterAMPM = DateFormatter()
+                timeFormatterAMPM.dateFormat = "a"
+                let strAMPM = timeFormatterAMPM.string(from: sender.date)
+                     UserDefaults.standard.set(strAMPM, forKey: "ampm")
+               
+               let timeFormatter = DateFormatter()
+               
+                timeFormatter.timeStyle = .short
+                let strDate = timeFormatter.string(from: sender.date)
+                     UserDefaults.standard.set(strDate, forKey: "datePicker")
+        
+                startLabel.text = "\(strDateHour):\(strDateMinute) \(strAMPM)"
+    }
 
     
     func notifiDetail() {

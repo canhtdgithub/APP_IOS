@@ -44,6 +44,16 @@ class ViewController: UIViewController {
     }
     
     //MARK: - VIEW LIFE CYCLE
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        guard wrongVocab.count > 0 else {
+                   return
+               }
+               print(wrongVocab)
+               DispatchQueue.main.async {
+                   self.table.reloadData()
+               }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -126,6 +136,9 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = table.dequeueReusableCell(withIdentifier: VocabularyTableViewCell.identifier, for: indexPath) as! VocabularyTableViewCell
+        
+        ModelViewController.shared.changeColor(indexPath: indexPath, vocabLabel: cell.showVocabulary)
+        
         if ModelViewController.shared.isConnectedToNetwork() {
             cell.config(text: list[indexPath.row].vocab)
         } else {

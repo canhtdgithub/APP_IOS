@@ -30,15 +30,15 @@ class GamesViewController: UIViewController {
     
     @IBAction func deleteButton(_ sender: UIButton) {
         sender.tapAnimation()
-        ModelQuizGames.shared.deleteText(show: showAnswer)
+        ModelQuizGames.shared.deleteText(showAnswer: showAnswer)
     }
     
     @IBAction func next(_ sender: Any) {
-        
         ModelQuizGames.shared.testQuestions(showAnswer: showAnswer,
                                             imageQuestion: imageQuestion,
                                             collectionView: collectionView,
                                             viewPresent: self)
+        
         
     }
    
@@ -77,7 +77,7 @@ class GamesViewController: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(GamesCollectionViewCell.nib(), forCellWithReuseIdentifier: GamesCollectionViewCell.identifier)
-        
+        collectionView.delaysContentTouches = false
     }
     
   
@@ -91,16 +91,28 @@ extension GamesViewController: UICollectionViewDelegate, UICollectionViewDataSou
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+//        ModelQuizGames.shared.editColor.append(true)
+     
+        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: GamesCollectionViewCell.identifier, for: indexPath) as! GamesCollectionViewCell
         cell.config(value: ModelQuizGames.shared.stringAfterShuffled[indexPath.row])
         cell.layerCollectionViewCell(cornerRadius: 8, borderColor: UIColor.black.cgColor, borderWidth: 1)
+        
+        cell.backgroundColor = UIColor(red: 252/255, green: 41/255, blue: 144/255, alpha: 1.0)
+        
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath) as! GamesCollectionViewCell
         
-        self.showAnswer.text?.append(ModelQuizGames.shared.stringAfterShuffled[indexPath.row])
+        ModelQuizGames.shared.addCharacter(showAnswer: showAnswer, indexPath: indexPath)
+//        ModelQuizGames.shared.changeColorCell(showAnswer: showAnswer, indexPath: indexPath, cell: cell)
+//        ModelQuizGames.shared.changeCharacter(indexPath: indexPath, showCharacter: cell.showCharacter, showAnswer: showAnswer)
+        
+       
     }
+    
     
 
 }

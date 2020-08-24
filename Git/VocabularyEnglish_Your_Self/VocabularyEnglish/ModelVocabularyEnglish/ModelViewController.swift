@@ -16,12 +16,11 @@ import SystemConfiguration
 // declare microphone
 
 var cellcount = 0
-
 let realm = try! Realm()
 var vocabularys: Results<Vocab>?
 
 var list = [ListVocab]()
-
+var wrongVocab = [WrongVocab]()
 
 
 // MARK: - CLASS
@@ -67,6 +66,18 @@ class ModelViewController {
           })
           
       }
+    
+    func changeColor(indexPath: IndexPath, vocabLabel: UILabel) {
+        guard wrongVocab.count > 0 else {
+            return
+        }
+        for i in 0...(wrongVocab.count - 1) {
+            if vocabularys![indexPath.row].vocabulary == wrongVocab[i].vocab {
+                vocabLabel.textColor = .red
+            }
+        }
+        
+    }
     
     func isConnectedToNetwork() -> Bool {
 
@@ -195,6 +206,10 @@ struct ListVocab {
     var vocab: String
     var define: String
    
+}
+
+struct WrongVocab {
+    var vocab: String
 }
 
 

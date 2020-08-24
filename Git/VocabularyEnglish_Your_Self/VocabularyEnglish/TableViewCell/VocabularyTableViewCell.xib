@@ -41,7 +41,7 @@
                             <constraint firstAttribute="height" constant="14" id="Ive-aI-0QG"/>
                             <constraint firstAttribute="width" constant="20" id="SKQ-eT-QUI"/>
                         </constraints>
-                        <state key="normal" image="arrowsingle"/>
+                        <state key="normal" image="arrow"/>
                     </button>
                 </subviews>
                 <constraints>
@@ -60,7 +60,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="arrowsingle" width="90" height="90"/>
+        <image name="arrow" width="800" height="800"/>
         <image name="speaker" width="26" height="26"/>
     </resources>
 </document>

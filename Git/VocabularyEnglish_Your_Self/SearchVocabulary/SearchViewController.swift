@@ -20,6 +20,8 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var selecteSegment: UISegmentedControl!
     var url: URL?
     
+    @IBOutlet weak var searchTextField: UITextField!
+    
     @IBAction func search(_ sender: Any) {
         
         notifiHideKeyboard()
@@ -27,16 +29,15 @@ class SearchViewController: UIViewController {
         switch selecteSegment.selectedSegmentIndex {
         case 0:
             url = URL(string: "https://dictionary.cambridge.org/dictionary/english/\(searchTextField.text!)")
-
-            break;
+                break
         case 1:
              url = URL(string: "https://www.ldoceonline.com/dictionary/\(searchTextField.text!)")
+                break
 
-            break;
         case 2:
              url = URL(string: "https://www.oxfordlearnersdictionaries.com/definition/english/\(searchTextField.text!)")
 
-            break;
+                break
         default:
             print("none")
         }
@@ -45,8 +46,13 @@ class SearchViewController: UIViewController {
 
     }
     
-    @IBOutlet weak var searchTextField: UITextField!
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        searchTextField.text = ""
+        dictionaryWeb.stopLoading()
+    }
     
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -54,9 +60,7 @@ class SearchViewController: UIViewController {
         
         searchTextField.delegate = self
         
-        viewContent.layer.cornerRadius = 5
-        viewContent.layer.borderColor = UIColor.gray.cgColor
-        viewContent.layer.borderWidth = 1
+        viewContent.layerViews(cornerRadius: 5, borderColor: UIColor.gray.cgColor, borderWidth: 1)
         
         layerSearch.layerButtom(cornerRadius: layerSearch.frame.size.height / 2, borderColor: UIColor.gray.cgColor, borderWidth: 1)
         

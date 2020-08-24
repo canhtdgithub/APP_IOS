@@ -30,7 +30,7 @@ class SettingViewController: UIViewController {
     @IBAction func startTime(_ sender: Any) {
         
         viewPicker.isHidden = false
-        datePicker.backgroundColor = .yellow
+        datePicker.backgroundColor = UIColor(red: 19/255, green: 200/255, blue: 250/255, alpha: 1.0)
         
     }
     

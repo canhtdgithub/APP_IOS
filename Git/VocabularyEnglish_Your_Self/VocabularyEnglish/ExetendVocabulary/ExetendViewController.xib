@@ -11,7 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ExetendViewController" customModule="VocabularyEnglish" customModuleProvider="target">
             <connections>
                 <outlet property="descripTextView" destination="qhh-Zy-LW4" id="A8m-r1-sGx"/>
-                <outlet property="showImages" destination="g9G-9X-7Wd" id="WvC-EO-6L8"/>
+                <outlet property="showImages" destination="g9G-9X-7Wd" id="s5I-wf-Ock"/>
                 <outlet property="textViewContraint" destination="tqx-60-7sL" id="b3K-ER-lyt"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="vocabLabel" destination="7Ar-c4-sSg" id="4w3-bn-dmH"/>
@@ -28,7 +28,7 @@
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ko1-k4-bVr">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                    <color key="backgroundColor" white="1" alpha="0.12989619006849315" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" white="1" alpha="0.28000000000000003" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
                 <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image" translatesAutoresizingMaskIntoConstraints="NO" id="g9G-9X-7Wd">
                     <rect key="frame" x="82" y="56" width="250" height="210"/>
@@ -53,7 +53,7 @@
                         <constraint firstAttribute="height" constant="23" id="1R6-R7-xzx"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                    <color key="textColor" red="0.97181450128103963" green="1" blue="0.053664164479784837" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="qhh-Zy-LW4">
@@ -88,7 +88,7 @@
         </view>
     </objects>
     <resources>
-        <image name="image" width="33.333332061767578" height="33.333332061767578"/>
+        <image name="image" width="256" height="256"/>
         <image name="purple" width="282" height="501.5"/>
     </resources>
 </document>

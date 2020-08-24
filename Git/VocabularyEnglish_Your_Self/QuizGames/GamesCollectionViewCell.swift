@@ -23,6 +23,15 @@ class GamesCollectionViewCell: UICollectionViewCell {
     func config(value: Character) {
         showCharacter.text = String(value)
     }
+//    override var isHighlighted: Bool {
+//        didSet {
+//            if self.isHighlighted {
+//                backgroundColor = .black
+//            } else {
+//                backgroundColor = .gray
+//            }
+//        }
+//    }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)

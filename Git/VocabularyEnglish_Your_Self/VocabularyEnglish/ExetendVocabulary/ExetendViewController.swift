@@ -17,6 +17,7 @@ class ExetendViewController: UIViewController {
     
     @IBOutlet weak var vocabLabel: UILabel!
     
+    
     @IBOutlet weak var showImages: UIImageView!
     
     @IBOutlet weak var descripTextView: UITextView!
@@ -58,8 +59,10 @@ class ExetendViewController: UIViewController {
         notifiShowKeyboard()
         // Any code you put in here will be called when the keyboard is about to hide
         notifiHideKeyboard()
+         
         
-        
+        inserImage()
+       
         layerImage()
         layerDesciption()
         if ModelViewController.shared.isConnectedToNetwork() {
@@ -67,7 +70,7 @@ class ExetendViewController: UIViewController {
             descripTextView.text! = list[cellcount].define
         } else {
         vocabLabel.text = vocabularys![cellcount].vocabulary
-        inserImage()
+            
         ModelExetendViewController.shared.testShowImage(label: vocabLabel, image: showImages)
         
         descripTextView.text! = vocabularys![cellcount].descripVocab
@@ -78,7 +81,7 @@ class ExetendViewController: UIViewController {
     
     func inserImage() {
         let gesture = UITapGestureRecognizer(target: self, action: #selector(didTapImage))
-        showImages.addGestureRecognizer(gesture)
+        self.showImages.addGestureRecognizer(gesture)
     }
     @objc func didTapImage() {
         alertInsertImages()

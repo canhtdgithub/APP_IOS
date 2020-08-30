@@ -23,6 +23,8 @@
 		4E1D696024E77C5B0032B572 /* ModelExetendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1D695F24E77C5B0032B572 /* ModelExetendViewController.swift */; };
 		4E208DE024D2788B0079C277 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E208DDF24D2788B0079C277 /* DatabaseManager.swift */; };
 		4E208DE224D2BF390079C277 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E208DE124D2BF390079C277 /* StorageManager.swift */; };
+		4E2A009124F3945500FC58DC /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2A008F24F3945500FC58DC /* SettingTableViewCell.swift */; };
+		4E2A009224F3945500FC58DC /* SettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E2A009024F3945500FC58DC /* SettingTableViewCell.xib */; };
 		4E305D1424C40A2A0014CCFE /* GamesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E305D1224C40A2A0014CCFE /* GamesCollectionViewCell.swift */; };
 		4E305D1524C40A2A0014CCFE /* GamesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E305D1324C40A2A0014CCFE /* GamesCollectionViewCell.xib */; };
 		4E35325C24BD87CD00415CC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E35325B24BD87CD00415CC9 /* AppDelegate.swift */; };
@@ -91,6 +93,8 @@
 		4E1D695F24E77C5B0032B572 /* ModelExetendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelExetendViewController.swift; sourceTree = "<group>"; };
 		4E208DDF24D2788B0079C277 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		4E208DE124D2BF390079C277 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		4E2A008F24F3945500FC58DC /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
+		4E2A009024F3945500FC58DC /* SettingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingTableViewCell.xib; sourceTree = "<group>"; };
 		4E305D1224C40A2A0014CCFE /* GamesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesCollectionViewCell.swift; sourceTree = "<group>"; };
 		4E305D1324C40A2A0014CCFE /* GamesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GamesCollectionViewCell.xib; sourceTree = "<group>"; };
 		4E35325824BD87CD00415CC9 /* VocabularyEnglish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VocabularyEnglish.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -193,6 +197,15 @@
 				4E109CB324CAE6C0007A509F /* ModelQuizGames.swift */,
 			);
 			path = ModelQuizGames;
+			sourceTree = "<group>";
+		};
+		4E2A008E24F3942700FC58DC /* SettingTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				4E2A008F24F3945500FC58DC /* SettingTableViewCell.swift */,
+				4E2A009024F3945500FC58DC /* SettingTableViewCell.xib */,
+			);
+			path = SettingTableViewCell;
 			sourceTree = "<group>";
 		};
 		4E35324F24BD87CD00415CC9 = {
@@ -340,6 +353,7 @@
 		4EBEE57C24BD8C59007820B4 /* Setting */ = {
 			isa = PBXGroup;
 			children = (
+				4E2A008E24F3942700FC58DC /* SettingTableViewCell */,
 				4E06E56124E7D6B000550708 /* ModelSetting */,
 				4EBEE58324BD95DA007820B4 /* SettingViewController.swift */,
 				4EBEE58424BD95DA007820B4 /* SettingViewController.xib */,
@@ -509,6 +523,7 @@
 				4E9A938424BED2CB00F00F4C /* ExetendViewController.xib in Resources */,
 				4E10A2E924CB126300C0B2AA /* wrong2.gif in Resources */,
 				4E7FBD8F24D1C3B300E73BF6 /* GoogleService-Info.plist in Resources */,
+				4E2A009224F3945500FC58DC /* SettingTableViewCell.xib in Resources */,
 				4E0C1F9B24DCE8B700DA3DE4 /* congratulation4.gif in Resources */,
 				4E305D1524C40A2A0014CCFE /* GamesCollectionViewCell.xib in Resources */,
 				4E35326524BD87D200415CC9 /* Assets.xcassets in Resources */,
@@ -655,6 +670,7 @@
 				4E109CBE24CAF597007A509F /* gif.swift in Sources */,
 				4E9B493224D1197B00BC94C6 /* RegisterViewController.swift in Sources */,
 				4EBEE57F24BD8CAA007820B4 /* GamesViewController.swift in Sources */,
+				4E2A009124F3945500FC58DC /* SettingTableViewCell.swift in Sources */,
 				4ECD670024D91A9700F65ED5 /* SpeakGameViewController.swift in Sources */,
 				4E9A938324BED2CB00F00F4C /* ExetendViewController.swift in Sources */,
 				4E305D1424C40A2A0014CCFE /* GamesCollectionViewCell.swift in Sources */,

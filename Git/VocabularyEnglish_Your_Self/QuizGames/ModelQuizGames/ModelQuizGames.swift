@@ -13,8 +13,6 @@ class ModelQuizGames {
     static let shared = ModelQuizGames()
 //    var editColor = [Bool]()
 //    var tapCount = [Int]()
-   
-    
     
     let imageWrong = ["wrong","wrong1","wrong2"]
       let imageCorrect = ["congratulation", "congratulation1", "congratulation2", "congratulation3", "congratulation4"]
@@ -38,6 +36,17 @@ class ModelQuizGames {
     
     func addCharacter(showAnswer: UILabel,indexPath: IndexPath) {
         showAnswer.text?.append(stringAfterShuffled[indexPath.row])
+    }
+    
+    func settingNavigationBar(viewController: UIViewController) {
+        let naviBar = viewController.navigationController?.navigationBar
+        // bacgroudcolor navigation bar
+        naviBar!.barStyle = .black
+        // tip: clear color navigation bar
+        naviBar!.setBackgroundImage(UIImage(), for: .default)
+        naviBar!.shadowImage = UIImage()
+        // set font and color title
+        naviBar!.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-Light", size: 25)!, NSAttributedString.Key.foregroundColor: UIColor.white]
     }
     
 //

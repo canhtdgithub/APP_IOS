@@ -9,7 +9,9 @@
 import UIKit
 
 
+
 class GamesViewController: UIViewController {
+  
     
     //MARK: - @IBOUTLET
     
@@ -56,12 +58,13 @@ class GamesViewController: UIViewController {
       
       override func viewDidLoad() {
           super.viewDidLoad()
-          navigationItem.title = "Brain Trainig"
+        ModelQuizGames.shared.settingNavigationBar(viewController: self)
+        navigationItem.title = "Brain Training"
           registTable(collectionView: collectionView)
         vocabularys = realm.objects(Vocab.self)
         
         layerSpeakerQuestion.layerButtom(cornerRadius: layerSpeakerQuestion.frame.height / 2,
-                                         borderColor: UIColor.black.cgColor ,
+                                         borderColor: UIColor.gray.cgColor ,
                                          borderWidth: 2)
         viewLayer.layerViews(cornerRadius: 7,
                              borderColor: UIColor.gray.cgColor,

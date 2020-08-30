@@ -8,6 +8,7 @@ target 'VocabularyEnglish' do
   pod 'RealmSwift'
   pod 'InstantSearchVoiceOverlay'
   pod 'IQKeyboardManagerSwift'
+  pod 'lottie-ios'
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
   pod 'Firebase/Database'

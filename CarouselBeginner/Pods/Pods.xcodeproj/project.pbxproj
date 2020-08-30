@@ -1,0 +1,976 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D24E81AA87CDCAC4FB57901DDDE0A61 /* Pods-CarouselBeginner-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8413EF97A137BF90F4657505B3C2508E /* Pods-CarouselBeginner-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		451FFD533287853F01BD7D6E3908DE8E /* iCarousel.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E564CB0369451A26BCF85C69A8373E9 /* iCarousel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		532113AD31AF833FEC3B85153A89FEAC /* Pods-CarouselBeginnerTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 08C6466EFEEF631296E7ABB126708977 /* Pods-CarouselBeginnerTests-dummy.m */; };
+		5E4C2A42908C2EA5B5F759646F72FB80 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB7D01ADEDD1776E999C158FA646656 /* iCarousel.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		61B1439FCE16A376A3F70E8249E2B609 /* Pods-CarouselBeginner-CarouselBeginnerUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4D8E93DFE4ECF6A1526704A5259296 /* Pods-CarouselBeginner-CarouselBeginnerUITests-dummy.m */; };
+		6706344C8052CC3D95BA6848CFA1327B /* Pods-CarouselBeginner-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 224C225F5112DAC50805ECF17E2B558E /* Pods-CarouselBeginner-dummy.m */; };
+		7207C54684E51FF4AEE6558A915AF5C3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB0F1732A2D4DBA41714F9E205837D34 /* Foundation.framework */; };
+		84ADDD465CB79E72C6DA896DA17AE93A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB6193BDF9256B1B2DC71E7CF8BFFB3D /* QuartzCore.framework */; };
+		8C42431CDCC587FEFD994A6CFDA6396B /* iCarousel-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 62D7D9237A3C380568000DCB51C2E42C /* iCarousel-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8D0F822D9BEC616537980B7039A01F2D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB0F1732A2D4DBA41714F9E205837D34 /* Foundation.framework */; };
+		8E65720E0DBA54A1530C1B6DE4098ED0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB0F1732A2D4DBA41714F9E205837D34 /* Foundation.framework */; };
+		9E63F9C0F14AF9E64470F10B66ABC207 /* iCarousel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BDD82BBE1B02D7FB2C31BD37672A2D2 /* iCarousel-dummy.m */; };
+		D79B3494459A723E4B68757562D238D9 /* Pods-CarouselBeginnerTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DC72CEA2FAAF6767EBB79EA4A107EDBE /* Pods-CarouselBeginnerTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DBBBA0E22C3ADF160C13EB666D527B6B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB0F1732A2D4DBA41714F9E205837D34 /* Foundation.framework */; };
+		EBA027AE23686FBD36D9D11B36CBE20A /* Pods-CarouselBeginner-CarouselBeginnerUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BFDDE86124770A84AE66A59598C2F7D /* Pods-CarouselBeginner-CarouselBeginnerUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		40F5969F78E8668959999DB38B092DC4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 548E0F26A10990707D8D4870D2490ACC;
+			remoteInfo = iCarousel;
+		};
+		4653B5DAC02D0197EB34682345F368CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A1DBF7DF00D0FFA1ACD71577757E9F42;
+			remoteInfo = "Pods-CarouselBeginner";
+		};
+		989568C7BE8CF1822896DF43E2788F22 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 548E0F26A10990707D8D4870D2490ACC;
+			remoteInfo = iCarousel;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		08C6466EFEEF631296E7ABB126708977 /* Pods-CarouselBeginnerTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CarouselBeginnerTests-dummy.m"; sourceTree = "<group>"; };
+		224C225F5112DAC50805ECF17E2B558E /* Pods-CarouselBeginner-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CarouselBeginner-dummy.m"; sourceTree = "<group>"; };
+		2D2825C432A78F57612C02BF2F737692 /* Pods-CarouselBeginner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CarouselBeginner.release.xcconfig"; sourceTree = "<group>"; };
+		340568DE275A7256267EC77826043A1D /* Pods-CarouselBeginner.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CarouselBeginner.modulemap"; sourceTree = "<group>"; };
+		390CD91F08CEBBB2EB591BC15231FCD6 /* iCarousel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = iCarousel.release.xcconfig; sourceTree = "<group>"; };
+		3C04FE44246B5FE1778A1F27C405A6C8 /* Pods-CarouselBeginner-CarouselBeginnerUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CarouselBeginner-CarouselBeginnerUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		4116B48A5404B38AAAAB7D32D219786E /* Pods-CarouselBeginner-CarouselBeginnerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CarouselBeginner-CarouselBeginnerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4356ADD394D8B31E17437EE98B83D45C /* Pods-CarouselBeginnerTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CarouselBeginnerTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		4BDD82BBE1B02D7FB2C31BD37672A2D2 /* iCarousel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "iCarousel-dummy.m"; sourceTree = "<group>"; };
+		5B5CCA27473AB32D1BDE665297D823D6 /* Pods-CarouselBeginner-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CarouselBeginner-acknowledgements.markdown"; sourceTree = "<group>"; };
+		5E564CB0369451A26BCF85C69A8373E9 /* iCarousel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = iCarousel.h; path = iCarousel/iCarousel.h; sourceTree = "<group>"; };
+		609145917E5A2F1E606EB4E9C364DB73 /* Pods-CarouselBeginnerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CarouselBeginnerTests.release.xcconfig"; sourceTree = "<group>"; };
+		62D7D9237A3C380568000DCB51C2E42C /* iCarousel-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "iCarousel-umbrella.h"; sourceTree = "<group>"; };
+		669F4AB8BB25C73E6FF3F4233AC46CDC /* iCarousel.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = iCarousel.modulemap; sourceTree = "<group>"; };
+		7A4C3BDF6EAA829FADD6605C49A81AFC /* Pods-CarouselBeginnerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CarouselBeginnerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7C8434D406BF08D9FEB6F8226163D1F1 /* Pods-CarouselBeginner-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CarouselBeginner-acknowledgements.plist"; sourceTree = "<group>"; };
+		8413EF97A137BF90F4657505B3C2508E /* Pods-CarouselBeginner-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CarouselBeginner-umbrella.h"; sourceTree = "<group>"; };
+		8A168B745CD96EF8AB43FD54B20947A4 /* Pods_CarouselBeginnerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CarouselBeginnerTests.framework; path = "Pods-CarouselBeginnerTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A6CACADC1498F3B5B1FE652BB160AEF /* Pods-CarouselBeginner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CarouselBeginner.debug.xcconfig"; sourceTree = "<group>"; };
+		8B4D8E93DFE4ECF6A1526704A5259296 /* Pods-CarouselBeginner-CarouselBeginnerUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CarouselBeginner-CarouselBeginnerUITests-dummy.m"; sourceTree = "<group>"; };
+		8BFDDE86124770A84AE66A59598C2F7D /* Pods-CarouselBeginner-CarouselBeginnerUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CarouselBeginner-CarouselBeginnerUITests-umbrella.h"; sourceTree = "<group>"; };
+		8E673FBA63996C9B9141754074E38522 /* Pods-CarouselBeginner-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CarouselBeginner-Info.plist"; sourceTree = "<group>"; };
+		99A18ED0549EABE9302D9493CDC4E031 /* Pods-CarouselBeginner-CarouselBeginnerUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CarouselBeginner-CarouselBeginnerUITests-frameworks.sh"; sourceTree = "<group>"; };
+		9B091CC7FE89BCFE1A4BE0FA270369CB /* iCarousel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "iCarousel-prefix.pch"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A34BA91A997E4EF6834CF15E69C61274 /* Pods-CarouselBeginner-CarouselBeginnerUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CarouselBeginner-CarouselBeginnerUITests.modulemap"; sourceTree = "<group>"; };
+		ACB7D01ADEDD1776E999C158FA646656 /* iCarousel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = iCarousel.m; path = iCarousel/iCarousel.m; sourceTree = "<group>"; };
+		AE5145D7234C78739128D6C5C4CE4ADD /* iCarousel-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "iCarousel-Info.plist"; sourceTree = "<group>"; };
+		B23863D4079173256A8EADBCAD53D859 /* Pods_CarouselBeginner_CarouselBeginnerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CarouselBeginner_CarouselBeginnerUITests.framework; path = "Pods-CarouselBeginner-CarouselBeginnerUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B51B06E8EAD6353A7945655BA61BC109 /* Pods-CarouselBeginner-CarouselBeginnerUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CarouselBeginner-CarouselBeginnerUITests-Info.plist"; sourceTree = "<group>"; };
+		BA8AF8BCC5D1411D81F4339B36368CB3 /* Pods-CarouselBeginner-CarouselBeginnerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CarouselBeginner-CarouselBeginnerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		BBC1EC9C8A0083F45A8E53F58464B9EC /* Pods-CarouselBeginnerTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CarouselBeginnerTests.modulemap"; sourceTree = "<group>"; };
+		C7FF0445F0B14F439CFA1451FD91096C /* iCarousel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = iCarousel.debug.xcconfig; sourceTree = "<group>"; };
+		C8217EB109A6A34051F09192C29B676F /* iCarousel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = iCarousel.framework; path = iCarousel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB6193BDF9256B1B2DC71E7CF8BFFB3D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		D2C87E361A6965C52D2BCF8FF137730F /* Pods_CarouselBeginner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CarouselBeginner.framework; path = "Pods-CarouselBeginner.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC72CEA2FAAF6767EBB79EA4A107EDBE /* Pods-CarouselBeginnerTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CarouselBeginnerTests-umbrella.h"; sourceTree = "<group>"; };
+		E4CA1D3E39F76F154E848AA10D50E77A /* Pods-CarouselBeginner-CarouselBeginnerUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CarouselBeginner-CarouselBeginnerUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		E4E17746D5539C37D1A9392658B26975 /* Pods-CarouselBeginner-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CarouselBeginner-frameworks.sh"; sourceTree = "<group>"; };
+		EA5FD36A5D55D59FA5B416C7C6FDB02E /* Pods-CarouselBeginnerTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CarouselBeginnerTests-Info.plist"; sourceTree = "<group>"; };
+		EB0F1732A2D4DBA41714F9E205837D34 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		EFDFAC4044759B4D4ECFD14817C70DBD /* Pods-CarouselBeginnerTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CarouselBeginnerTests-acknowledgements.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		48763E9631D940D2A408CBA39B0BB65E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBBBA0E22C3ADF160C13EB666D527B6B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		787C8A9C5816E9015181428B3882CD9E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7207C54684E51FF4AEE6558A915AF5C3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E80799964AE5A87DC5C1BAF6F942573F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E65720E0DBA54A1530C1B6DE4098ED0 /* Foundation.framework in Frameworks */,
+				84ADDD465CB79E72C6DA896DA17AE93A /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F02AB6063E7045CF6B6E05369D7EE932 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D0F822D9BEC616537980B7039A01F2D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		07E70D84E514ECEF6E27B24F55049831 /* Pods-CarouselBeginner */ = {
+			isa = PBXGroup;
+			children = (
+				340568DE275A7256267EC77826043A1D /* Pods-CarouselBeginner.modulemap */,
+				5B5CCA27473AB32D1BDE665297D823D6 /* Pods-CarouselBeginner-acknowledgements.markdown */,
+				7C8434D406BF08D9FEB6F8226163D1F1 /* Pods-CarouselBeginner-acknowledgements.plist */,
+				224C225F5112DAC50805ECF17E2B558E /* Pods-CarouselBeginner-dummy.m */,
+				E4E17746D5539C37D1A9392658B26975 /* Pods-CarouselBeginner-frameworks.sh */,
+				8E673FBA63996C9B9141754074E38522 /* Pods-CarouselBeginner-Info.plist */,
+				8413EF97A137BF90F4657505B3C2508E /* Pods-CarouselBeginner-umbrella.h */,
+				8A6CACADC1498F3B5B1FE652BB160AEF /* Pods-CarouselBeginner.debug.xcconfig */,
+				2D2825C432A78F57612C02BF2F737692 /* Pods-CarouselBeginner.release.xcconfig */,
+			);
+			name = "Pods-CarouselBeginner";
+			path = "Target Support Files/Pods-CarouselBeginner";
+			sourceTree = "<group>";
+		};
+		1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6C850C37433B9EAF70AA8EF4EC21FC43 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6C850C37433B9EAF70AA8EF4EC21FC43 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				EB0F1732A2D4DBA41714F9E205837D34 /* Foundation.framework */,
+				CB6193BDF9256B1B2DC71E7CF8BFFB3D /* QuartzCore.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		739EE7C1289C0FC5EA5172EA267B143A /* Pods-CarouselBeginner-CarouselBeginnerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A34BA91A997E4EF6834CF15E69C61274 /* Pods-CarouselBeginner-CarouselBeginnerUITests.modulemap */,
+				3C04FE44246B5FE1778A1F27C405A6C8 /* Pods-CarouselBeginner-CarouselBeginnerUITests-acknowledgements.markdown */,
+				E4CA1D3E39F76F154E848AA10D50E77A /* Pods-CarouselBeginner-CarouselBeginnerUITests-acknowledgements.plist */,
+				8B4D8E93DFE4ECF6A1526704A5259296 /* Pods-CarouselBeginner-CarouselBeginnerUITests-dummy.m */,
+				99A18ED0549EABE9302D9493CDC4E031 /* Pods-CarouselBeginner-CarouselBeginnerUITests-frameworks.sh */,
+				B51B06E8EAD6353A7945655BA61BC109 /* Pods-CarouselBeginner-CarouselBeginnerUITests-Info.plist */,
+				8BFDDE86124770A84AE66A59598C2F7D /* Pods-CarouselBeginner-CarouselBeginnerUITests-umbrella.h */,
+				BA8AF8BCC5D1411D81F4339B36368CB3 /* Pods-CarouselBeginner-CarouselBeginnerUITests.debug.xcconfig */,
+				4116B48A5404B38AAAAB7D32D219786E /* Pods-CarouselBeginner-CarouselBeginnerUITests.release.xcconfig */,
+			);
+			name = "Pods-CarouselBeginner-CarouselBeginnerUITests";
+			path = "Target Support Files/Pods-CarouselBeginner-CarouselBeginnerUITests";
+			sourceTree = "<group>";
+		};
+		7F8EC292AF1A2C22661A2CFB6F5963F5 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				07E70D84E514ECEF6E27B24F55049831 /* Pods-CarouselBeginner */,
+				739EE7C1289C0FC5EA5172EA267B143A /* Pods-CarouselBeginner-CarouselBeginnerUITests */,
+				F04E25A4E89B2552814428A6F3627F01 /* Pods-CarouselBeginnerTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		A13DFE3502851A703984AF642F20C6CE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C8217EB109A6A34051F09192C29B676F /* iCarousel.framework */,
+				D2C87E361A6965C52D2BCF8FF137730F /* Pods_CarouselBeginner.framework */,
+				B23863D4079173256A8EADBCAD53D859 /* Pods_CarouselBeginner_CarouselBeginnerUITests.framework */,
+				8A168B745CD96EF8AB43FD54B20947A4 /* Pods_CarouselBeginnerTests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
+				ED2AD11940207C53D20D5B7EFE14961D /* Pods */,
+				A13DFE3502851A703984AF642F20C6CE /* Products */,
+				7F8EC292AF1A2C22661A2CFB6F5963F5 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		E091E4137FF739E0BC8C50B03E5646A0 /* iCarousel */ = {
+			isa = PBXGroup;
+			children = (
+				5E564CB0369451A26BCF85C69A8373E9 /* iCarousel.h */,
+				ACB7D01ADEDD1776E999C158FA646656 /* iCarousel.m */,
+				F2F971C9940EF076917CAB6BBC9D185A /* Support Files */,
+			);
+			name = iCarousel;
+			path = iCarousel;
+			sourceTree = "<group>";
+		};
+		ED2AD11940207C53D20D5B7EFE14961D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E091E4137FF739E0BC8C50B03E5646A0 /* iCarousel */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F04E25A4E89B2552814428A6F3627F01 /* Pods-CarouselBeginnerTests */ = {
+			isa = PBXGroup;
+			children = (
+				BBC1EC9C8A0083F45A8E53F58464B9EC /* Pods-CarouselBeginnerTests.modulemap */,
+				4356ADD394D8B31E17437EE98B83D45C /* Pods-CarouselBeginnerTests-acknowledgements.markdown */,
+				EFDFAC4044759B4D4ECFD14817C70DBD /* Pods-CarouselBeginnerTests-acknowledgements.plist */,
+				08C6466EFEEF631296E7ABB126708977 /* Pods-CarouselBeginnerTests-dummy.m */,
+				EA5FD36A5D55D59FA5B416C7C6FDB02E /* Pods-CarouselBeginnerTests-Info.plist */,
+				DC72CEA2FAAF6767EBB79EA4A107EDBE /* Pods-CarouselBeginnerTests-umbrella.h */,
+				7A4C3BDF6EAA829FADD6605C49A81AFC /* Pods-CarouselBeginnerTests.debug.xcconfig */,
+				609145917E5A2F1E606EB4E9C364DB73 /* Pods-CarouselBeginnerTests.release.xcconfig */,
+			);
+			name = "Pods-CarouselBeginnerTests";
+			path = "Target Support Files/Pods-CarouselBeginnerTests";
+			sourceTree = "<group>";
+		};
+		F2F971C9940EF076917CAB6BBC9D185A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				669F4AB8BB25C73E6FF3F4233AC46CDC /* iCarousel.modulemap */,
+				4BDD82BBE1B02D7FB2C31BD37672A2D2 /* iCarousel-dummy.m */,
+				AE5145D7234C78739128D6C5C4CE4ADD /* iCarousel-Info.plist */,
+				9B091CC7FE89BCFE1A4BE0FA270369CB /* iCarousel-prefix.pch */,
+				62D7D9237A3C380568000DCB51C2E42C /* iCarousel-umbrella.h */,
+				C7FF0445F0B14F439CFA1451FD91096C /* iCarousel.debug.xcconfig */,
+				390CD91F08CEBBB2EB591BC15231FCD6 /* iCarousel.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/iCarousel";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		3E0BD965881EA72DD0039C741DECF31D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D79B3494459A723E4B68757562D238D9 /* Pods-CarouselBeginnerTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55FC2FC25480F68A249DD790A0786E9D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D24E81AA87CDCAC4FB57901DDDE0A61 /* Pods-CarouselBeginner-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6416606083410EF9B342B065E71CA40E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C42431CDCC587FEFD994A6CFDA6396B /* iCarousel-umbrella.h in Headers */,
+				451FFD533287853F01BD7D6E3908DE8E /* iCarousel.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA6EC780DBB057B9F5AE26C41824A46E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBA027AE23686FBD36D9D11B36CBE20A /* Pods-CarouselBeginner-CarouselBeginnerUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0725870703BAF0243DD51E23864EA207 /* Pods-CarouselBeginnerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D594C0C66EE929FED156775C3442366 /* Build configuration list for PBXNativeTarget "Pods-CarouselBeginnerTests" */;
+			buildPhases = (
+				3E0BD965881EA72DD0039C741DECF31D /* Headers */,
+				AE26D00B136E723140426B7543FC32FE /* Sources */,
+				F02AB6063E7045CF6B6E05369D7EE932 /* Frameworks */,
+				BE97D7A1E3846970B678DEE6AB05829B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				25B2809EDCD0F7389E1DACA852075D61 /* PBXTargetDependency */,
+			);
+			name = "Pods-CarouselBeginnerTests";
+			productName = "Pods-CarouselBeginnerTests";
+			productReference = 8A168B745CD96EF8AB43FD54B20947A4 /* Pods_CarouselBeginnerTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		548E0F26A10990707D8D4870D2490ACC /* iCarousel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A464634D0732B47E0FDD0B02B322182B /* Build configuration list for PBXNativeTarget "iCarousel" */;
+			buildPhases = (
+				6416606083410EF9B342B065E71CA40E /* Headers */,
+				8B35506D347717001114F114BE3AF9CF /* Sources */,
+				E80799964AE5A87DC5C1BAF6F942573F /* Frameworks */,
+				CFB0A3FEBB55B426BCADF1575FDD669E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iCarousel;
+			productName = iCarousel;
+			productReference = C8217EB109A6A34051F09192C29B676F /* iCarousel.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A1DBF7DF00D0FFA1ACD71577757E9F42 /* Pods-CarouselBeginner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 494C72CF1F6D3C5CD1AE228C17E29383 /* Build configuration list for PBXNativeTarget "Pods-CarouselBeginner" */;
+			buildPhases = (
+				55FC2FC25480F68A249DD790A0786E9D /* Headers */,
+				B28C0D7472F32197B04F81F8C429598F /* Sources */,
+				48763E9631D940D2A408CBA39B0BB65E /* Frameworks */,
+				149C7F02B64414E758C09A7E78E888A9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7338CFFDC86C6852B621BBD4DEA4A22E /* PBXTargetDependency */,
+			);
+			name = "Pods-CarouselBeginner";
+			productName = "Pods-CarouselBeginner";
+			productReference = D2C87E361A6965C52D2BCF8FF137730F /* Pods_CarouselBeginner.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E359AD3FEA363B2DB90908817E1F4E4D /* Pods-CarouselBeginner-CarouselBeginnerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A800644D7EDC784E89E55F48F72DA14E /* Build configuration list for PBXNativeTarget "Pods-CarouselBeginner-CarouselBeginnerUITests" */;
+			buildPhases = (
+				CA6EC780DBB057B9F5AE26C41824A46E /* Headers */,
+				4F0D54D499E96E9C461821848E8FBA71 /* Sources */,
+				787C8A9C5816E9015181428B3882CD9E /* Frameworks */,
+				6C950825EC261FCF85F3089F3D6CDA7B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C19A779C4ED254B3B6BD3A25EDCC99C1 /* PBXTargetDependency */,
+			);
+			name = "Pods-CarouselBeginner-CarouselBeginnerUITests";
+			productName = "Pods-CarouselBeginner-CarouselBeginnerUITests";
+			productReference = B23863D4079173256A8EADBCAD53D859 /* Pods_CarouselBeginner_CarouselBeginnerUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = A13DFE3502851A703984AF642F20C6CE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				548E0F26A10990707D8D4870D2490ACC /* iCarousel */,
+				A1DBF7DF00D0FFA1ACD71577757E9F42 /* Pods-CarouselBeginner */,
+				E359AD3FEA363B2DB90908817E1F4E4D /* Pods-CarouselBeginner-CarouselBeginnerUITests */,
+				0725870703BAF0243DD51E23864EA207 /* Pods-CarouselBeginnerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		149C7F02B64414E758C09A7E78E888A9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C950825EC261FCF85F3089F3D6CDA7B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE97D7A1E3846970B678DEE6AB05829B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFB0A3FEBB55B426BCADF1575FDD669E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4F0D54D499E96E9C461821848E8FBA71 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61B1439FCE16A376A3F70E8249E2B609 /* Pods-CarouselBeginner-CarouselBeginnerUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B35506D347717001114F114BE3AF9CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E63F9C0F14AF9E64470F10B66ABC207 /* iCarousel-dummy.m in Sources */,
+				5E4C2A42908C2EA5B5F759646F72FB80 /* iCarousel.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE26D00B136E723140426B7543FC32FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				532113AD31AF833FEC3B85153A89FEAC /* Pods-CarouselBeginnerTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B28C0D7472F32197B04F81F8C429598F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6706344C8052CC3D95BA6848CFA1327B /* Pods-CarouselBeginner-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		25B2809EDCD0F7389E1DACA852075D61 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-CarouselBeginner";
+			target = A1DBF7DF00D0FFA1ACD71577757E9F42 /* Pods-CarouselBeginner */;
+			targetProxy = 4653B5DAC02D0197EB34682345F368CE /* PBXContainerItemProxy */;
+		};
+		7338CFFDC86C6852B621BBD4DEA4A22E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = iCarousel;
+			target = 548E0F26A10990707D8D4870D2490ACC /* iCarousel */;
+			targetProxy = 40F5969F78E8668959999DB38B092DC4 /* PBXContainerItemProxy */;
+		};
+		C19A779C4ED254B3B6BD3A25EDCC99C1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = iCarousel;
+			target = 548E0F26A10990707D8D4870D2490ACC /* iCarousel */;
+			targetProxy = 989568C7BE8CF1822896DF43E2788F22 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		13C3F5195603C26F83D7265AC0D03626 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4116B48A5404B38AAAAB7D32D219786E /* Pods-CarouselBeginner-CarouselBeginnerUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-CarouselBeginner-CarouselBeginnerUITests/Pods-CarouselBeginner-CarouselBeginnerUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CarouselBeginner-CarouselBeginnerUITests/Pods-CarouselBeginner-CarouselBeginnerUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		1DC501D437C6FFCA37EDC415FFEF0E3E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C7FF0445F0B14F439CFA1451FD91096C /* iCarousel.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/iCarousel/iCarousel-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/iCarousel/iCarousel-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/iCarousel/iCarousel.modulemap";
+				PRODUCT_MODULE_NAME = iCarousel;
+				PRODUCT_NAME = iCarousel;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		326DFFB1912F8DBE363E23012C886FD5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 390CD91F08CEBBB2EB591BC15231FCD6 /* iCarousel.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/iCarousel/iCarousel-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/iCarousel/iCarousel-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/iCarousel/iCarousel.modulemap";
+				PRODUCT_MODULE_NAME = iCarousel;
+				PRODUCT_NAME = iCarousel;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		67DA717F1478DF8AE97F0141A792EAD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA8AF8BCC5D1411D81F4339B36368CB3 /* Pods-CarouselBeginner-CarouselBeginnerUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-CarouselBeginner-CarouselBeginnerUITests/Pods-CarouselBeginner-CarouselBeginnerUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CarouselBeginner-CarouselBeginnerUITests/Pods-CarouselBeginner-CarouselBeginnerUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		94DD9F18F304A4506A2AB1E592EB9DCF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A6CACADC1498F3B5B1FE652BB160AEF /* Pods-CarouselBeginner.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-CarouselBeginner/Pods-CarouselBeginner-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CarouselBeginner/Pods-CarouselBeginner.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A04EB752C5C4E94AACC8EAE1CA8F6156 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A4C3BDF6EAA829FADD6605C49A81AFC /* Pods-CarouselBeginnerTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-CarouselBeginnerTests/Pods-CarouselBeginnerTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CarouselBeginnerTests/Pods-CarouselBeginnerTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		DAC94DC292AD1BA7A8B8496AD33E81E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D2825C432A78F57612C02BF2F737692 /* Pods-CarouselBeginner.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-CarouselBeginner/Pods-CarouselBeginner-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CarouselBeginner/Pods-CarouselBeginner.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		DFD9D19FEEBF98DE271D7FBABCB845B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		F5F04600F5626DC980F02790D1ED2C19 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		F72876E7BF71500A9781A4C930AA7925 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 609145917E5A2F1E606EB4E9C364DB73 /* Pods-CarouselBeginnerTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-CarouselBeginnerTests/Pods-CarouselBeginnerTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CarouselBeginnerTests/Pods-CarouselBeginnerTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3D594C0C66EE929FED156775C3442366 /* Build configuration list for PBXNativeTarget "Pods-CarouselBeginnerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A04EB752C5C4E94AACC8EAE1CA8F6156 /* Debug */,
+				F72876E7BF71500A9781A4C930AA7925 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DFD9D19FEEBF98DE271D7FBABCB845B5 /* Debug */,
+				F5F04600F5626DC980F02790D1ED2C19 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		494C72CF1F6D3C5CD1AE228C17E29383 /* Build configuration list for PBXNativeTarget "Pods-CarouselBeginner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				94DD9F18F304A4506A2AB1E592EB9DCF /* Debug */,
+				DAC94DC292AD1BA7A8B8496AD33E81E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A464634D0732B47E0FDD0B02B322182B /* Build configuration list for PBXNativeTarget "iCarousel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DC501D437C6FFCA37EDC415FFEF0E3E /* Debug */,
+				326DFFB1912F8DBE363E23012C886FD5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A800644D7EDC784E89E55F48F72DA14E /* Build configuration list for PBXNativeTarget "Pods-CarouselBeginner-CarouselBeginnerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67DA717F1478DF8AE97F0141A792EAD4 /* Debug */,
+				13C3F5195603C26F83D7265AC0D03626 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

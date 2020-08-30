@@ -6,14 +6,14 @@
 //  Copyright © 2020 Cata. All rights reserved.
 //
 
-import Foundation
 import UIKit
+
 
 class ModelSetting {
     static let shared = ModelSetting()
     let defaults = UserDefaults.standard
     var arrayBool = [true, true, true, true, true, true, true]
-    
+    var list = [ListItems]()
     func testReminder(tick: UIButton) {
         if tick.isHidden {
             
@@ -27,6 +27,13 @@ class ModelSetting {
             tick.isHidden = true
             defaults.set(true, forKey: "show")
         }
+    }
+    
+    func addItem() {
+        list.append(ListItems(image: UIImage(named: "feedback")!,
+                              name: "Feedback App"))
+        list.append(ListItems(image: UIImage(named: "star")!,
+                              name: "5 Star Raiting"))
     }
     
     
@@ -136,4 +143,17 @@ class ModelSetting {
         UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
     }
     
+    func settingNavigationBar(viewController: UIViewController) {
+        let naviBar = viewController.navigationController?.navigationBar
+        // bacgroudcolor navigation bar
+        naviBar!.barStyle = .black
+        // set font title
+        naviBar!.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-Light", size: 25)!, NSAttributedString.Key.foregroundColor: UIColor.white]
+    }
+    
+}
+
+struct ListItems {
+    var image: UIImage
+    var name: String
 }

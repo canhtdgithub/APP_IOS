@@ -12,6 +12,7 @@
             <connections>
                 <outlet property="datePicker" destination="uOS-hP-YX5" id="KEm-LZ-4t2"/>
                 <outlet property="startLabel" destination="ygn-HA-oD5" id="ghp-Ro-7pz"/>
+                <outlet property="table" destination="e92-pV-PeV" id="Ep1-LV-ocU"/>
                 <outlet property="tapSettingSwitch" destination="MwX-Df-ayB" id="PqV-ZT-ulJ"/>
                 <outlet property="tick" destination="qtR-mf-2hQ" id="1fz-d5-UnK"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -30,6 +31,10 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="249" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="e92-pV-PeV">
+                    <rect key="frame" x="5" y="256.66666666666669" width="365" height="521.33333333333326"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </tableView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AEG-gK-4KF">
                     <rect key="frame" x="5" y="49" width="365" height="50"/>
                     <subviews>
@@ -83,7 +88,7 @@
                             <constraints>
                                 <constraint firstAttribute="height" constant="36" id="off-Bi-PgV"/>
                             </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                             <state key="normal" title="  Reminder learning vocabulary " image="clock1">
                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
@@ -97,6 +102,7 @@
                                 <constraint firstAttribute="height" constant="36" id="ciI-JY-9Ol"/>
                                 <constraint firstAttribute="width" constant="354" id="wke-X2-JOf"/>
                             </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
                             <state key="normal" title="Start Time">
                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
@@ -110,13 +116,13 @@
                                 <constraint firstAttribute="height" constant="36" id="cCf-nB-IlF"/>
                                 <constraint firstAttribute="width" constant="354" id="kNV-dc-Wjs"/>
                             </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="07:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ygn-HA-oD5">
-                            <rect key="frame" x="302.66666666666669" y="43.666666666666657" width="54.333333333333314" height="23"/>
-                            <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                            <rect key="frame" x="308.33333333333331" y="45" width="48.666666666666686" height="20.333333333333329"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
@@ -281,7 +287,7 @@
                             </constraints>
                         </datePicker>
                     </subviews>
-                    <color key="backgroundColor" white="1" alpha="0.4415935359589041" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.3105736301369863" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="uOS-hP-YX5" firstAttribute="centerY" secondItem="d9f-aN-tUH" secondAttribute="centerY" id="BOt-JH-3J2"/>
                         <constraint firstItem="uOS-hP-YX5" firstAttribute="centerX" secondItem="d9f-aN-tUH" secondAttribute="centerX" id="Fyv-6C-2u9"/>
@@ -292,11 +298,15 @@
             <constraints>
                 <constraint firstItem="AEG-gK-4KF" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="5" id="AfQ-bW-RMd"/>
                 <constraint firstItem="d9f-aN-tUH" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="BRc-lf-Xz8"/>
+                <constraint firstItem="e92-pV-PeV" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="5" id="DHs-Cl-dbS"/>
+                <constraint firstItem="e92-pV-PeV" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="Dkr-Bb-QBe"/>
                 <constraint firstAttribute="bottom" secondItem="d9f-aN-tUH" secondAttribute="bottom" id="I1A-DE-2of"/>
+                <constraint firstItem="e92-pV-PeV" firstAttribute="top" secondItem="5lj-FF-4DI" secondAttribute="bottom" constant="2.5" id="JBx-Rp-3oL"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="5lj-FF-4DI" secondAttribute="trailing" constant="5" id="N8D-4i-ZCr"/>
                 <constraint firstItem="AEG-gK-4KF" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="5" id="Xil-5A-52y"/>
                 <constraint firstItem="5lj-FF-4DI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="5" id="ZdP-AF-oNR"/>
                 <constraint firstItem="d9f-aN-tUH" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="bqr-ZY-yhd"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="e92-pV-PeV" secondAttribute="trailing" constant="5" id="i5Q-SP-qnn"/>
                 <constraint firstItem="d9f-aN-tUH" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ksb-kj-aFh"/>
                 <constraint firstItem="5lj-FF-4DI" firstAttribute="top" secondItem="AEG-gK-4KF" secondAttribute="bottom" constant="5" id="nI1-r1-UIf"/>
                 <constraint firstItem="AEG-gK-4KF" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" constant="-5" id="pea-Cm-b6W"/>
@@ -308,7 +318,7 @@
         </view>
     </objects>
     <resources>
-        <image name="checkmark" width="96" height="96"/>
+        <image name="checkmark" width="48" height="48"/>
         <image name="clock1" width="26.666666030883789" height="26.666666030883789"/>
         <image name="square" width="25" height="25"/>
     </resources>

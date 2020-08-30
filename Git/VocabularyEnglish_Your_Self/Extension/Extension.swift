@@ -6,7 +6,6 @@
 //  Copyright © 2020 Cata. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 extension UIButton {
@@ -63,4 +62,6 @@ extension UICollectionViewCell {
     }
 
 }
+
+
 

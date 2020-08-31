@@ -9,7 +9,8 @@
 import UIKit
 
 class MyView: UIView {
-
+    
    
-
+    @IBOutlet weak var nameLabel: UILabel!
+    
 }

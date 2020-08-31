@@ -10,28 +10,13 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController" customModule="CarouselBeginner" customModuleProvider="target">
             <connections>
                 <outlet property="view" destination="iN0-l3-epB" id="a16-Rq-squ"/>
-                <outlet property="viewImage" destination="Jzl-GD-ER1" id="mOt-mY-Klc"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jzl-GD-ER1" customClass="iCarousel">
-                    <rect key="frame" x="82" y="348" width="250" height="200"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="200" id="qS1-Rs-Bhl"/>
-                        <constraint firstAttribute="width" constant="250" id="us4-aQ-QUd"/>
-                    </constraints>
-                </view>
-            </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-            <constraints>
-                <constraint firstItem="Jzl-GD-ER1" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="E0z-VM-opf"/>
-                <constraint firstItem="Jzl-GD-ER1" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Lnf-0i-keh"/>
-            </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="139" y="120"/>
         </view>

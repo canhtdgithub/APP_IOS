@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController" customModule="COVERT_700_TOEIC_TXT" customModuleProvider="target">
+            <connections>
+                <outlet property="thuLabel" destination="1Lf-Mz-Wzl" id="f2d-rT-eGU"/>
+                <outlet property="view" destination="iN0-l3-epB" id="rgB-WR-CDa"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KIU-4d-l9l">
+                    <rect key="frame" x="148" y="54" width="118" height="30"/>
+                    <state key="normal" title="CONVERT TOEIC"/>
+                    <connections>
+                        <action selector="convert:" destination="-1" eventType="touchUpInside" id="e3J-dG-nja"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JGi-Ga-rNy">
+                    <rect key="frame" x="125.5" y="94" width="163" height="30"/>
+                    <state key="normal" title="CONVERT DICTIONARY"/>
+                    <connections>
+                        <action selector="convertDictionaryCopy:" destination="-1" eventType="touchUpInside" id="LeZ-JW-E7u"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Lf-Mz-Wzl">
+                    <rect key="frame" x="20" y="204" width="374" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SmO-hY-Gtt">
+                    <rect key="frame" x="177.5" y="144" width="59" height="30"/>
+                    <state key="normal" title="SEARCH"/>
+                    <connections>
+                        <action selector="convertDictionaryCopy:" destination="-1" eventType="touchUpInside" id="jag-k7-PK3"/>
+                        <action selector="search:" destination="-1" eventType="touchUpInside" id="bD1-LH-q8g"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="1Lf-Mz-Wzl" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="2LK-Ld-3xC"/>
+                <constraint firstItem="1Lf-Mz-Wzl" firstAttribute="top" secondItem="JGi-Ga-rNy" secondAttribute="bottom" constant="80" id="9xC-Y0-0Cb"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="1Lf-Mz-Wzl" secondAttribute="trailing" constant="20" id="Grl-7Y-Urh"/>
+                <constraint firstItem="JGi-Ga-rNy" firstAttribute="top" secondItem="KIU-4d-l9l" secondAttribute="bottom" constant="10" id="NbA-5c-oxu"/>
+                <constraint firstItem="JGi-Ga-rNy" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="THi-7e-z0K"/>
+                <constraint firstItem="KIU-4d-l9l" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="f3s-3w-Nli"/>
+                <constraint firstItem="KIU-4d-l9l" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="kiw-MA-K3z"/>
+                <constraint firstItem="SmO-hY-Gtt" firstAttribute="top" secondItem="JGi-Ga-rNy" secondAttribute="bottom" constant="20" id="x06-T4-987"/>
+                <constraint firstItem="SmO-hY-Gtt" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="yrQ-hy-CSh"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="123" y="83"/>
+        </view>
+    </objects>
+</document>

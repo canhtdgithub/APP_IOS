@@ -16,16 +16,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HAz-6c-3C4">
-                                <rect key="frame" x="177.5" y="433" width="59" height="30"/>
-                                <state key="normal" title="COVERT"/>
+                                <rect key="frame" x="153.5" y="433" width="107" height="30"/>
+                                <state key="normal" title="COVERT TOEIC"/>
                                 <connections>
                                     <action selector="convert:" destination="BYZ-38-t0r" eventType="touchUpInside" id="281-mm-pfX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EOu-vO-8QY">
+                                <rect key="frame" x="103" y="513" width="208" height="30"/>
+                                <state key="normal" title="CONVERT DICTIONARY COPY"/>
+                                <connections>
+                                    <action selector="convertDictionaryCopy:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wee-Pi-HbE"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="HAz-6c-3C4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TIg-f8-kH5"/>
+                            <constraint firstItem="EOu-vO-8QY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZS4-Rv-lb8"/>
+                            <constraint firstItem="EOu-vO-8QY" firstAttribute="top" secondItem="HAz-6c-3C4" secondAttribute="bottom" constant="50" id="cl7-DC-XdW"/>
                             <constraint firstItem="HAz-6c-3C4" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="dqm-mT-o5g"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

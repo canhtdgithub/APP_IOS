@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TranslateViewController" customModule="VocabularyEnglish" customModuleProvider="target">
+            <connections>
+                <outlet property="ipaLabel" destination="jx5-XJ-Jfp" id="oMM-Qv-BeZ"/>
+                <outlet property="mainMeaningLabel" destination="rMC-mY-3nt" id="t7W-uj-hnB"/>
+                <outlet property="typeLabel" destination="zCf-x0-z2l" id="LDm-BI-4QB"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="vocabularyLabel" destination="PpQ-4z-aLj" id="3dy-A3-fSW"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mainMeaning" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rMC-mY-3nt">
+                    <rect key="frame" x="20" y="138.5" width="389" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vocabulary" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PpQ-4z-aLj">
+                    <rect key="frame" x="5" y="74" width="92.5" height="21"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                    <color key="textColor" red="1" green="0.1529411765" blue="0.027450980390000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zCf-x0-z2l">
+                    <rect key="frame" x="20" y="110" width="389" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IPA" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jx5-XJ-Jfp">
+                    <rect key="frame" x="102.5" y="75" width="24" height="19.5"/>
+                    <fontDescription key="fontDescription" type="italicSystem" pointSize="16"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="zCf-x0-z2l" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="4Pi-04-twl"/>
+                <constraint firstItem="PpQ-4z-aLj" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="5" id="CyN-6d-3XV"/>
+                <constraint firstItem="rMC-mY-3nt" firstAttribute="centerX" secondItem="zCf-x0-z2l" secondAttribute="centerX" id="Kdq-9Y-z3C"/>
+                <constraint firstItem="zCf-x0-z2l" firstAttribute="top" secondItem="PpQ-4z-aLj" secondAttribute="bottom" constant="15" id="QqL-0Z-OfD"/>
+                <constraint firstItem="rMC-mY-3nt" firstAttribute="top" secondItem="zCf-x0-z2l" secondAttribute="bottom" constant="8" id="TD5-RP-Vw0"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="zCf-x0-z2l" secondAttribute="trailing" constant="5" id="U1v-lq-FCd"/>
+                <constraint firstItem="jx5-XJ-Jfp" firstAttribute="leading" secondItem="PpQ-4z-aLj" secondAttribute="trailing" constant="5" id="VSo-Fr-ttX"/>
+                <constraint firstItem="PpQ-4z-aLj" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="30" id="alk-rk-NLW"/>
+                <constraint firstItem="rMC-mY-3nt" firstAttribute="width" secondItem="zCf-x0-z2l" secondAttribute="width" id="in5-Rr-XzC"/>
+                <constraint firstItem="jx5-XJ-Jfp" firstAttribute="centerY" secondItem="PpQ-4z-aLj" secondAttribute="centerY" id="um4-il-keO"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="137.68115942028987" y="95.758928571428569"/>
+        </view>
+    </objects>
+</document>

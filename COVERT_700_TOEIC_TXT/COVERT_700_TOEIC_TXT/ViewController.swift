@@ -100,7 +100,7 @@ class ViewController: UIViewController {
 //        thuLabel.text = diccomponent[1294].replacingOccurrences(of: "\\n", with: "\n")
         var diction = [NSMutableDictionary]()
         
-        for i in 0...diccomponent.count - 2 {
+        for i in 0...diccomponent.count - 1 {
             let para = NSMutableDictionary()
             // vocabulary
             let firstComponent = diccomponent[i].components(separatedBy: "\t").first!
@@ -109,6 +109,7 @@ class ViewController: UIViewController {
             let dicLastComponent = diccomponent[i].components(separatedBy: "\\n").last!
             
             let vocabulary = dicFirstComponent.components(separatedBy: "\t").first!
+//            print(vocabulary)
             para.setValue(vocabulary, forKey: "vocabulary")
             // ipa
             let ipaComponent = dicFirstComponent.components(separatedBy: "@").last!.components(separatedBy: .whitespaces)
@@ -129,7 +130,7 @@ class ViewController: UIViewController {
             } else {
                 para.setValue(type, forKey: "type")
             }
-            // difine
+            // difine all
             
             var defiFirst = diccomponent[i].components(separatedBy: "\\n-").first!.replacingOccurrences(of: vocabulary, with: "")
            defiFirst.removeFirst()
@@ -148,17 +149,85 @@ class ViewController: UIViewController {
                 }
             
             
+            // main meaning
+            var mainMeaning = String()
+            var sumMajor = String()
+            
+            if !sumDefine.contains("Chuyên ngành") {
+                mainMeaning = sumDefine
+            } else {
+               
+                var first = sumDefine.components(separatedBy: "Chuyên ngành").first!
+                if first.contains("@") {
+                    first.removeLast()
+                }
+                mainMeaning = first
+                
+                sumMajor = sumDefine.replacingOccurrences(of: first, with: "")
+            }
+            
+//            print(mainMeaning)
+            var technical = String()
+            var economic = String()
+//            print(sumMajor)
+            if sumMajor.contains("Chuyên ngành kinh tế") && sumMajor.contains("Chuyên ngành kỹ thuật") {
+//                print("có")
+            } else {
+                if sumMajor.contains("Chuyên ngành kinh tế") {
+                    let chuyen = sumMajor
+                    
+                    
+                    
+                } else if sumMajor.contains("Chuyên ngành kỹ thuật") {
+                    technical = sumMajor
+                }
+            }
+            
+           
+            
+            
+            if sumMajor.contains("Chuyên ngành") {
+//                print("có chứa")
+            } else {
+//                if sumMajor.contains("kỹ thuật") {
+//                    technical = sumMajor
+//                } else if sumMajor.contains("kinh tế") {
+//                    economic = sumMajor
+//                }
+                               
+            }
+            
+//            print(technical)
+//            print(economic)
+            let majorTechnicalAndEconomic = sumMajor.replacingOccurrences(of: "@", with: "").replacingOccurrences(of: "\\n", with: "\n")
+            let main = mainMeaning.replacingOccurrences(of: "\\n", with: "")
+            
+            para.setValue(main, forKey: "mainMeaning")
+            para.setValue(majorTechnicalAndEconomic, forKey: "Faculty")
+            
+//            print(mainMeaning)
 
-            print(sumDefine)
-            
-            
-         
             diction.append(para)
         }
         let jsonData = try! JSONSerialization.data(withJSONObject: diction, options: .prettyPrinted)
         let jsonString = String(data: jsonData, encoding: .utf8)!
+        print(jsonString)
+//        do {
+//            let fileURL = try FileManager.default
+//                .url(for: .applicationSupportDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
+//                .appendingPathComponent("dictionaryNew.json")
+//            print(fileURL)
+//            try JSONEncoder().encode(jsonString)
+//                .write(to: fileURL)
+//        } catch {
+//            print(error)
+//        }
+
+        
         DispatchQueue.main.async {
 //            print(jsonString)
+            
+            
         }
         
     }

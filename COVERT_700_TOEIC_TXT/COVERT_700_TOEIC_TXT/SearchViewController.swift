@@ -33,10 +33,6 @@ class SearchViewController: UIViewController {
         table.register(UINib(nibName: "SearchTableViewCell", bundle: .main), forCellReuseIdentifier: "cell")
     }
     
-
-
-  
-
 }
 
 extension SearchViewController: UITableViewDelegate, UITableViewDataSource {

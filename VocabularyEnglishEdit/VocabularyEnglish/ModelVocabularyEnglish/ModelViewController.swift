@@ -55,21 +55,7 @@ class ModelViewController {
             newVocab.text = ""
         }
     }
-    func startMicrophone(viewController: UIViewController, showText: UITextField ) {
-        let voice = VoiceOverlayController()
-        voice.start(on: viewController,
-                    textHandler: { (text, finish, nil) in
-                        if finish {
-                            print("fail voice")
-                        } else {
-                            print(text)
-                            showText.text! = text
-                        }
-        }, errorHandler: {error in
-            
-        })
-        
-    }
+    
     
     func changeColor(indexPath: IndexPath, vocabLabel: UILabel) {
         guard wrongVocab.count > 0 else {
@@ -85,42 +71,62 @@ class ModelViewController {
     
 }
 
+class SpeechToText {
+    static let shared = SpeechToText()
+    
+    func startMicrophone(viewController: UIViewController, showText: UITextField ) {
+        let voice = VoiceOverlayController()
+        voice.start(on: viewController,
+                    textHandler: { (text, finish, nil) in
+                        if finish {
+                            print("fail voice")
+                        } else {
+                            print(text)
+                            showText.text! = text
+                        }
+        }, errorHandler: {error in
+            
+        })
+        
+    }
+}
 
 
-//class NotificationKeyboard {
-//    
-//    var edgeContrains: NSLayoutConstraint!
-//    
-//    init(edgeContrains: NSLayoutConstraint) {
-//        self.edgeContrains = edgeContrains
-//    }
-//    
-//    func notifiShowKeyboard() {
-//           NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
-//       }
-//       
-//       @objc func keyboardWillShow(notification: NSNotification) {
-//           
-//           if let userInfo = notification.userInfo as? Dictionary<String, AnyObject> {
-//               let frame = userInfo[UIResponder.keyboardFrameEndUserInfoKey]
-//               let keyBoardRect = frame?.cgRectValue
-//               if let keyBoardHeight = keyBoardRect?.height {
-//                   self.edgeContrains.constant = keyBoardHeight
-//               }
-//           }
-//           
-//       }
-//       
-//       func notifiHideKeyboard() {
-//           NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
-//       }
-//       
-//       @objc func keyboardWillHide(notification: NSNotification) {
-//           self.edgeContrains.constant = 0
-//           
-//       }
-//    
-//}
+
+class NotificationKeyboard {
+    
+    var edgeContrains: NSLayoutConstraint!
+    
+    init(edgeContrains: NSLayoutConstraint) {
+        self.edgeContrains = edgeContrains
+    }
+    
+    func notifiShowKeyboard() {
+           NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+       }
+       
+       @objc func keyboardWillShow(notification: NSNotification) {
+           
+           if let userInfo = notification.userInfo as? Dictionary<String, AnyObject> {
+               let frame = userInfo[UIResponder.keyboardFrameEndUserInfoKey]
+               let keyBoardRect = frame?.cgRectValue
+               if let keyBoardHeight = keyBoardRect?.height {
+                   self.edgeContrains.constant = keyBoardHeight
+               }
+           }
+           
+       }
+       
+       func notifiHideKeyboard() {
+           NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+       }
+       
+       @objc func keyboardWillHide(notification: NSNotification) {
+           self.edgeContrains.constant = 0
+           
+       }
+    
+}
 
 
 class SIRSpeakerManager: NSObject {

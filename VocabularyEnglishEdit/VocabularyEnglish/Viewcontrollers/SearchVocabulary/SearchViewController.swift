@@ -60,9 +60,13 @@ class SearchViewController: UIViewController {
         
         searchTextField.delegate = self
         
-        viewContent.layerViews(cornerRadius: 5, borderColor: UIColor.gray.cgColor, borderWidth: 1)
+        viewContent.layerViews(cornerRadius: 5,
+                               borderColor: UIColor.gray.cgColor,
+                               borderWidth: 1)
         
-        layerSearch.layerButtom(cornerRadius: layerSearch.frame.size.height / 2, borderColor: UIColor.gray.cgColor, borderWidth: 1)
+        layerSearch.layerButtom(cornerRadius: layerSearch.frame.size.height / 2,
+                                borderColor: UIColor.gray.cgColor,
+                                borderWidth: 1)
         
     }
     

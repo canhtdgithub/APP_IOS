@@ -9,6 +9,12 @@
 import UIKit
 
 class DictionaryTableViewCell: UITableViewCell {
+    
+    static var identifier = "dictioncell"
+    
+    static func nib() -> UINib {
+        return UINib(nibName: "DictionaryTableViewCell", bundle: nil)
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()

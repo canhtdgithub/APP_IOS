@@ -58,6 +58,10 @@
 		4E4D2BB825010CBB00340BD1 /* dictionary.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E4D2BB725010CBB00340BD1 /* dictionary.json */; };
 		4E4D2BBA25010CC500340BD1 /* vocab_dictionary.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4E4D2BB925010CC400340BD1 /* vocab_dictionary.txt */; };
 		4E5F915C24C97489004FFBB0 /* ModelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5F915B24C97489004FFBB0 /* ModelViewController.swift */; };
+		4E63F2FA2501D26A007E5B4B /* ModelDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E63F2F92501D26A007E5B4B /* ModelDictionary.swift */; };
+		4E63F2FE250241DE007E5B4B /* TranslateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E63F2FC250241DE007E5B4B /* TranslateCollectionViewCell.swift */; };
+		4E63F2FF250241DE007E5B4B /* TranslateCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E63F2FD250241DE007E5B4B /* TranslateCollectionViewCell.xib */; };
+		4E63F30225024631007E5B4B /* ModelTranslateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E63F30125024631007E5B4B /* ModelTranslateViewController.swift */; };
 		4E6A3FB824C1FABF00345714 /* vocabulary.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E6A3FB724C1FABE00345714 /* vocabulary.png */; };
 		4E9A938324BED2CB00F00F4C /* ExetendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9A938124BED2CB00F00F4C /* ExetendViewController.swift */; };
 		4E9A938424BED2CB00F00F4C /* ExetendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E9A938224BED2CB00F00F4C /* ExetendViewController.xib */; };
@@ -72,6 +76,13 @@
 		4ECD670524D932B300F65ED5 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECD670324D932B300F65ED5 /* SearchViewController.swift */; };
 		4ECD670624D932B300F65ED5 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4ECD670424D932B300F65ED5 /* SearchViewController.xib */; };
 		4EEE2BE224BDC7E00063AFCC /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EEE2BE124BDC7E00063AFCC /* ViewController.xib */; };
+		4EF39034250291F300839E39 /* DictionaryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF39032250291F300839E39 /* DictionaryCollectionViewCell.swift */; };
+		4EF39035250291F300839E39 /* DictionaryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EF39033250291F300839E39 /* DictionaryCollectionViewCell.xib */; };
+		4EF390392502962D00839E39 /* ToeicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF390372502962D00839E39 /* ToeicViewController.swift */; };
+		4EF3903A2502962D00839E39 /* ToeicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EF390382502962D00839E39 /* ToeicViewController.xib */; };
+		4EF3903D2502968400839E39 /* WordCommonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF3903B2502968400839E39 /* WordCommonViewController.swift */; };
+		4EF3903E2502968400839E39 /* WordCommonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EF3903C2502968400839E39 /* WordCommonViewController.xib */; };
+		4EF3904025029B3200839E39 /* 700_TOEIC.json in Resources */ = {isa = PBXBuildFile; fileRef = 4EF3903F25029B3200839E39 /* 700_TOEIC.json */; };
 		5A0B70320DC0B55A2706FCC8 /* Pods_VocabularyEnglish.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AA69E4804B3E1F47065F053 /* Pods_VocabularyEnglish.framework */; };
 		91AE457CB5E95126118A00F8 /* Pods_VocabularyEnglish_VocabularyEnglishUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBA1DC82C92CB55F9BEC3AD1 /* Pods_VocabularyEnglish_VocabularyEnglishUITests.framework */; };
 		A65207360CAD3BECB70EC4C5 /* Pods_VocabularyEnglishTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C43E357F1C3D224477BB9039 /* Pods_VocabularyEnglishTests.framework */; };
@@ -153,6 +164,10 @@
 		4E4D2BB725010CBB00340BD1 /* dictionary.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = dictionary.json; sourceTree = "<group>"; };
 		4E4D2BB925010CC400340BD1 /* vocab_dictionary.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = vocab_dictionary.txt; sourceTree = "<group>"; };
 		4E5F915B24C97489004FFBB0 /* ModelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelViewController.swift; sourceTree = "<group>"; };
+		4E63F2F92501D26A007E5B4B /* ModelDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelDictionary.swift; sourceTree = "<group>"; };
+		4E63F2FC250241DE007E5B4B /* TranslateCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateCollectionViewCell.swift; sourceTree = "<group>"; };
+		4E63F2FD250241DE007E5B4B /* TranslateCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TranslateCollectionViewCell.xib; sourceTree = "<group>"; };
+		4E63F30125024631007E5B4B /* ModelTranslateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTranslateViewController.swift; sourceTree = "<group>"; };
 		4E6A3FB724C1FABE00345714 /* vocabulary.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vocabulary.png; sourceTree = "<group>"; };
 		4E9A938124BED2CB00F00F4C /* ExetendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExetendViewController.swift; sourceTree = "<group>"; };
 		4E9A938224BED2CB00F00F4C /* ExetendViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExetendViewController.xib; sourceTree = "<group>"; };
@@ -167,6 +182,13 @@
 		4ECD670324D932B300F65ED5 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		4ECD670424D932B300F65ED5 /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
 		4EEE2BE124BDC7E00063AFCC /* ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		4EF39032250291F300839E39 /* DictionaryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryCollectionViewCell.swift; sourceTree = "<group>"; };
+		4EF39033250291F300839E39 /* DictionaryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DictionaryCollectionViewCell.xib; sourceTree = "<group>"; };
+		4EF390372502962D00839E39 /* ToeicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToeicViewController.swift; sourceTree = "<group>"; };
+		4EF390382502962D00839E39 /* ToeicViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ToeicViewController.xib; sourceTree = "<group>"; };
+		4EF3903B2502968400839E39 /* WordCommonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordCommonViewController.swift; sourceTree = "<group>"; };
+		4EF3903C2502968400839E39 /* WordCommonViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WordCommonViewController.xib; sourceTree = "<group>"; };
+		4EF3903F25029B3200839E39 /* 700_TOEIC.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = 700_TOEIC.json; sourceTree = "<group>"; };
 		5EE8438C4A9B720489777347 /* Pods-VocabularyEnglish.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VocabularyEnglish.release.xcconfig"; path = "Target Support Files/Pods-VocabularyEnglish/Pods-VocabularyEnglish.release.xcconfig"; sourceTree = "<group>"; };
 		737E94BF9F1E6152AD15F39A /* Pods-VocabularyEnglish.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VocabularyEnglish.debug.xcconfig"; path = "Target Support Files/Pods-VocabularyEnglish/Pods-VocabularyEnglish.debug.xcconfig"; sourceTree = "<group>"; };
 		8EA588551D061B8280E4C1E2 /* Pods-VocabularyEnglishTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VocabularyEnglishTests.debug.xcconfig"; path = "Target Support Files/Pods-VocabularyEnglishTests/Pods-VocabularyEnglishTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -213,6 +235,7 @@
 				4E6A3FB724C1FABE00345714 /* vocabulary.png */,
 				4E4D2BB925010CC400340BD1 /* vocab_dictionary.txt */,
 				4E4D2BB725010CBB00340BD1 /* dictionary.json */,
+				4EF3903F25029B3200839E39 /* 700_TOEIC.json */,
 				4E109CBD24CAF597007A509F /* gif.swift */,
 				4E35326424BD87D200415CC9 /* Assets.xcassets */,
 			);
@@ -273,7 +296,8 @@
 		0A21302A24F7D41C001B0AB9 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				4E4D2BAC2501082200340BD1 /* DictionaryTableViewCell */,
+				4E63F2FB25024186007E5B4B /* TranslateCollectionViewCell */,
+				4E4D2BAC2501082200340BD1 /* DictionaryViewCell */,
 				4EBEE58724BDABDC007820B4 /* VocabularyTableViewCell */,
 				4E2A008E24F3942700FC58DC /* SettingTableViewCell */,
 				0A21302B24F7D437001B0AB9 /* GamesCollectionViewCell */,
@@ -293,6 +317,8 @@
 		0A21302C24F7D65E001B0AB9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4E63F30025024608007E5B4B /* ModelTranslate */,
+				4E63F2F82501D217007E5B4B /* ModelDictionary */,
 				4E06E56124E7D6B000550708 /* ModelSetting */,
 				4E109CB224CAE69D007A509F /* ModelQuizGames */,
 			);
@@ -479,19 +505,22 @@
 		4E4D2BA7250104C600340BD1 /* DictionaryVC */ = {
 			isa = PBXGroup;
 			children = (
+				4EF390362502960800839E39 /* VC */,
 				4E4D2BA8250104F800340BD1 /* DictionaryViewController.swift */,
 				4E4D2BA9250104F800340BD1 /* DictionaryViewController.xib */,
 			);
 			path = DictionaryVC;
 			sourceTree = "<group>";
 		};
-		4E4D2BAC2501082200340BD1 /* DictionaryTableViewCell */ = {
+		4E4D2BAC2501082200340BD1 /* DictionaryViewCell */ = {
 			isa = PBXGroup;
 			children = (
 				4E4D2BAD2501084F00340BD1 /* DictionaryTableViewCell.swift */,
 				4E4D2BAE2501084F00340BD1 /* DictionaryTableViewCell.xib */,
+				4EF39032250291F300839E39 /* DictionaryCollectionViewCell.swift */,
+				4EF39033250291F300839E39 /* DictionaryCollectionViewCell.xib */,
 			);
-			path = DictionaryTableViewCell;
+			path = DictionaryViewCell;
 			sourceTree = "<group>";
 		};
 		4E4D2BB12501086800340BD1 /* TranslateVC */ = {
@@ -510,6 +539,31 @@
 				4E1D695F24E77C5B0032B572 /* ModelExetendViewController.swift */,
 			);
 			path = ModelVocabularyEnglish;
+			sourceTree = "<group>";
+		};
+		4E63F2F82501D217007E5B4B /* ModelDictionary */ = {
+			isa = PBXGroup;
+			children = (
+				4E63F2F92501D26A007E5B4B /* ModelDictionary.swift */,
+			);
+			path = ModelDictionary;
+			sourceTree = "<group>";
+		};
+		4E63F2FB25024186007E5B4B /* TranslateCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				4E63F2FC250241DE007E5B4B /* TranslateCollectionViewCell.swift */,
+				4E63F2FD250241DE007E5B4B /* TranslateCollectionViewCell.xib */,
+			);
+			path = TranslateCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		4E63F30025024608007E5B4B /* ModelTranslate */ = {
+			isa = PBXGroup;
+			children = (
+				4E63F30125024631007E5B4B /* ModelTranslateViewController.swift */,
+			);
+			path = ModelTranslate;
 			sourceTree = "<group>";
 		};
 		4E9A938024BED24700F00F4C /* ExetendVC */ = {
@@ -546,6 +600,17 @@
 				4ECD670424D932B300F65ED5 /* SearchViewController.xib */,
 			);
 			path = SearchVocabulary;
+			sourceTree = "<group>";
+		};
+		4EF390362502960800839E39 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				4EF390372502962D00839E39 /* ToeicViewController.swift */,
+				4EF390382502962D00839E39 /* ToeicViewController.xib */,
+				4EF3903B2502968400839E39 /* WordCommonViewController.swift */,
+				4EF3903C2502968400839E39 /* WordCommonViewController.xib */,
+			);
+			path = VC;
 			sourceTree = "<group>";
 		};
 		86FAB99513C4B14E75387AA0 /* Pods */ = {
@@ -693,18 +758,23 @@
 				4E10A2EC24CB126300C0B2AA /* wrong.gif in Resources */,
 				0A250B4E24F879780070B7BC /* Poppins-Bold.ttf in Resources */,
 				4E9A938424BED2CB00F00F4C /* ExetendViewController.xib in Resources */,
+				4E63F2FF250241DE007E5B4B /* TranslateCollectionViewCell.xib in Resources */,
 				4E4D2BB825010CBB00340BD1 /* dictionary.json in Resources */,
 				4E10A2E924CB126300C0B2AA /* wrong2.gif in Resources */,
 				4E2A009224F3945500FC58DC /* SettingTableViewCell.xib in Resources */,
+				4EF3903E2502968400839E39 /* WordCommonViewController.xib in Resources */,
 				4E0C1F9B24DCE8B700DA3DE4 /* congratulation4.gif in Resources */,
 				0A250B4D24F879780070B7BC /* Poppins-Regular.ttf in Resources */,
 				0A250B4C24F879780070B7BC /* OFL.txt in Resources */,
 				0A250B5124F879780070B7BC /* Poppins-Italic.ttf in Resources */,
 				4E4D2BBA25010CC500340BD1 /* vocab_dictionary.txt in Resources */,
 				4E305D1524C40A2A0014CCFE /* GamesCollectionViewCell.xib in Resources */,
+				4EF3904025029B3200839E39 /* 700_TOEIC.json in Resources */,
 				4E35326524BD87D200415CC9 /* Assets.xcassets in Resources */,
 				4E0C1F9724DCE8B700DA3DE4 /* congratulation1.gif in Resources */,
 				4E0C1F9824DCE8B700DA3DE4 /* congratulation.gif in Resources */,
+				4EF39035250291F300839E39 /* DictionaryCollectionViewCell.xib in Resources */,
+				4EF3903A2502962D00839E39 /* ToeicViewController.xib in Resources */,
 				0A250B5024F879780070B7BC /* Poppins-SemiBold.ttf in Resources */,
 				4ECD670624D932B300F65ED5 /* SearchViewController.xib in Resources */,
 				4E4D2BAB250104F800340BD1 /* DictionaryViewController.xib in Resources */,
@@ -842,12 +912,15 @@
 			files = (
 				0A250B5524F887670070B7BC /* MarqueeLabel.swift in Sources */,
 				4E35326024BD87CD00415CC9 /* ViewController.swift in Sources */,
+				4EF39034250291F300839E39 /* DictionaryCollectionViewCell.swift in Sources */,
 				4E5F915C24C97489004FFBB0 /* ModelViewController.swift in Sources */,
 				0A21303F24F7D7D2001B0AB9 /* DateExtention.swift in Sources */,
 				4E06E56024E7C5D200550708 /* DatabaseRealm.swift in Sources */,
 				4E1D696024E77C5B0032B572 /* ModelExetendViewController.swift in Sources */,
 				0A21303A24F7D7D2001B0AB9 /* ImageExtention.swift in Sources */,
 				0A21304124F7D7D2001B0AB9 /* StringExtention.swift in Sources */,
+				4EF3903D2502968400839E39 /* WordCommonViewController.swift in Sources */,
+				4EF390392502962D00839E39 /* ToeicViewController.swift in Sources */,
 				4E109CBE24CAF597007A509F /* gif.swift in Sources */,
 				0A21304224F7D7D2001B0AB9 /* ColorExtention.swift in Sources */,
 				4EBEE57F24BD8CAA007820B4 /* GamesViewController.swift in Sources */,
@@ -857,13 +930,16 @@
 				0A21303C24F7D7D2001B0AB9 /* FontExtention.swift in Sources */,
 				4E9A938324BED2CB00F00F4C /* ExetendViewController.swift in Sources */,
 				4E305D1424C40A2A0014CCFE /* GamesCollectionViewCell.swift in Sources */,
+				4E63F30225024631007E5B4B /* ModelTranslateViewController.swift in Sources */,
 				0A21303D24F7D7D2001B0AB9 /* NibExtention.swift in Sources */,
 				0A21303B24F7D7D2001B0AB9 /* UIViewExtention.swift in Sources */,
+				4E63F2FE250241DE007E5B4B /* TranslateCollectionViewCell.swift in Sources */,
 				4E089CAD24E6D01000AFC380 /* UIButtonExtension.swift in Sources */,
 				0A21303E24F7D7D2001B0AB9 /* AttributedExtention.swift in Sources */,
 				4ECD670524D932B300F65ED5 /* SearchViewController.swift in Sources */,
 				4E35325C24BD87CD00415CC9 /* AppDelegate.swift in Sources */,
 				4EBEE58524BD95DA007820B4 /* SettingViewController.swift in Sources */,
+				4E63F2FA2501D26A007E5B4B /* ModelDictionary.swift in Sources */,
 				4E06E56324E7D6F600550708 /* ModelSetting.swift in Sources */,
 				4EBEE58A24BDAC24007820B4 /* VocabularyTableViewCell.swift in Sources */,
 				4E4D2BAF2501084F00340BD1 /* DictionaryTableViewCell.swift in Sources */,

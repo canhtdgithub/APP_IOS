@@ -9,82 +9,49 @@
 import UIKit
 
 class DictionaryViewController: UIViewController {
+    
+    let modelDicitonVC = ModelDictionaryViewController.shared
 
     @IBOutlet weak var table: UITableView!
     
+    @IBOutlet weak var collection: UICollectionView!
+    
+    @IBOutlet weak var cancelLayer: UIButton!
+    
+    @IBOutlet weak var speechLayer: UIButton!
     
     @IBOutlet weak var searchTextField: UITextField!
     
     
-    var dataVocab = [String]()
-    var filterDataVocab = [String]()
-    var diction = [DictionaryCommon]()
-    var diction1 = [[String:String]]()
-    var vocablary: DictionaryCommon!
-    var vocabulary1 = [String:String]()
+    @IBAction func speech(_ sender: Any) {
+        SpeechToText.shared.startMicrophone(viewController: self, showText: searchTextField)
+    }
+    
+    
+    @IBAction func cancel(_ sender: Any) {
+        searchTextField.text = ""
+        table.isHidden = true
+        speechLayer.isHidden = false
+        cancelLayer.isHidden = true
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        regis()
-        loadDataVocab()
-        loadDiction()
-    }
-    
-    func regis() {
-        table.delegate = self
-        table.dataSource = self
-        searchTextField.delegate = self
-        
-        table.register(UINib(nibName: "DictionaryTableViewCell", bundle: .main), forCellReuseIdentifier: "dictioncell")
-    }
-    
-    func loadDataVocab() {
-        let path = Bundle.main.path(forResource: "vocab_dictionary", ofType: "txt")
-        let text = try! String(contentsOf: URL(fileURLWithPath: path!))
-        
-        let data = text.components(separatedBy: .newlines)
-        dataVocab = data
-    }
-    func loadDiction() {
-        let path = Bundle.main.path(forResource: "dictionary", ofType: "json")
-        
-        do {
-            let data = try Data(contentsOf: URL(fileURLWithPath: path!))
-            diction1 = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves) as! [[String:String]]
-            
-//            diction = try JSONDecoder().decode([DictionaryCommon].self, from: data)
-        } catch {
-            print("error")
-        }
-        
+        initUI()
         
     }
-    
-    
-    func passData(cell: UITableViewCell) {
-        var index = 0
-        for i in 0...self.dataVocab.count - 1  {
-            if cell.textLabel?.text! == self.dataVocab[i] {
-                index = i
-            }
-        }
-        
-        vocabulary1 = diction1[index]
-//        vocablary = diction[index]
-    }
-    
     
     
 }
 
 extension DictionaryViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return filterDataVocab.count
+        return modelDicitonVC.filterDataVocab.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = table.dequeueReusableCell(withIdentifier: "dictioncell", for: indexPath) as! DictionaryTableViewCell
-        cell.textLabel?.text = filterDataVocab[indexPath.row]
+        let cell = table.dequeueReusableCell(withIdentifier: DictionaryTableViewCell.identifier, for: indexPath) as! DictionaryTableViewCell
+        cell.textLabel?.text = modelDicitonVC.filterDataVocab[indexPath.row]
         return cell
     }
     
@@ -92,14 +59,30 @@ extension DictionaryViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = table.cellForRow(at: indexPath) as! DictionaryTableViewCell
             
         cell.selectionStyle = .none
-            passData(cell: cell)
+            modelDicitonVC.passData(cell: cell)
             
             let transVC = TranslateViewController()
-            transVC.translate = vocabulary1
+            transVC.translate = modelDicitonVC.vocabulary
             self.navigationController?.pushViewController(transVC, animated: true)
         
-        
-            
+    }
+    
+    
+}
+
+extension DictionaryViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return modelDicitonVC.subject.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collection.dequeueReusableCell(withReuseIdentifier: DictionaryCollectionViewCell.identifier, for: indexPath) as! DictionaryCollectionViewCell
+        cell.nameLabel.text = modelDicitonVC.subject[indexPath.row].name
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.navigationController?.pushViewController(modelDicitonVC.subject[indexPath.row].view, animated: true)
     }
     
     
@@ -107,47 +90,66 @@ extension DictionaryViewController: UITableViewDelegate, UITableViewDataSource {
 
 extension DictionaryViewController: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-
         if let text = searchTextField.text {
             
-            table.isHidden = false
-            filterText(query: text + string)
-           
+            if text.count == 1 && string == "" {
+                speechLayer.isHidden = false
+                cancelLayer.isHidden = true
+                table.isHidden = true
+            } else {
+                speechLayer.isHidden = true
+                cancelLayer.isHidden = false
+                table.isHidden = false
+                
+            }
+            
+            modelDicitonVC.filterText(hideButton: speechLayer, showButton: cancelLayer, table: table, query: text + string)
         }
         return true
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField, reason: UITextField.DidEndEditingReason) {
+        table.isHidden = true
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        
+        if modelDicitonVC.filterDataVocab.isEmpty {
+            modelDicitonVC.alert(viewController: self, searchTextFiled: searchTextField, table: table)
+        } else {
         let trans = TranslateViewController()
-        trans.translate = vocabulary1
+        trans.translate = modelDicitonVC.vocabulary
         self.navigationController?.pushViewController(trans, animated: true)
         textField.resignFirstResponder()
-        return true
-    }
-    
-    func filterText (query: String?) {
-        filterDataVocab.removeAll()
-       
-        for text in dataVocab {
-            if text.starts(with: query!.lowercased()) {
-                filterDataVocab.append(text)
-                
-            }
         }
-        table.reloadData()
-
+        return true
+        
     }
     
-   
     
 }
 
-struct DictionaryCommon: Codable {
-    var vocabulary: String
-    var ipa: String
-    var type: String
-    var faculty: String
-    var mainMeaning: String
+extension DictionaryViewController {
+    func initUI() {
+        navigationItem.title = "Dictionary"
+        regis()
+        modelDicitonVC.loadDataVocab()
+        modelDicitonVC.loadDiction()
+        modelDicitonVC.loadSubject()
+    }
+    
+    func regis() {
+        // table view
+        table.delegate = self
+        table.dataSource = self
+        searchTextField.delegate = self
+        
+        table.register(DictionaryTableViewCell.nib(), forCellReuseIdentifier: DictionaryTableViewCell.identifier)
+        
+        //collection view
+        
+        collection.delegate = self
+        collection.dataSource = self
+        collection.register(DictionaryCollectionViewCell.nib(), forCellWithReuseIdentifier: DictionaryCollectionViewCell.identifier)
+        
+    }
 }
-

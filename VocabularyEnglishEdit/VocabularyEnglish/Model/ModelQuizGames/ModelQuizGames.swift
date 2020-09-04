@@ -83,7 +83,6 @@ class ModelQuizGames {
             imageQuestion.loadGif(name: imageCorrect.randomElement()!)
             let _ = Timer.scheduledTimer(withTimeInterval: 1.2, repeats: false) { (time) in
                 imageQuestion.image = UIImage(named: "nevergiveup")
-                showAnswer.text = ""
                 self.tapCount.removeAll()
                 self.editColor.removeAll()
                 collectionView.reloadData()
@@ -92,7 +91,6 @@ class ModelQuizGames {
         } else if showAnswer.text!.isEmpty {
             let alert = UIAlertController(title: "Alert", message: "You have not entered anything, please re-enter", preferredStyle: .alert)
             let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-            showAnswer.text = ""
             alert.addAction(cancel)
             viewPresent.present(alert, animated: true, completion: nil)
         }
@@ -100,7 +98,6 @@ class ModelQuizGames {
             let alert = UIAlertController(title: "Alert", message: "You wrong, please work again", preferredStyle: .alert)
             let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
             wrongVocab.append(WrongVocab.init(vocab: stringAfterRandom!))
-            showAnswer.text = ""
             alert.addAction(cancel)
             imageQuestion.loadGif(name: imageWrong.randomElement()!)
             viewPresent.present(alert, animated: true, completion: nil)

@@ -10,10 +10,11 @@ import UIKit
 
 class TranslateViewController: UIViewController {
     
-    
+    let transModel = ModelTranslateViewController.shared
     
     var translate = [String:String]()
     
+    @IBOutlet weak var collection: UICollectionView!
     
     @IBOutlet weak var vocabularyLabel: UILabel!
     
@@ -26,7 +27,7 @@ class TranslateViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadData()
-        
+        initUI()
         
     }
     
@@ -37,14 +38,47 @@ class TranslateViewController: UIViewController {
         mainMeaningLabel.text = translate["mainMeaning"]
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
+
+extension TranslateViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 2
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let collec = collection.dequeueReusableCell(withReuseIdentifier: TranslateCollectionViewCell.identifier, for: indexPath) as! TranslateCollectionViewCell
+        collec.titleLabel.text = transModel.title[indexPath.row].title
+        return collec
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = UIScreen.main.bounds.size.width / 2
+        let height = collectionView.bounds.size.height
+        return CGSize(width: width, height: height)
+    }
+    
+//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        <#code#>
+//    }
+    
+    
+}
+
+extension TranslateViewController {
+    func initUI() {
+        
+        regist()
+        transModel.loadTitles()
+    }
+    
+    func regist() {
+        collection.delegate = self
+        collection.dataSource = self
+        collection.register(TranslateCollectionViewCell.nib(), forCellWithReuseIdentifier: TranslateCollectionViewCell.identifier)
+    }
+    
+    
+}
+

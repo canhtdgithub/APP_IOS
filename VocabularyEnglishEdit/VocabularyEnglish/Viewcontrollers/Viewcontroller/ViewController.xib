@@ -62,15 +62,15 @@
                                             <rect key="frame" x="16" y="12" width="332" height="42.5"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" placeholder="Enter vocabulary" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qsw-aj-ExS">
-                                                    <rect key="frame" x="12" y="12" width="273" height="18.5"/>
+                                                    <rect key="frame" x="12" y="12" width="278" height="18.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fGx-yU-eHl">
-                                                    <rect key="frame" x="290" y="6.5" width="30" height="30"/>
+                                                    <rect key="frame" x="295" y="9" width="25" height="25"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="30" id="Lqd-d6-8lH"/>
-                                                        <constraint firstAttribute="width" constant="30" id="a9E-aE-hF8"/>
+                                                        <constraint firstAttribute="height" constant="25" id="Lqd-d6-8lH"/>
+                                                        <constraint firstAttribute="width" constant="25" id="a9E-aE-hF8"/>
                                                     </constraints>
                                                     <state key="normal" image="microphone"/>
                                                     <connections>

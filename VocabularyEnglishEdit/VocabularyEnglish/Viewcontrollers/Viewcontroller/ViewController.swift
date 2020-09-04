@@ -38,8 +38,13 @@ class ViewController: UIViewController {
     }
     
     override func viewDidLayoutSubviews() {
-        self.vMain.gradient(firstColor: UIColor.white, secondColor: UIColor(red: 0.898, green: 0.908, blue: 0.932, alpha: 1))
-        vMain.roundCorners(corners: [.topLeft,.topRight], radius: 20)
+        self.vMain.gradient(firstColor: UIColor.white,
+                            secondColor: UIColor(red: 0.898,
+                                                 green: 0.908,
+                                                 blue: 0.932,
+                                                 alpha: 1))
+        vMain.roundCorners(corners: [.topLeft,.topRight],
+                           radius: 20)
     }
     
     //MARK: - @IBACTION
@@ -48,7 +53,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func microphone(_ sender: Any) {
-        ModelViewController.shared.startMicrophone(viewController: self, showText: textVocab)
+        SpeechToText.shared.startMicrophone(viewController: self, showText: textVocab)
     }
 }
 

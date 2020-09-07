@@ -45,7 +45,7 @@ class GamesViewController: UIViewController {
         guard let string = ModelQuizGames.shared.stringAfterRandom else {
             return
         }
-        SIRSpeakerManager.sharedInstance.speak(string)
+        SIRSpeakerManager.sharedInstance.speakUS(string)
         
     }
     

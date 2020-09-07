@@ -76,6 +76,7 @@ PODS:
   - GoogleUtilities/UserDefaults (6.7.2):
     - GoogleUtilities/Logger
   - GTMSessionFetcher/Core (1.4.0)
+  - iCarousel (1.8.3)
   - InstantSearchVoiceOverlay (1.1.0)
   - IQKeyboardManagerSwift (6.5.6)
   - Kingfisher (5.15.0):
@@ -102,6 +103,7 @@ DEPENDENCIES:
   - Firebase/Core
   - Firebase/Database
   - Firebase/Storage
+  - iCarousel
   - InstantSearchVoiceOverlay
   - IQKeyboardManagerSwift
   - Kingfisher
@@ -124,6 +126,7 @@ SPEC REPOS:
     - GoogleDataTransport
     - GoogleUtilities
     - GTMSessionFetcher
+    - iCarousel
     - InstantSearchVoiceOverlay
     - IQKeyboardManagerSwift
     - Kingfisher
@@ -149,6 +152,7 @@ SPEC CHECKSUMS:
   GoogleDataTransport: e85fb700c9b027079ce182c3d08e12e0f9618bb4
   GoogleUtilities: 7f2f5a07f888cdb145101d6042bc4422f57e70b3
   GTMSessionFetcher: 6f5c8abbab8a9bce4bb3f057e317728ec6182b10
+  iCarousel: d782f635afac190c49bb8ee455882284cff8b85f
   InstantSearchVoiceOverlay: 8fcbd0c143c872e6b39ef9b6475f1dfeb9ebfbcf
   IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
   Kingfisher: 1acb67597a520c2d0310677e66d6e0af455ef757
@@ -160,6 +164,6 @@ SPEC CHECKSUMS:
   Realm: 2b52fcc86fc0ed3d75a56ac0eb1e73c4f1a60e16
   RealmSwift: a6ea2ea561039fc3833c08dec81371a9a3bb5ca6
 
-PODFILE CHECKSUM: 95dcdb00b44f930276f65065d4efc00d926d54ff
+PODFILE CHECKSUM: f89bd7001f2cab7aa1f033738c9334413d7ab746
 
 COCOAPODS: 1.9.3

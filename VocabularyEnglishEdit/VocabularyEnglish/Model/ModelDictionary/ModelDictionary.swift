@@ -52,7 +52,7 @@ class ModelDictionaryViewController {
     func loadSubject() {
         subject.append(SubjectName(name: "700 Word Toeic",
                                    view: ToeicViewController()))
-        subject.append(SubjectName(name: "1300 Word Common",
+        subject.append(SubjectName(name: "3000 Word Common",
                                    view: WordCommonViewController()))
     }
       

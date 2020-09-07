@@ -42,7 +42,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let dictionController = DictionaryViewController()
         let navi4 = UINavigationController(rootViewController: dictionController)
-        navi4.tabBarItem.image = UIImage(named: "Dictionary")
+        navi4.tabBarItem.image = UIImage(named: "dictionary")
         navi4.title = "Dictionary"
         
         let settingController = SettingViewController()
@@ -87,8 +87,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         guard let show = UserDefaults.standard.value(forKey: "show") as? Bool, let arr = UserDefaults.standard.value(forKey: "arrayBool") as? Array<Bool> else {
             return
         }
-        print(show)
-        print(arr)
         
         if show == false {
             let date = Date()

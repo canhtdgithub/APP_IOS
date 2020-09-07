@@ -20,7 +20,7 @@ class ViewController: UIViewController {
         let component = text.components(separatedBy: .newlines)
         var ojectNew = [String]()
 //        print(component)
-        for i in 0...component.count - 1 {
+        for i in 0...component.count - 2 {
             ojectNew.append(component[i].trimmingCharacters(in: .init(charactersIn: " 0 1 2 3 4 5 6 7 8 9")))
         }
 //        print(ojectNew)
@@ -37,7 +37,12 @@ class ViewController: UIViewController {
                 } else if i == 5 {
                     diction.setValue(vocabAndDefine[i], forKey: "type")
                 } else if i == 4 {
-                    diction.setValue(vocabAndDefine[i], forKey: "example")
+                    let first = vocabAndDefine[i].components(separatedBy: "(").first!
+                    diction.setValue(first, forKey: "example")
+                    let last = vocabAndDefine[i].components(separatedBy: "(").last!.replacingOccurrences(of: ")", with: "")
+                    diction.setValue(last, forKey: "exampleDefine")
+                    
+//                    diction.setValue(first, forKey: "example")
                 }
             }
 //            let vocabAndDefine = ojectNew[i].components(separatedBy: ":").last!

@@ -749,8 +749,6 @@
 		4EBEE58624BD95DA007820B4 /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EBEE58424BD95DA007820B4 /* SettingViewController.xib */; };
 		4EBEE58A24BDAC24007820B4 /* VocabularyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBEE58824BDAC24007820B4 /* VocabularyTableViewCell.swift */; };
 		4EBEE58B24BDAC24007820B4 /* VocabularyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EBEE58924BDAC24007820B4 /* VocabularyTableViewCell.xib */; };
-		4ECD670024D91A9700F65ED5 /* SpeakGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECD66FE24D91A9700F65ED5 /* SpeakGameViewController.swift */; };
-		4ECD670124D91A9700F65ED5 /* SpeakGameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4ECD66FF24D91A9700F65ED5 /* SpeakGameViewController.xib */; };
 		4ECD670524D932B300F65ED5 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECD670324D932B300F65ED5 /* SearchViewController.swift */; };
 		4ECD670624D932B300F65ED5 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4ECD670424D932B300F65ED5 /* SearchViewController.xib */; };
 		4EEE2BE224BDC7E00063AFCC /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EEE2BE124BDC7E00063AFCC /* ViewController.xib */; };
@@ -1532,8 +1530,6 @@
 		4EBEE58424BD95DA007820B4 /* SettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingViewController.xib; sourceTree = "<group>"; };
 		4EBEE58824BDAC24007820B4 /* VocabularyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocabularyTableViewCell.swift; sourceTree = "<group>"; };
 		4EBEE58924BDAC24007820B4 /* VocabularyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VocabularyTableViewCell.xib; sourceTree = "<group>"; };
-		4ECD66FE24D91A9700F65ED5 /* SpeakGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakGameViewController.swift; sourceTree = "<group>"; };
-		4ECD66FF24D91A9700F65ED5 /* SpeakGameViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpeakGameViewController.xib; sourceTree = "<group>"; };
 		4ECD670324D932B300F65ED5 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		4ECD670424D932B300F65ED5 /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
 		4EEE2BE124BDC7E00063AFCC /* ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
@@ -1613,7 +1609,6 @@
 				4E4D2BB12501086800340BD1 /* TranslateVC */,
 				4E4D2BA7250104C600340BD1 /* DictionaryVC */,
 				0A21302924F7D377001B0AB9 /* GameVC */,
-				0A21302824F7D361001B0AB9 /* SpeakGameVC */,
 				4EBEE57C24BD8C59007820B4 /* SettingVC */,
 				4E9A938024BED24700F00F4C /* ExetendVC */,
 				0A21302724F7D2C4001B0AB9 /* Viewcontroller */,
@@ -1629,15 +1624,6 @@
 				4EEE2BE124BDC7E00063AFCC /* ViewController.xib */,
 			);
 			path = Viewcontroller;
-			sourceTree = "<group>";
-		};
-		0A21302824F7D361001B0AB9 /* SpeakGameVC */ = {
-			isa = PBXGroup;
-			children = (
-				4ECD66FE24D91A9700F65ED5 /* SpeakGameViewController.swift */,
-				4ECD66FF24D91A9700F65ED5 /* SpeakGameViewController.xib */,
-			);
-			path = SpeakGameVC;
 			sourceTree = "<group>";
 		};
 		0A21302924F7D377001B0AB9 /* GameVC */ = {
@@ -2897,7 +2883,6 @@
 				4E767CB3250331A100880C5E /* pull_out.jpg in Resources */,
 				4E767A69250331A000880C5E /* financial.jpg in Resources */,
 				4E767C2E250331A100880C5E /* physically.jpg in Resources */,
-				4ECD670124D91A9700F65ED5 /* SpeakGameViewController.xib in Resources */,
 				4E767BAB250331A100880C5E /* housekeeper.jpg in Resources */,
 				4E767A89250331A000880C5E /* on_time.jpg in Resources */,
 				4E767B9D250331A100880C5E /* run.jpg in Resources */,
@@ -3658,7 +3643,6 @@
 				4EBEE57F24BD8CAA007820B4 /* GamesViewController.swift in Sources */,
 				4E4D2BB42501088D00340BD1 /* TranslateViewController.swift in Sources */,
 				4E2A009124F3945500FC58DC /* SettingTableViewCell.swift in Sources */,
-				4ECD670024D91A9700F65ED5 /* SpeakGameViewController.swift in Sources */,
 				0A21303C24F7D7D2001B0AB9 /* FontExtention.swift in Sources */,
 				4E9A938324BED2CB00F00F4C /* ExetendViewController.swift in Sources */,
 				4E305D1424C40A2A0014CCFE /* GamesCollectionViewCell.swift in Sources */,

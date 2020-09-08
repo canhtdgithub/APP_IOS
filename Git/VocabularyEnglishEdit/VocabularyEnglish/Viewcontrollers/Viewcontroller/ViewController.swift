@@ -10,6 +10,7 @@ import UIKit
 
 
 class ViewController: UIViewController {
+    let modelVC = ModelViewController.shared
     
     //MARK: - @IBOUTLET
     @IBOutlet weak var viewLayer: UIView!
@@ -20,13 +21,22 @@ class ViewController: UIViewController {
     @IBOutlet weak var table: UITableView!
     @IBOutlet weak var vMain: UIView!
     
+    //MARK: - @IBACTION
+    @IBAction func insert(_ sender: Any) {
+        modelVC.insertVocab(newVocab: textVocab, tableView: table)
+    }
+    
+    @IBAction func microphone(_ sender: Any) {
+        SpeechToText.shared.startMicrophone(viewController: self, showText: textVocab)
+    }
+    
     //MARK: - VIEW LIFE CYCLE
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         guard wrongVocab.count > 0 else {
             return
         }
-        print(wrongVocab)
+        
         DispatchQueue.main.async {
             self.table.reloadData()
         }
@@ -46,19 +56,11 @@ class ViewController: UIViewController {
         vMain.roundCorners(corners: [.topLeft,.topRight],
                            radius: 20)
     }
-    
-    //MARK: - @IBACTION
-    @IBAction func insert(_ sender: Any) {
-        ModelViewController.shared.insertVocab(newVocab: textVocab, tableView: table)
-    }
-    
-    @IBAction func microphone(_ sender: Any) {
-        SpeechToText.shared.startMicrophone(viewController: self, showText: textVocab)
-    }
+
 }
 
 
-//MARK: - UITABLEVIEW
+//MARK: - EXTENSION UITABLEVIEW
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -71,7 +73,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = table.dequeueReusableCell(withIdentifier: VocabularyTableViewCell.identifier, for: indexPath) as! VocabularyTableViewCell
-        ModelViewController.shared.changeColor(indexPath: indexPath, vocabLabel: cell.showVocabulary)
+        modelVC.changeColor(indexPath: indexPath, vocabLabel: cell.showVocabulary)
         cell.config(text: vocabularys![indexPath.row].vocabulary)
         cell.showSpeaker()
         cell.selectionStyle = .none
@@ -100,7 +102,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
 }
 
-//MARK: - UITEXTFIELDDELEGATE
+//MARK: - EXTENSION UITEXTFIELDDELEGATE
 
 extension ViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

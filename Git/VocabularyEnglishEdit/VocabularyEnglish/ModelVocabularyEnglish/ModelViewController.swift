@@ -16,25 +16,22 @@ import AVFoundation
 
 //class VocabularyManger {
 //    static let sharedInstance = VocabularyManger()
-    
-    var cellcount = 0
-    let realm = try! Realm()
-    var vocabularys: Results<Vocab>?
+
+var cellcount = 0
+let realm = try! Realm()
+var vocabularys: Results<Vocab>?
 
 
-    var wrongVocab = [WrongVocab]()
+var wrongVocab = [WrongVocab]()
 //}
-
-
-
-
-// MARK: - CLASS
+    // MARK: - VOCAB REALM
 
 class Vocab: Object {
     @objc dynamic var vocabulary = ""
     @objc dynamic var descripVocab = ""
     
 }
+    // MARK: - MODEL VIEW CONTROLLER
 
 class ModelViewController {
     static let shared = ModelViewController()
@@ -59,18 +56,29 @@ class ModelViewController {
     
     func changeColor(indexPath: IndexPath, vocabLabel: UILabel) {
         guard wrongVocab.count > 0 else {
+            vocabLabel.textColor = .black
             return
         }
+        
+        var isRed = false
         for i in 0...(wrongVocab.count - 1) {
             if vocabularys![indexPath.row].vocabulary == wrongVocab[i].vocab {
-                vocabLabel.textColor = .red
+                isRed = true
             }
+            //            else {
+            //                vocabLabel.textColor = .black
+            //            }
         }
         
+        if isRed {
+            vocabLabel.textColor = .red
+        } else {
+            vocabLabel.textColor = .black
+        }
     }
     
 }
-
+    // MARK: - SPEECH TO TEXT
 class SpeechToText {
     static let shared = SpeechToText()
     
@@ -90,9 +98,8 @@ class SpeechToText {
         
     }
 }
-
-
-
+    // MARK: - NOTIFICATION KEYBOARD
+    
 class NotificationKeyboard {
     
     var edgeContrains: NSLayoutConstraint!
@@ -102,32 +109,33 @@ class NotificationKeyboard {
     }
     
     func notifiShowKeyboard() {
-           NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
-       }
-       
-       @objc func keyboardWillShow(notification: NSNotification) {
-           
-           if let userInfo = notification.userInfo as? Dictionary<String, AnyObject> {
-               let frame = userInfo[UIResponder.keyboardFrameEndUserInfoKey]
-               let keyBoardRect = frame?.cgRectValue
-               if let keyBoardHeight = keyBoardRect?.height {
-                   self.edgeContrains.constant = keyBoardHeight
-               }
-           }
-           
-       }
-       
-       func notifiHideKeyboard() {
-           NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
-       }
-       
-       @objc func keyboardWillHide(notification: NSNotification) {
-           self.edgeContrains.constant = 0
-           
-       }
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+    }
+    
+    @objc func keyboardWillShow(notification: NSNotification) {
+        
+        if let userInfo = notification.userInfo as? Dictionary<String, AnyObject> {
+            let frame = userInfo[UIResponder.keyboardFrameEndUserInfoKey]
+            let keyBoardRect = frame?.cgRectValue
+            if let keyBoardHeight = keyBoardRect?.height {
+                self.edgeContrains.constant = keyBoardHeight
+            }
+        }
+        
+    }
+    
+    func notifiHideKeyboard() {
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    @objc func keyboardWillHide(notification: NSNotification) {
+        self.edgeContrains.constant = 0
+        
+    }
     
 }
 
+    // MARK: - SIRI SPEAKER
 
 class SIRSpeakerManager: NSObject {
     
@@ -153,7 +161,7 @@ class SIRSpeakerManager: NSObject {
         utterance.voice = AVSpeechSynthesisVoice(language: "en-UK")
         synth.speak(utterance)
     }
-
+    
     
     private func prepareAudioSession() {
         do {
@@ -175,6 +183,8 @@ class SIRSpeakerManager: NSObject {
         }
     }
 }
+
+    // MARK: - EXTENSION SIRI SPEAKER
 
 extension SIRSpeakerManager: AVSpeechSynthesizerDelegate {
     func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didStart utterance: AVSpeechUtterance) {

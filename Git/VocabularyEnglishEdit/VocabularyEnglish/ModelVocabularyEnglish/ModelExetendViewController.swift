@@ -71,4 +71,17 @@ class ModelExetendViewController {
 //        }
     
     }
+    func saveData(descripTextView: UITextView) {
+        if descripTextView.text.isEmpty {
+            realm.beginWrite()
+            vocabularys![cellcount].descripVocab = ""
+            try! realm.commitWrite()
+        } else {
+            realm.beginWrite()
+            vocabularys![cellcount].descripVocab = descripTextView.text!
+            try! realm.commitWrite()
+            
+        }
+
+    }
 }

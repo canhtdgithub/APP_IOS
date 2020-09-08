@@ -10,13 +10,13 @@ import UIKit
 
 
 class ExetendViewController: UIViewController {
-        
+    let modelExtendVC = ModelExetendViewController.shared
+    
     //MARK: - @IBOUTLET
     
     @IBOutlet weak var textViewContraint: NSLayoutConstraint!
     
     @IBOutlet weak var vocabLabel: UILabel!
-    
     
     @IBOutlet weak var showImages: UIImageView!
     
@@ -26,24 +26,13 @@ class ExetendViewController: UIViewController {
     
     @IBAction func actionDismiss(_ sender: UIButton) {
         self.dismissMe(animated: true)
+        modelExtendVC.saveData(descripTextView: descripTextView)
     }
     
     //MARK: - TOUCH
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
-        
-        if descripTextView.text.isEmpty {
-            realm.beginWrite()
-            vocabularys![cellcount].descripVocab = ""
-            try! realm.commitWrite()
-        } else {
-            realm.beginWrite()
-            vocabularys![cellcount].descripVocab = descripTextView.text!
-            try! realm.commitWrite()
-            
-        }
-        
         self.descripTextView.resignFirstResponder()
     }
     
@@ -51,67 +40,12 @@ class ExetendViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Any code you put in here will be called when the keyboard is about to display
-        notifiShowKeyboard()
-        // Any code you put in here will be called when the keyboard is about to hide
-        notifiHideKeyboard()
-         
-        
-        inserImage()
-        
-        showImages.layerImage(cornerRadius: 10,
-                              borderColor: UIColor.black.cgColor,
-                              borderWidth: 0.6)
-        descripTextView.layerTextView(cornerRadius: 10,
-                                      borderColor: UIColor.black.cgColor,
-                                      borderWidth: 0.6)
-        vocabLabel.text = vocabularys![cellcount].vocabulary
-            
-        ModelExetendViewController.shared.testShowImage(label: vocabLabel, image: showImages)
-        
-        descripTextView.text! = vocabularys![cellcount].descripVocab
-        
+        initUI()
     }
-    
-    
-    //MARK: - METHOD
-    
-    func inserImage() {
-        let gesture = UITapGestureRecognizer(target: self, action: #selector(didTapImage))
-        self.showImages.addGestureRecognizer(gesture)
-    }
-    @objc func didTapImage() {
-        alertInsertImages()
-    }
-    
-    func notifiShowKeyboard() {
-        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
-    }
-    
-    @objc func keyboardWillShow(notification: NSNotification) {
-        
-        if let userInfo = notification.userInfo as? Dictionary<String, AnyObject> {
-            let frame = userInfo[UIResponder.keyboardFrameEndUserInfoKey]
-            let keyBoardRect = frame?.cgRectValue
-            if let keyBoardHeight = keyBoardRect?.height {
-                self.textViewContraint.constant = keyBoardHeight
-            }
-        }
-        
-    }
-    
-    func notifiHideKeyboard() {
-        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
-    }
-    
-    @objc func keyboardWillHide(notification: NSNotification) {
-        self.textViewContraint.constant = 5
-    }
-    
+
 }
 
-//MARK: - UIImagePickerControllerDelegate And UINavigationControllerDelegate
+//MARK: - Extension UIImagePickerControllerDelegate And UINavigationControllerDelegate
 
 extension ExetendViewController: UIImagePickerControllerDelegate & UINavigationControllerDelegate {
     
@@ -152,11 +86,63 @@ extension ExetendViewController: UIImagePickerControllerDelegate & UINavigationC
         let image = info[.originalImage] as? UIImage
         showImages.image = image!
         // save image in document directory
-        ModelExetendViewController.shared.saveImag(vocabLabel: vocabLabel, image: image!)
-       
+        modelExtendVC.saveImag(vocabLabel: vocabLabel, image: image!)
+        
         dismiss(animated: true, completion: nil)
     }
     
+}
+
+extension ExetendViewController {
+    func initUI() {
+        // Any code you put in here will be called when the keyboard is about to display
+        notifiShowKeyboard()
+        // Any code you put in here will be called when the keyboard is about to hide
+        notifiHideKeyboard()
+        inserImage()
+        showImages.layerImage(cornerRadius: 10,
+                              borderColor: UIColor.black.cgColor,
+                              borderWidth: 0.6)
+        descripTextView.layerTextView(cornerRadius: 10,
+                                      borderColor: UIColor.black.cgColor,
+                                      borderWidth: 0.6)
+        vocabLabel.text = vocabularys![cellcount].vocabulary
+        modelExtendVC.testShowImage(label: vocabLabel,
+                                    image: showImages)
+        descripTextView.text! = vocabularys![cellcount].descripVocab
+    }
+    
+    func inserImage() {
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(didTapImage))
+        self.showImages.addGestureRecognizer(gesture)
+    }
+    @objc func didTapImage() {
+        alertInsertImages()
+    }
+    
+    func notifiShowKeyboard() {
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+    }
+    
+    @objc func keyboardWillShow(notification: NSNotification) {
+        
+        if let userInfo = notification.userInfo as? Dictionary<String, AnyObject> {
+            let frame = userInfo[UIResponder.keyboardFrameEndUserInfoKey]
+            let keyBoardRect = frame?.cgRectValue
+            if let keyBoardHeight = keyBoardRect?.height {
+                self.textViewContraint.constant = keyBoardHeight
+            }
+        }
+        
+    }
+    
+    func notifiHideKeyboard() {
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    @objc func keyboardWillHide(notification: NSNotification) {
+        self.textViewContraint.constant = 5
+    }
 }
 
 

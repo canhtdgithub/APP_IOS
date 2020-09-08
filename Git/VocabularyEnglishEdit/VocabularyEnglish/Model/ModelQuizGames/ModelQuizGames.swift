@@ -52,6 +52,8 @@ class ModelQuizGames {
                         showAnswer.text?.append(stringAfterShuffled[indexPath.row])
                 if showAnswer.text == stringAfterRandom {
                     showAnswer.textColor = UIColor("ef5285", alpha: 1)
+                    SIRSpeakerManager.sharedInstance.stop()
+                    SIRSpeakerManager.sharedInstance.speakUS(showAnswer.text!)
                 }
                        editColor[indexPath.row] = false
                    } else {

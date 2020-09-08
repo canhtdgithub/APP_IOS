@@ -11,7 +11,6 @@ import UIKit
 
 class VocabularyTableViewCell: UITableViewCell {
     
-    
     static var identifier = "cell"
     
     static func nib() -> UINib {
@@ -22,18 +21,16 @@ class VocabularyTableViewCell: UITableViewCell {
     
     @IBOutlet weak var layerSpeaker: UIButton!
     
-    func config(text: String) {
-        self.showVocabulary.text = text
-    }
-    
     @IBAction func speaker(_ sender: Any) {
         SIRSpeakerManager.sharedInstance.stop()
         SIRSpeakerManager.sharedInstance.speakUS(showVocabulary.text!)
     }
     
-    
     func showSpeaker() {
         layerSpeaker.isHidden = false
+    }
+    func config(text: String) {
+        self.showVocabulary.text = text
     }
     
 }

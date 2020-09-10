@@ -12,6 +12,7 @@
             <connections>
                 <outlet property="myIcarousel" destination="73B-sw-2Xy" id="IgZ-ml-i8A"/>
                 <outlet property="view" destination="k3B-xo-2mx" id="O1U-W3-hPp"/>
+                <outlet property="viewHome" destination="Tc1-MX-Q4y" id="yUS-wj-k9v"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -20,17 +21,29 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="73B-sw-2Xy" customClass="iCarousel">
-                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <rect key="frame" x="107" y="348" width="200" height="200"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <color key="tintColor" red="1" green="0.1529411765" blue="0.027450980390000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="ajp-ky-2vs"/>
+                        <constraint firstAttribute="width" constant="200" id="lFH-ou-2Le"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tc1-MX-Q4y">
+                    <rect key="frame" x="107" y="822" width="200" height="40"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="ET1-Qw-Pzn"/>
+                        <constraint firstAttribute="height" constant="40" id="bdl-Kd-gXb"/>
+                    </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" red="0.47843137250000001" green="0.83529411760000005" blue="0.1176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="73B-sw-2Xy" firstAttribute="top" secondItem="wjU-5H-e3T" secondAttribute="top" id="AfB-nM-znb"/>
-                <constraint firstItem="73B-sw-2Xy" firstAttribute="leading" secondItem="wjU-5H-e3T" secondAttribute="leading" id="F43-0l-6Xv"/>
-                <constraint firstItem="wjU-5H-e3T" firstAttribute="bottom" secondItem="73B-sw-2Xy" secondAttribute="bottom" id="WJJ-K5-bpe"/>
-                <constraint firstItem="wjU-5H-e3T" firstAttribute="trailing" secondItem="73B-sw-2Xy" secondAttribute="trailing" id="cw1-IV-Hg6"/>
+                <constraint firstItem="73B-sw-2Xy" firstAttribute="centerY" secondItem="k3B-xo-2mx" secondAttribute="centerY" id="8ct-nM-NWG"/>
+                <constraint firstItem="Tc1-MX-Q4y" firstAttribute="bottom" secondItem="wjU-5H-e3T" secondAttribute="bottom" id="G3Z-A2-oKA"/>
+                <constraint firstItem="73B-sw-2Xy" firstAttribute="centerX" secondItem="k3B-xo-2mx" secondAttribute="centerX" id="Tcp-Qb-Grx"/>
+                <constraint firstItem="Tc1-MX-Q4y" firstAttribute="centerX" secondItem="k3B-xo-2mx" secondAttribute="centerX" id="YJQ-VT-pji"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="wjU-5H-e3T"/>
             <point key="canvasLocation" x="139" y="120"/>

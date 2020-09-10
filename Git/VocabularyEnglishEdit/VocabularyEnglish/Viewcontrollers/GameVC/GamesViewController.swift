@@ -11,6 +11,7 @@ import UIKit
 class GamesViewController: UIViewController {
     
     let modelGamesVC = ModelQuizGames.shared
+    let manager = VocabularyManger.sharedInstance
     //MARK: - @IBOUTLET
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -68,10 +69,6 @@ extension GamesViewController: UICollectionViewDelegate, UICollectionViewDataSou
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: GamesCollectionViewCell.identifier, for: indexPath) as! GamesCollectionViewCell
         cell.config(value: modelGamesVC.stringAfterShuffled[indexPath.row])
-        cell.layerCollectionViewCell(cornerRadius: 8,
-                                     borderColor: UIColor.black.cgColor,
-                                     borderWidth: 1)
-        
         cell.backgroundColor = UIColor("ef5285", alpha: 1.0)
         
         return cell
@@ -91,21 +88,11 @@ extension GamesViewController: UICollectionViewDelegate, UICollectionViewDataSou
 //MARK: - EXTENSION GAMES VIEW
 
 extension GamesViewController {
-    func initUI() {
+    private func initUI() {
         modelGamesVC.settingNavigationBar(viewController: self)
         navigationItem.title = "Brain Training"
         registTable(collectionView: collectionView)
-        vocabularys = realm.objects(Vocab.self)
-        
-        layerSpeakerQuestion.layerButtom(cornerRadius: layerSpeakerQuestion.frame.height / 2,
-                                         borderColor: UIColor.gray.cgColor ,
-                                         borderWidth: 2)
-        viewLayer.layerViews(cornerRadius: 7,
-                             borderColor: UIColor.gray.cgColor,
-                             borderWidth: 1)
-        layerNextQuestion.layerButtom(cornerRadius: layerNextQuestion.frame.size.height / 2,
-                                      borderColor: UIColor.gray.cgColor,
-                                      borderWidth: 1)
+        manager.vocabularys = manager.realm.objects(Vocab.self)
     }
     
     func registTable(collectionView: UICollectionView) {

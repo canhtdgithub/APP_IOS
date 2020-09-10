@@ -8,6 +8,11 @@
 
 import UIKit
 
+struct HomeLists {
+    var name: String
+    var view: UIViewController
+}
+
 
 struct SubjectName {
     var name: String
@@ -28,26 +33,26 @@ class ModelDictionaryViewController {
     private init() {}
     
     func loadDataVocab() {
-          let path = Bundle.main.path(forResource: "vocab_dictionary", ofType: "txt")
-          let text = try! String(contentsOf: URL(fileURLWithPath: path!))
-          
-          let data = text.components(separatedBy: .newlines)
-          dataVocab = data
-      }
+        let path = Bundle.main.path(forResource: "vocab_dictionary", ofType: "txt")
+        let text = try! String(contentsOf: URL(fileURLWithPath: path!))
+        
+        let data = text.components(separatedBy: .newlines)
+        dataVocab = data
+    }
     
-      func loadDiction() {
-          let path = Bundle.main.path(forResource: "dictionary", ofType: "json")
-          
-          do {
-              let data = try Data(contentsOf: URL(fileURLWithPath: path!))
-              diction = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves) as! [[String:String]]
-              
-          } catch {
-              print("error")
-          }
-          
-          
-      }
+    func loadDiction() {
+        let path = Bundle.main.path(forResource: "dictionary", ofType: "json")
+        
+        do {
+            let data = try Data(contentsOf: URL(fileURLWithPath: path!))
+            diction = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves) as! [[String:String]]
+            
+        } catch {
+            print("error")
+        }
+        
+        
+    }
     
     func loadSubject() {
         subject.append(SubjectName(name: "700 Word Toeic",
@@ -55,19 +60,19 @@ class ModelDictionaryViewController {
         subject.append(SubjectName(name: "3000 Word Common",
                                    view: WordCommonViewController()))
     }
-      
-      
-      func passData(cell: UITableViewCell) {
-          var index = 0
-          for i in 0...self.dataVocab.count - 1  {
-              if cell.textLabel?.text! == self.dataVocab[i] {
-                  index = i
-              }
-          }
-          
-          vocabulary = diction[index]
-
-      }
+    
+    
+    func passData(cell: UITableViewCell) {
+        var index = 0
+        for i in 0...self.dataVocab.count - 1  {
+            if cell.textLabel?.text! == self.dataVocab[i] {
+                index = i
+            }
+        }
+        
+        vocabulary = diction[index]
+        
+    }
     
     func filterText (hideButton: UIButton, showButton: UIButton,table: UITableView, query: String?) {
         filterDataVocab.removeAll()
@@ -87,7 +92,7 @@ class ModelDictionaryViewController {
             table.reloadData()
         }
         
-
+        
     }
     
     func alert(viewController: UIViewController, searchTextFiled: UITextField, table: UITableView) {
@@ -96,7 +101,7 @@ class ModelDictionaryViewController {
         let cancel = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
             DispatchQueue.main.async {
                 searchTextFiled.text = ""
-//                table.isHidden = true
+                //                table.isHidden = true
             }
             
         }
@@ -106,13 +111,13 @@ class ModelDictionaryViewController {
     }
     
     func settingNavigationBar(viewController: UIViewController) {
-           let naviBar = viewController.navigationController?.navigationBar
-           // bacgroudcolor navigation bar
-           naviBar!.barTintColor = UIColor("feee7d", alpha: 1.0)
+        let naviBar = viewController.navigationController?.navigationBar
+        // bacgroudcolor navigation bar
+        naviBar!.barTintColor = UIColor("feee7d", alpha: 1.0)
         naviBar!.shadowImage = UIImage()
-           // set font title
+        // set font title
         
-           naviBar!.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-Light", size: 25)!, NSAttributedString.Key.foregroundColor: UIColor("60c5ba", alpha: 1.0)]
-       }
+        naviBar!.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-Light", size: 25)!, NSAttributedString.Key.foregroundColor: UIColor("60c5ba", alpha: 1.0)]
+    }
     
 }

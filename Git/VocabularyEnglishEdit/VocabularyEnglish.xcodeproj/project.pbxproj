@@ -25,7 +25,6 @@
 		0A250B5024F879780070B7BC /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0A250B4824F879780070B7BC /* Poppins-SemiBold.ttf */; };
 		0A250B5124F879780070B7BC /* Poppins-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0A250B4924F879780070B7BC /* Poppins-Italic.ttf */; };
 		0A250B5524F887670070B7BC /* MarqueeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A250B5424F887660070B7BC /* MarqueeLabel.swift */; };
-		4E06E56024E7C5D200550708 /* DatabaseRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E06E55F24E7C5D200550708 /* DatabaseRealm.swift */; };
 		4E06E56324E7D6F600550708 /* ModelSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E06E56224E7D6F600550708 /* ModelSetting.swift */; };
 		4E089CAD24E6D01000AFC380 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E089CAC24E6D01000AFC380 /* UIButtonExtension.swift */; };
 		4E0C1F9724DCE8B700DA3DE4 /* congratulation1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4E0C1F9224DCE8B300DA3DE4 /* congratulation1.gif */; };
@@ -751,6 +750,14 @@
 		4EBEE58B24BDAC24007820B4 /* VocabularyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EBEE58924BDAC24007820B4 /* VocabularyTableViewCell.xib */; };
 		4ECD670524D932B300F65ED5 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECD670324D932B300F65ED5 /* SearchViewController.swift */; };
 		4ECD670624D932B300F65ED5 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4ECD670424D932B300F65ED5 /* SearchViewController.xib */; };
+		4ED49C24250A17670069FB07 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED49C23250A17670069FB07 /* HomeView.swift */; };
+		4ED49C26250A17880069FB07 /* HomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4ED49C25250A17880069FB07 /* HomeView.xib */; };
+		4ED49C2A250A1BF00069FB07 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED49C28250A1BF00069FB07 /* HomeCollectionViewCell.swift */; };
+		4ED49C2B250A1BF00069FB07 /* HomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4ED49C29250A1BF00069FB07 /* HomeCollectionViewCell.xib */; };
+		4ED49C2E250A1F0A0069FB07 /* FavouriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED49C2C250A1F0A0069FB07 /* FavouriteViewController.swift */; };
+		4ED49C2F250A1F0A0069FB07 /* FavouriteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4ED49C2D250A1F0A0069FB07 /* FavouriteViewController.xib */; };
+		4ED49C37250A1F830069FB07 /* ListGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED49C35250A1F830069FB07 /* ListGameViewController.swift */; };
+		4ED49C38250A1F830069FB07 /* ListGameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4ED49C36250A1F830069FB07 /* ListGameViewController.xib */; };
 		4EEE2BE224BDC7E00063AFCC /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EEE2BE124BDC7E00063AFCC /* ViewController.xib */; };
 		4EF39034250291F300839E39 /* DictionaryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF39032250291F300839E39 /* DictionaryCollectionViewCell.swift */; };
 		4EF39035250291F300839E39 /* DictionaryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EF39033250291F300839E39 /* DictionaryCollectionViewCell.xib */; };
@@ -800,7 +807,6 @@
 		0A250B4924F879780070B7BC /* Poppins-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Italic.ttf"; sourceTree = "<group>"; };
 		0A250B5424F887660070B7BC /* MarqueeLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarqueeLabel.swift; sourceTree = "<group>"; };
 		4AA69E4804B3E1F47065F053 /* Pods_VocabularyEnglish.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VocabularyEnglish.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4E06E55F24E7C5D200550708 /* DatabaseRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseRealm.swift; sourceTree = "<group>"; };
 		4E06E56224E7D6F600550708 /* ModelSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelSetting.swift; sourceTree = "<group>"; };
 		4E089CAC24E6D01000AFC380 /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
 		4E0C1F9224DCE8B300DA3DE4 /* congratulation1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = congratulation1.gif; sourceTree = "<group>"; };
@@ -1532,6 +1538,14 @@
 		4EBEE58924BDAC24007820B4 /* VocabularyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VocabularyTableViewCell.xib; sourceTree = "<group>"; };
 		4ECD670324D932B300F65ED5 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		4ECD670424D932B300F65ED5 /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
+		4ED49C23250A17670069FB07 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		4ED49C25250A17880069FB07 /* HomeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeView.xib; sourceTree = "<group>"; };
+		4ED49C28250A1BF00069FB07 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
+		4ED49C29250A1BF00069FB07 /* HomeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCollectionViewCell.xib; sourceTree = "<group>"; };
+		4ED49C2C250A1F0A0069FB07 /* FavouriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteViewController.swift; sourceTree = "<group>"; };
+		4ED49C2D250A1F0A0069FB07 /* FavouriteViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavouriteViewController.xib; sourceTree = "<group>"; };
+		4ED49C35250A1F830069FB07 /* ListGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListGameViewController.swift; sourceTree = "<group>"; };
+		4ED49C36250A1F830069FB07 /* ListGameViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListGameViewController.xib; sourceTree = "<group>"; };
 		4EEE2BE124BDC7E00063AFCC /* ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 		4EF39032250291F300839E39 /* DictionaryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryCollectionViewCell.swift; sourceTree = "<group>"; };
 		4EF39033250291F300839E39 /* DictionaryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DictionaryCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -1747,14 +1761,6 @@
 			path = Gif;
 			sourceTree = "<group>";
 		};
-		4E06E55E24E7C5AA00550708 /* DatabaseRealm */ = {
-			isa = PBXGroup;
-			children = (
-				4E06E55F24E7C5D200550708 /* DatabaseRealm.swift */,
-			);
-			path = DatabaseRealm;
-			sourceTree = "<group>";
-		};
 		4E06E56124E7D6B000550708 /* ModelSetting */ = {
 			isa = PBXGroup;
 			children = (
@@ -1831,7 +1837,6 @@
 				0A21302624F7D2AF001B0AB9 /* Viewcontrollers */,
 				0A21302524F7D258001B0AB9 /* Supporting Files */,
 				0A21302424F7D22B001B0AB9 /* Resources */,
-				4E06E55E24E7C5AA00550708 /* DatabaseRealm */,
 				4E5F915A24C973EA004FFBB0 /* ModelVocabularyEnglish */,
 			);
 			path = VocabularyEnglish;
@@ -1858,6 +1863,7 @@
 		4E4D2BA7250104C600340BD1 /* DictionaryVC */ = {
 			isa = PBXGroup;
 			children = (
+				4ED49C22250A17320069FB07 /* View */,
 				4EF390362502960800839E39 /* VC */,
 				4E4D2BA8250104F800340BD1 /* DictionaryViewController.swift */,
 				4E4D2BA9250104F800340BD1 /* DictionaryViewController.xib */,
@@ -1868,6 +1874,7 @@
 		4E4D2BAC2501082200340BD1 /* DictionaryViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				4ED49C27250A1BBD0069FB07 /* HomeViewCell */,
 				4E4D2BAD2501084F00340BD1 /* DictionaryTableViewCell.swift */,
 				4E4D2BAE2501084F00340BD1 /* DictionaryTableViewCell.xib */,
 				4EF39032250291F300839E39 /* DictionaryCollectionViewCell.swift */,
@@ -2641,6 +2648,24 @@
 			path = SearchVocabulary;
 			sourceTree = "<group>";
 		};
+		4ED49C22250A17320069FB07 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4ED49C23250A17670069FB07 /* HomeView.swift */,
+				4ED49C25250A17880069FB07 /* HomeView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4ED49C27250A1BBD0069FB07 /* HomeViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				4ED49C28250A1BF00069FB07 /* HomeCollectionViewCell.swift */,
+				4ED49C29250A1BF00069FB07 /* HomeCollectionViewCell.xib */,
+			);
+			path = HomeViewCell;
+			sourceTree = "<group>";
+		};
 		4EF390362502960800839E39 /* VC */ = {
 			isa = PBXGroup;
 			children = (
@@ -2650,6 +2675,10 @@
 				4EF3903C2502968400839E39 /* WordCommonViewController.xib */,
 				4E76778C25032E5300880C5E /* MyView.swift */,
 				4E76778E25032E8E00880C5E /* MyView.xib */,
+				4ED49C2C250A1F0A0069FB07 /* FavouriteViewController.swift */,
+				4ED49C2D250A1F0A0069FB07 /* FavouriteViewController.xib */,
+				4ED49C35250A1F830069FB07 /* ListGameViewController.swift */,
+				4ED49C36250A1F830069FB07 /* ListGameViewController.xib */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -2798,6 +2827,7 @@
 				4E767BB8250331A100880C5E /* procedure.jpg in Resources */,
 				4E767BED250331A100880C5E /* competition.jpg in Resources */,
 				4E767AEB250331A000880C5E /* register.jpg in Resources */,
+				4ED49C2B250A1BF00069FB07 /* HomeCollectionViewCell.xib in Resources */,
 				4E767CB5250331A100880C5E /* consume.jpg in Resources */,
 				4E767C81250331A100880C5E /* condition.jpg in Resources */,
 				4E767C55250331A100880C5E /* lead_time.jpg in Resources */,
@@ -2883,6 +2913,7 @@
 				4E767CB3250331A100880C5E /* pull_out.jpg in Resources */,
 				4E767A69250331A000880C5E /* financial.jpg in Resources */,
 				4E767C2E250331A100880C5E /* physically.jpg in Resources */,
+				4ED49C26250A17880069FB07 /* HomeView.xib in Resources */,
 				4E767BAB250331A100880C5E /* housekeeper.jpg in Resources */,
 				4E767A89250331A000880C5E /* on_time.jpg in Resources */,
 				4E767B9D250331A100880C5E /* run.jpg in Resources */,
@@ -3007,6 +3038,7 @@
 				4E767A65250331A000880C5E /* expiration.jpg in Resources */,
 				4E767A7A250331A000880C5E /* taste.jpg in Resources */,
 				4E767CA4250331A100880C5E /* familiar.jpg in Resources */,
+				4ED49C38250A1F830069FB07 /* ListGameViewController.xib in Resources */,
 				4E767C12250331A100880C5E /* profile.jpg in Resources */,
 				4E767A64250331A000880C5E /* influence.jpg in Resources */,
 				4E767B21250331A000880C5E /* compromise.jpg in Resources */,
@@ -3144,6 +3176,7 @@
 				4E767C99250331A100880C5E /* commensurate.jpg in Resources */,
 				4E767BB0250331A100880C5E /* imply.jpg in Resources */,
 				4E767AD8250331A000880C5E /* solve.jpg in Resources */,
+				4ED49C2F250A1F0A0069FB07 /* FavouriteViewController.xib in Resources */,
 				4E767B74250331A100880C5E /* singer.jpg in Resources */,
 				4E767C8D250331A100880C5E /* commonly.jpg in Resources */,
 				4E767C3D250331A100880C5E /* agreement.jpg in Resources */,
@@ -3629,8 +3662,8 @@
 				4E35326024BD87CD00415CC9 /* ViewController.swift in Sources */,
 				4EF39034250291F300839E39 /* DictionaryCollectionViewCell.swift in Sources */,
 				4E5F915C24C97489004FFBB0 /* ModelViewController.swift in Sources */,
+				4ED49C2A250A1BF00069FB07 /* HomeCollectionViewCell.swift in Sources */,
 				0A21303F24F7D7D2001B0AB9 /* DateExtention.swift in Sources */,
-				4E06E56024E7C5D200550708 /* DatabaseRealm.swift in Sources */,
 				4E1D696024E77C5B0032B572 /* ModelExetendViewController.swift in Sources */,
 				0A21303A24F7D7D2001B0AB9 /* ImageExtention.swift in Sources */,
 				4E1922C82503A22A005DE8E3 /* WordCommonTableViewCell.swift in Sources */,
@@ -3652,9 +3685,11 @@
 				4E63F2FE250241DE007E5B4B /* TranslateCollectionViewCell.swift in Sources */,
 				4E089CAD24E6D01000AFC380 /* UIButtonExtension.swift in Sources */,
 				0A21303E24F7D7D2001B0AB9 /* AttributedExtention.swift in Sources */,
+				4ED49C2E250A1F0A0069FB07 /* FavouriteViewController.swift in Sources */,
 				4ECD670524D932B300F65ED5 /* SearchViewController.swift in Sources */,
 				4E35325C24BD87CD00415CC9 /* AppDelegate.swift in Sources */,
 				4EBEE58524BD95DA007820B4 /* SettingViewController.swift in Sources */,
+				4ED49C37250A1F830069FB07 /* ListGameViewController.swift in Sources */,
 				4E63F2FA2501D26A007E5B4B /* ModelDictionary.swift in Sources */,
 				4E06E56324E7D6F600550708 /* ModelSetting.swift in Sources */,
 				4EBEE58A24BDAC24007820B4 /* VocabularyTableViewCell.swift in Sources */,
@@ -3662,6 +3697,7 @@
 				0A21303924F7D7D2001B0AB9 /* BundleExtention.swift in Sources */,
 				4E4D2BAA250104F800340BD1 /* DictionaryViewController.swift in Sources */,
 				4E109CB424CAE6C0007A509F /* ModelQuizGames.swift in Sources */,
+				4ED49C24250A17670069FB07 /* HomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

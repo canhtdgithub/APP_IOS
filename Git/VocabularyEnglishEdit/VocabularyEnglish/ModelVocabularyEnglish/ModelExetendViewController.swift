@@ -11,6 +11,7 @@ import UIKit
 class ModelExetendViewController {
     static var shared = ModelExetendViewController()
     let fileManager = FileManager.default
+    let manager = VocabularyManger.sharedInstance
     var urlPathImage: URL?
     
      private init() {}
@@ -73,13 +74,13 @@ class ModelExetendViewController {
     }
     func saveData(descripTextView: UITextView) {
         if descripTextView.text.isEmpty {
-            realm.beginWrite()
-            vocabularys![cellcount].descripVocab = ""
-            try! realm.commitWrite()
+            manager.realm.beginWrite()
+            manager.vocabularys![manager.cellcount].descripVocab = ""
+            try! manager.realm.commitWrite()
         } else {
-            realm.beginWrite()
-            vocabularys![cellcount].descripVocab = descripTextView.text!
-            try! realm.commitWrite()
+            manager.realm.beginWrite()
+            manager.vocabularys![manager.cellcount].descripVocab = descripTextView.text!
+            try! manager.realm.commitWrite()
             
         }
 

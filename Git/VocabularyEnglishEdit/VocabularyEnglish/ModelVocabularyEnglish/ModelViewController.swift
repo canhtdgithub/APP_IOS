@@ -11,19 +11,18 @@ import RealmSwift
 import InstantSearchVoiceOverlay
 import AVFoundation
 
-//MARK: - PROPERTIES
-// declare microphone
+struct WrongVocab {
+    var vocab: String
+}
 
-//class VocabularyManger {
-//    static let sharedInstance = VocabularyManger()
+class VocabularyManger {
+    static let sharedInstance = VocabularyManger()
+    var cellcount = 0
+    let realm = try! Realm()
+    var vocabularys: Results<Vocab>?
+    var wrongVocab = [WrongVocab]()
+}
 
-var cellcount = 0
-let realm = try! Realm()
-var vocabularys: Results<Vocab>?
-
-
-var wrongVocab = [WrongVocab]()
-//}
     // MARK: - VOCAB REALM
 
 class Vocab: Object {
@@ -35,6 +34,7 @@ class Vocab: Object {
 
 class ModelViewController {
     static let shared = ModelViewController()
+    let manager = VocabularyManger.sharedInstance
     private init() {}
     
     func insertVocab(newVocab: UITextField, tableView: UITableView) {
@@ -43,9 +43,9 @@ class ModelViewController {
             let value = Vocab()
             value.vocabulary = newVocab.text!.lowercased()
             value.descripVocab = ""
-            realm.beginWrite()
-            realm.add(value)
-            try! realm.commitWrite()
+            manager.realm.beginWrite()
+            manager.realm.add(value)
+            try! manager.realm.commitWrite()
             DispatchQueue.main.async {
                 tableView.reloadData()
             }
@@ -55,19 +55,16 @@ class ModelViewController {
     
     
     func changeColor(indexPath: IndexPath, vocabLabel: UILabel) {
-        guard wrongVocab.count > 0 else {
+        guard manager.wrongVocab.count > 0 else {
             vocabLabel.textColor = .black
             return
         }
         
         var isRed = false
-        for i in 0...(wrongVocab.count - 1) {
-            if vocabularys![indexPath.row].vocabulary == wrongVocab[i].vocab {
+        for i in 0...(manager.wrongVocab.count - 1) {
+            if manager.vocabularys![indexPath.row].vocabulary == manager.wrongVocab[i].vocab {
                 isRed = true
             }
-            //            else {
-            //                vocabLabel.textColor = .black
-            //            }
         }
         
         if isRed {
@@ -196,9 +193,6 @@ extension SIRSpeakerManager: AVSpeechSynthesizerDelegate {
     }
 }
 
-struct WrongVocab {
-    var vocab: String
-}
 
 
 

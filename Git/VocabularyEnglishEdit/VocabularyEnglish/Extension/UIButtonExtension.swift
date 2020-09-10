@@ -20,12 +20,6 @@ extension UIButton {
         layer.add(tap, forKey: nil)
     }
     
-    func layerButtom(cornerRadius: CGFloat?, borderColor: CGColor, borderWidth: CGFloat? ) {
-        layer.cornerRadius = cornerRadius ?? 0
-        layer.borderColor = borderColor
-        layer.borderWidth = borderWidth ?? 0
-    }
-    
     func setColorIcon(btn: UIButton, nameImage: String, colorIcon: UIColor) {
         let origImage = UIImage(named: nameImage)
         let tintedImage = origImage?.withRenderingMode(.alwaysTemplate)
@@ -35,14 +29,6 @@ extension UIButton {
     
 }
 
-extension UIView {
-    
-    func layerViews(cornerRadius: CGFloat?, borderColor: CGColor, borderWidth: CGFloat? ) {
-        layer.cornerRadius = cornerRadius ?? 0
-        layer.borderColor = borderColor
-        layer.borderWidth = borderWidth ?? 0
-    }
-}
 extension UICollectionViewCell {
     func tapAnimation() {
         let tap = CASpringAnimation(keyPath: "opacity")
@@ -53,29 +39,6 @@ extension UICollectionViewCell {
         tap.autoreverses = true
         tap.repeatCount = 1
         contentView.layer.add(tap, forKey: nil)
-    }
-    
-    func layerCollectionViewCell(cornerRadius: CGFloat?, borderColor: CGColor, borderWidth: CGFloat? ) {
-        layer.cornerRadius = cornerRadius ?? 0
-        layer.borderColor = borderColor
-        layer.borderWidth = borderWidth ?? 0
-    }
-
-}
-
-extension UIImageView {
-    func layerImage(cornerRadius: CGFloat?, borderColor: CGColor, borderWidth: CGFloat? ) {
-        layer.cornerRadius = cornerRadius ?? 0
-        layer.borderColor = borderColor
-        layer.borderWidth = borderWidth ?? 0
-    }
-}
-
-extension UITextView {
-    func layerTextView(cornerRadius: CGFloat?, borderColor: CGColor, borderWidth: CGFloat? ) {
-        layer.cornerRadius = cornerRadius ?? 0
-        layer.borderColor = borderColor
-        layer.borderWidth = borderWidth ?? 0
     }
 }
 

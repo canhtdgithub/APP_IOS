@@ -8,14 +8,24 @@
 
 import UIKit
 
-class WordCommonViewController: UIViewController {
+class WordCommonViewController: UIViewController, MyViewDelegate {
+    
+    func didTapButton(viewController: UIViewController) {
+        self.navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+ 
+    @IBOutlet weak var viewHome: UIView!
     
     @IBOutlet weak var table: UITableView!
     var word = [Word3000Common]()
     override func viewDidLoad() {
         super.viewDidLoad()
         initUI()
-       
+       let view1 = Bundle.main.loadNibNamed("HomeView", owner: self, options: nil)?.first as? HomeView
+        view1?.dele = self
+        view1!.frame = viewHome.bounds
+        viewHome.addSubview(view1!)
     }
 
     

@@ -96,6 +96,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="favouriteLayer" destination="Eoh-YJ-zjp" id="oAJ-EJ-3jP"/>
                 <outlet property="ipaLabel" destination="gqj-gn-IPx" id="XzI-sS-l1b"/>
                 <outlet property="meaningLabel" destination="yiG-qE-l1O" id="fsd-Ql-Awg"/>
                 <outlet property="typeLabel" destination="wys-nc-bmD" id="Nx5-EC-R3a"/>

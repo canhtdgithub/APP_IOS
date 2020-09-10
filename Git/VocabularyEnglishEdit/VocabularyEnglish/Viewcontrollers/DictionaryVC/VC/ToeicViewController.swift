@@ -10,11 +10,16 @@ import UIKit
 import iCarousel
 
 
-class ToeicViewController: UIViewController {
+class ToeicViewController: UIViewController, MyViewDelegate {
+    func didTapButton(viewController: UIViewController) {
+        self.navigationController?.pushViewController(viewController, animated: true)
+    }
+   
    
     var vocab = [Word700]()
     var favourite = [Bool]()
     
+    @IBOutlet weak var viewHome: UIView!
     @IBOutlet weak var myIcarousel: iCarousel!
     
     override func viewDidLoad() {
@@ -25,6 +30,11 @@ class ToeicViewController: UIViewController {
         myIcarousel.delegate = self
         myIcarousel.dataSource = self
         getData()
+        
+        let view1 = Bundle.main.loadNibNamed("HomeView", owner: self, options: nil)?.first as? HomeView
+        view1?.dele = self
+        view1!.frame = viewHome.bounds
+        viewHome.addSubview(view1!)
         
     }
     
@@ -63,14 +73,7 @@ extension ToeicViewController: iCarouselDelegate, iCarouselDataSource {
         a?.config(value: vocab[index])
         return a!
     }
-    func carousel(_ carousel: iCarousel, didSelectItemAt index: Int) {
-
-        
-       
-    }
-    
-    
-    
+   
 }
 
 struct Word700: Codable {

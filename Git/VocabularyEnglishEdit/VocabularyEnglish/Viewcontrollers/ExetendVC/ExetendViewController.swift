@@ -11,6 +11,7 @@ import UIKit
 
 class ExetendViewController: UIViewController {
     let modelExtendVC = ModelExetendViewController.shared
+    let manager = VocabularyManger.sharedInstance
     
     //MARK: - @IBOUTLET
     
@@ -94,22 +95,16 @@ extension ExetendViewController: UIImagePickerControllerDelegate & UINavigationC
 }
 
 extension ExetendViewController {
-    func initUI() {
+    private func initUI() {
         // Any code you put in here will be called when the keyboard is about to display
         notifiShowKeyboard()
         // Any code you put in here will be called when the keyboard is about to hide
         notifiHideKeyboard()
         inserImage()
-        showImages.layerImage(cornerRadius: 10,
-                              borderColor: UIColor.black.cgColor,
-                              borderWidth: 0.6)
-        descripTextView.layerTextView(cornerRadius: 10,
-                                      borderColor: UIColor.black.cgColor,
-                                      borderWidth: 0.6)
-        vocabLabel.text = vocabularys![cellcount].vocabulary
+        vocabLabel.text = manager.vocabularys![manager.cellcount].vocabulary
         modelExtendVC.testShowImage(label: vocabLabel,
                                     image: showImages)
-        descripTextView.text! = vocabularys![cellcount].descripVocab
+        descripTextView.text! = manager.vocabularys![manager.cellcount].descripVocab
     }
     
     func inserImage() {

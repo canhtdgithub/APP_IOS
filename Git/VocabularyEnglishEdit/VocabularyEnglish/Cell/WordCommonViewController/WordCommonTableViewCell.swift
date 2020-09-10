@@ -10,6 +10,8 @@ import UIKit
 
 class WordCommonTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var favouriteLayer: UIButton!
+    
     static var identifier = "wordcell"
     static func nib() -> UINib {
         return UINib(nibName: "WordCommonTableViewCell", bundle: nil)
@@ -29,8 +31,14 @@ class WordCommonTableViewCell: UITableViewCell {
         SIRSpeakerManager.sharedInstance.speakUS(vocabLabel.text!)
         
     }
-    @IBAction func favourite(_ sender: Any) {
-        
+    var selec = false
+    @IBAction func favourite(_ sender: UIButton) {
+        if !selec {
+            selec = true
+            sender.tintColor = .red
+        } else {
+            sender.tintColor = .blue
+        }
         
     }
     

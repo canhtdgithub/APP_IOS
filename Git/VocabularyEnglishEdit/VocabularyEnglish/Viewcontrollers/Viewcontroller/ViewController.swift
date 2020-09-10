@@ -11,6 +11,7 @@ import UIKit
 
 class ViewController: UIViewController {
     let modelVC = ModelViewController.shared
+    let manager = VocabularyManger.sharedInstance
     
     //MARK: - @IBOUTLET
     @IBOutlet weak var viewLayer: UIView!
@@ -33,7 +34,7 @@ class ViewController: UIViewController {
     //MARK: - VIEW LIFE CYCLE
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        guard wrongVocab.count > 0 else {
+        guard manager.wrongVocab.count > 0 else {
             return
         }
         
@@ -64,7 +65,7 @@ class ViewController: UIViewController {
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return vocabularys?.count ?? 0
+        return manager.vocabularys?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -74,7 +75,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = table.dequeueReusableCell(withIdentifier: VocabularyTableViewCell.identifier, for: indexPath) as! VocabularyTableViewCell
         modelVC.changeColor(indexPath: indexPath, vocabLabel: cell.showVocabulary)
-        cell.config(text: vocabularys![indexPath.row].vocabulary)
+        cell.config(text: manager.vocabularys![indexPath.row].vocabulary)
         cell.showSpeaker()
         cell.selectionStyle = .none
         return cell
@@ -82,7 +83,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let extend = ExetendViewController()
-        cellcount = indexPath.row
+        manager.cellcount = indexPath.row
         extend.modalPresentationStyle = .fullScreen
         self.present(extend, animated: true, completion: nil)
     }
@@ -90,10 +91,10 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             print(indexPath.row)
-            ModelExetendViewController.shared.deletePatchImage(deleteVocab: vocabularys![indexPath.row].vocabulary)
-            realm.beginWrite()
-            realm.delete(vocabularys![indexPath.row])
-            try! realm.commitWrite()
+            ModelExetendViewController.shared.deletePatchImage(deleteVocab: manager.vocabularys![indexPath.row].vocabulary)
+            manager.realm.beginWrite()
+            manager.realm.delete(manager.vocabularys![indexPath.row])
+            try! manager.realm.commitWrite()
             DispatchQueue.main.async {
                 self.table.reloadData()
             }
@@ -112,18 +113,15 @@ extension ViewController: UITextFieldDelegate {
 }
 
 extension ViewController {
-    func initUI() {
+    private func initUI() {
         textVocab.delegate = self
         registTable(tableView: table)
         notifiShowKeyboard()
         notifiHideKeyboard()
-        viewLayer.layerViews(cornerRadius: 19,
-                             borderColor: UIColor.black.cgColor,
-                             borderWidth: 1 )
         layerButtom.setColorIcon(btn: layerButtom,
                                  nameImage: "plus",
                                  colorIcon: UIColor("ef5285", alpha: 1))
-        vocabularys = realm.objects(Vocab.self)
+        manager.vocabularys = manager.realm.objects(Vocab.self)
     }
     
     func registTable(tableView: UITableView) {

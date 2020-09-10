@@ -128,7 +128,7 @@ extension SettingViewController: MFMailComposeViewControllerDelegate {
 // MARK: - EXTENSION SETTING VIEW CONTROLLER
 
 extension SettingViewController {
-    func initUI() {
+    private func initUI() {
         navigationItem.title = "Setting"
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert,.badge, .sound], completionHandler: {(didAllow, error) in })
         modelSettingVC.testShowVocab(tapSettingSwitch: tapSettingSwitch)
@@ -142,11 +142,7 @@ extension SettingViewController {
         tapViewPicker()
         
         datePicker.addTarget(self, action: #selector(handl(sender:)), for: .valueChanged)
-        for i in 0...btn.count - 1 {
-            btn[i].layerButtom(cornerRadius: 10,
-                               borderColor: UIColor.gray.cgColor,
-                               borderWidth: 1)
-        }
+       
     }
     
     func regisTable() {

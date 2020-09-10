@@ -11,24 +11,28 @@ import UIKit
 
 class ModelQuizGames {
     static let shared = ModelQuizGames()
-        var editColor = [Bool]()
-        var tapCount = [Int]()
-    
-    let imageWrong = ["wrong","wrong1","wrong2"]
-    let imageCorrect = ["congratulation", "congratulation1", "congratulation2", "congratulation3", "congratulation4"]
-    
-    
+    let manager = VocabularyManger.sharedInstance
+    var editColor = [Bool]()
+    var tapCount = [Int]()
     var stringAfterRandom: String?
     var stringAfterShuffled = [Character]()
+    
+    let imageWrong = ["wrong",
+                      "wrong1",
+                      "wrong2"]
+    let imageCorrect = ["congratulation",
+                        "congratulation1",
+                        "congratulation2",
+                        "congratulation3",
+                        "congratulation4"]
+    
     private init() {}
-    
-    
     
     func deleteText(indexPath: IndexPath, showAnswer: UILabel) {
         guard var string = showAnswer.text, string.count > 0 else {
             return
         }
-         string.remove(at: string.index(string.startIndex, offsetBy: tapCount[indexPath.row] - 1, limitedBy: string.endIndex)!)
+        string.remove(at: string.index(string.startIndex, offsetBy: tapCount[indexPath.row] - 1, limitedBy: string.endIndex)!)
         showAnswer.text! = string
         
     }
@@ -41,42 +45,43 @@ class ModelQuizGames {
         naviBar!.setBackgroundImage(UIImage(), for: .default)
         naviBar!.shadowImage = UIImage()
         // set font and color title
-        naviBar!.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-Light", size: 25)!, NSAttributedString.Key.foregroundColor: UIColor.white]
+        naviBar!.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-Light",
+                                                                            size: 25)!, NSAttributedString.Key.foregroundColor: UIColor.white]
     }
     
-        func changeColorCell(showAnswer: UILabel, indexPath: IndexPath, cell: UICollectionViewCell) {
-            if editColor[indexPath.row] {
-                
-                        tapCount[indexPath.row] = tapCount.max()! + 1
-                       cell.backgroundColor = .gray
-                        showAnswer.text?.append(stringAfterShuffled[indexPath.row])
-                if showAnswer.text == stringAfterRandom {
-                    showAnswer.textColor = UIColor("ef5285", alpha: 1)
-                    SIRSpeakerManager.sharedInstance.stop()
-                    SIRSpeakerManager.sharedInstance.speakUS(showAnswer.text!)
+    func changeColorCell(showAnswer: UILabel, indexPath: IndexPath, cell: UICollectionViewCell) {
+        if editColor[indexPath.row] {
+            
+            tapCount[indexPath.row] = tapCount.max()! + 1
+            cell.backgroundColor = .gray
+            showAnswer.text?.append(stringAfterShuffled[indexPath.row])
+            if showAnswer.text == stringAfterRandom {
+                showAnswer.textColor = UIColor("ef5285", alpha: 1)
+                SIRSpeakerManager.sharedInstance.stop()
+                SIRSpeakerManager.sharedInstance.speakUS(showAnswer.text!)
+            }
+            editColor[indexPath.row] = false
+        } else {
+            cell.backgroundColor = UIColor("ef5285", alpha: 1.0)
+            deleteText(indexPath: indexPath, showAnswer: showAnswer)
+            for i in 0...tapCount.count - 1 {
+                if tapCount[i] > tapCount[indexPath.row] {
+                    tapCount[i] -= 1
                 }
-                       editColor[indexPath.row] = false
-                   } else {
-                cell.backgroundColor = UIColor("ef5285", alpha: 1.0)
-                        deleteText(indexPath: indexPath, showAnswer: showAnswer)
-                        for i in 0...tapCount.count - 1 {
-                            if tapCount[i] > tapCount[indexPath.row] {
-                                tapCount[i] -= 1
-                            }
-                        }
-                if showAnswer.text != stringAfterRandom {
-                                   showAnswer.textColor = .black
-                               }
-                    tapCount[indexPath.row] = 0
-                       editColor[indexPath.row] = true
-                   }
+            }
+            if showAnswer.text != stringAfterRandom {
+                showAnswer.textColor = .black
+            }
+            tapCount[indexPath.row] = 0
+            editColor[indexPath.row] = true
         }
+    }
     
     func tinh() -> Int {
-        if vocabularys!.count == 0 {
+        if manager.vocabularys!.count == 0 {
             return 0
         } else {
-            self.stringAfterRandom = vocabularys![Int.random(in: 0...(vocabularys!.count - 1))].vocabulary
+            self.stringAfterRandom = manager.vocabularys![Int.random(in: 0...(manager.vocabularys!.count - 1))].vocabulary
             self.stringAfterShuffled = stringAfterRandom!.shuffled()
             return stringAfterShuffled.count
         }
@@ -107,7 +112,7 @@ class ModelQuizGames {
         else {
             let alert = UIAlertController(title: "Alert", message: "You wrong, please work again", preferredStyle: .alert)
             let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-            wrongVocab.append(WrongVocab.init(vocab: stringAfterRandom!))
+            manager.wrongVocab.append(WrongVocab.init(vocab: stringAfterRandom!))
             alert.addAction(cancel)
             imageQuestion.loadGif(name: imageWrong.randomElement()!)
             viewPresent.present(alert, animated: true, completion: nil)

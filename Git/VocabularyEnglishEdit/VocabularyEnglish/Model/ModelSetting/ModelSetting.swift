@@ -11,9 +11,13 @@ import UIKit
 
 class ModelSetting {
     static let shared = ModelSetting()
+    let manager = VocabularyManger.sharedInstance
     let defaults = UserDefaults.standard
     var arrayBool = [true, true, true, true, true, true, true]
     var list = [ListItems]()
+    
+    private init() {}
+    
     func testReminder(tick: UIButton, contrainstTable: NSLayoutConstraint) {
         if tick.isHidden {
             
@@ -46,7 +50,7 @@ class ModelSetting {
         if show {
             tick.isHidden = true
             contrainstTable.constant = -114
-
+            
         } else {
             tick.isHidden = false
             contrainstTable.constant = 2.5
@@ -99,34 +103,34 @@ class ModelSetting {
     }
     
     func setTimePicker(sender: UIDatePicker, startLabel: UILabel) {
-          let timeFormatterHour = DateFormatter()
-                timeFormatterHour.dateFormat = "hh"
-                let strDateHour = timeFormatterHour.string(from: sender.date)
-                     UserDefaults.standard.set(strDateHour, forKey: "hour")
-
-                let timeFormatterMinute = DateFormatter()
-                timeFormatterMinute.dateFormat = "mm"
-                let strDateMinute = timeFormatterMinute.string(from: sender.date)
-                     UserDefaults.standard.set(strDateMinute, forKey: "minute")
-
-                let timeFormatterAMPM = DateFormatter()
-                timeFormatterAMPM.dateFormat = "a"
-                let strAMPM = timeFormatterAMPM.string(from: sender.date)
-                     UserDefaults.standard.set(strAMPM, forKey: "ampm")
-               
-               let timeFormatter = DateFormatter()
-               
-                timeFormatter.timeStyle = .short
-                let strDate = timeFormatter.string(from: sender.date)
-                     UserDefaults.standard.set(strDate, forKey: "datePicker")
+        let timeFormatterHour = DateFormatter()
+        timeFormatterHour.dateFormat = "hh"
+        let strDateHour = timeFormatterHour.string(from: sender.date)
+        UserDefaults.standard.set(strDateHour, forKey: "hour")
         
-                startLabel.text = "\(strDateHour):\(strDateMinute) \(strAMPM)"
+        let timeFormatterMinute = DateFormatter()
+        timeFormatterMinute.dateFormat = "mm"
+        let strDateMinute = timeFormatterMinute.string(from: sender.date)
+        UserDefaults.standard.set(strDateMinute, forKey: "minute")
+        
+        let timeFormatterAMPM = DateFormatter()
+        timeFormatterAMPM.dateFormat = "a"
+        let strAMPM = timeFormatterAMPM.string(from: sender.date)
+        UserDefaults.standard.set(strAMPM, forKey: "ampm")
+        
+        let timeFormatter = DateFormatter()
+        
+        timeFormatter.timeStyle = .short
+        let strDate = timeFormatter.string(from: sender.date)
+        UserDefaults.standard.set(strDate, forKey: "datePicker")
+        
+        startLabel.text = "\(strDateHour):\(strDateMinute) \(strAMPM)"
     }
-
+    
     
     func notifiDetail() {
         
-        let title = vocabularys![Int.random(in: 0...(vocabularys!.count - 1))].vocabulary
+        let title = manager.vocabularys![Int.random(in: 0...(manager.vocabularys!.count - 1))].vocabulary
         
         let content = UNMutableNotificationContent()
         content.title = "Learn a new vocabulary!!!!"

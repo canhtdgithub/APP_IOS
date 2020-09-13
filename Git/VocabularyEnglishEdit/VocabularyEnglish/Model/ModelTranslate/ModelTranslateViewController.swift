@@ -8,20 +8,7 @@
 
 import UIKit
 
-struct Titles {
-    var title: String
-}
-
-
 class ModelTranslateViewController {
     static let shared = ModelTranslateViewController()
-    var title = [Titles]()
-    
-    
-    func loadTitles() {
-        title.append(Titles(title: "Translate"))
-        title.append(Titles(title: "Specialized"))
-    }
-    
     
 }

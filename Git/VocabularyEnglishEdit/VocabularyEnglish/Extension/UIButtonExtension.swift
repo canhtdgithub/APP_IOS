@@ -42,5 +42,18 @@ extension UICollectionViewCell {
     }
 }
 
+extension UILabel {
+    func pulse() {
+        let pul = CASpringAnimation(keyPath: "transfom.scale")
+        pul.duration = 0.6
+        pul.fromValue = 0.5
+        pul.toValue = 1
+        pul.autoreverses = true
+        pul.repeatCount = 2
+        pul.initialVelocity = 0.5
+        pul.damping = 1
+        layer.add(pul, forKey: nil)
+    }
+}
 
 

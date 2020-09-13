@@ -19,16 +19,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" image="vocabulary" translatesAutoresizingMaskIntoConstraints="NO" id="Rui-vg-6eG">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" image="lauch1" translatesAutoresizingMaskIntoConstraints="NO" id="Rui-vg-6eG">
+                                <rect key="frame" x="20" y="298" width="374" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="5TO-Ie-Jx6"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="Rui-vg-6eG" secondAttribute="trailing" id="FXB-sN-uSD"/>
-                            <constraint firstItem="Rui-vg-6eG" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="HAx-In-Gde"/>
-                            <constraint firstItem="Rui-vg-6eG" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="dzb-DL-Rbt"/>
-                            <constraint firstAttribute="bottom" secondItem="Rui-vg-6eG" secondAttribute="bottom" id="fdX-gS-Hdy"/>
+                            <constraint firstItem="Rui-vg-6eG" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" id="BD8-Vz-ufG"/>
+                            <constraint firstItem="Rui-vg-6eG" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="DNa-8B-zA4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Rui-vg-6eG" secondAttribute="trailing" id="KEf-7x-Vb7"/>
+                            <constraint firstItem="Rui-vg-6eG" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="PdQ-F2-2VI"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -38,6 +41,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="vocabulary" width="348" height="272"/>
+        <image name="lauch1" width="960" height="540"/>
     </resources>
 </document>

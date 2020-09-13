@@ -17,9 +17,31 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1bp-m3-SNC">
+                    <rect key="frame" x="0.0" y="44" width="26" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="26" id="AUV-Ff-N7O"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="24" id="FW4-IP-kJM"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="26" id="HEz-ss-oiD"/>
+                        <constraint firstAttribute="height" constant="24" id="ce1-VE-goC"/>
+                    </constraints>
+                    <state key="normal" image="back"/>
+                    <connections>
+                        <action selector="back:" destination="-1" eventType="touchUpInside" id="oGB-OB-bjx"/>
+                    </connections>
+                </button>
+            </subviews>
             <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="1bp-m3-SNC" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="fNZ-r9-pQH"/>
+                <constraint firstItem="1bp-m3-SNC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="raJ-eN-Eve"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="139" y="96"/>
         </view>
     </objects>
+    <resources>
+        <image name="back" width="100" height="100"/>
+    </resources>
 </document>

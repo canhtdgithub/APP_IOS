@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController" customModule="SlideTabBarDemo" customModuleProvider="target">
+            <connections>
+                <outlet property="buttonBarView" destination="UGc-j7-sco" id="pyf-lA-hlq"/>
+                <outlet property="containerView" destination="IxA-3V-Qv1" id="BJ8-oA-tzG"/>
+                <outlet property="view" destination="iN0-l3-epB" id="iDR-gz-Y6X"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IxA-3V-Qv1">
+                    <rect key="frame" x="0.0" y="94" width="414" height="768"/>
+                </scrollView>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="UGc-j7-sco" customClass="ButtonBarView" customModule="XLPagerTabStrip">
+                    <rect key="frame" x="0.0" y="44" width="414" height="50"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="Fgf-Yi-6RZ"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="xNf-AM-TLF">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="UGc-j7-sco" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="5Fk-Hx-pHb"/>
+                <constraint firstItem="IxA-3V-Qv1" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="6BO-0S-wOw"/>
+                <constraint firstItem="UGc-j7-sco" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="CG6-ok-NR6"/>
+                <constraint firstItem="IxA-3V-Qv1" firstAttribute="top" secondItem="UGc-j7-sco" secondAttribute="bottom" id="KCm-Bi-yl6"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="IxA-3V-Qv1" secondAttribute="bottom" id="fqT-5p-hYr"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="UGc-j7-sco" secondAttribute="trailing" id="fu6-ax-XA7"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="IxA-3V-Qv1" secondAttribute="trailing" id="zx9-Ut-UvZ"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="139" y="120"/>
+        </view>
+    </objects>
+</document>

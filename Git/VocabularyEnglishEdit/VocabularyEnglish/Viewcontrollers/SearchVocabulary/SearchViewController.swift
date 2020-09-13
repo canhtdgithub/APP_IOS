@@ -14,6 +14,9 @@ class SearchViewController: UIViewController {
     
     // MARK: - @IBOUTLET
     
+    @IBOutlet weak var viewSearch: UIView!
+    
+    @IBOutlet weak var constraintView: NSLayoutConstraint!
     @IBOutlet weak var layerSearch: UIButton!
     
     @IBOutlet weak var dictionaryWeb: UIWebView!
@@ -32,7 +35,7 @@ class SearchViewController: UIViewController {
         modelSearchVC.search(searchTextField: searchTextField,
                              alertLabel: alertLabel,
                              selecteSegment: selecteSegment,
-                             dictionaryWeb: dictionaryWeb)
+                             dictionaryWeb: dictionaryWeb, viewSearch: viewSearch)
         
     }
     // MARK: - VIEW LIFE CYCLE

@@ -49,7 +49,28 @@ class ModelQuizGames {
                                                                             size: 25)!, NSAttributedString.Key.foregroundColor: UIColor.white]
     }
     
-    func changeColorCell(showAnswer: UILabel, indexPath: IndexPath, cell: UICollectionViewCell) {
+    func changeColorCell(showAnswer: UILabel, indexPath: IndexPath, cell: UICollectionViewCell, viewAnswer: UIView) {
+        func scale() {
+            UIView.animate(withDuration: 0.4, animations: {
+                showAnswer.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
+                viewAnswer.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
+            }) { (success) in
+                UIView.animate(withDuration: 0.4, animations: {
+                    showAnswer.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
+                    viewAnswer.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
+                }) { (success) in
+                    UIView.animate(withDuration: 0.4, animations: {
+                        showAnswer.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
+                        viewAnswer.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
+                    }) { (success) in
+                        showAnswer.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
+                        viewAnswer.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
+                    }
+                }
+                
+                
+            }
+        }
         if editColor[indexPath.row] {
             
             tapCount[indexPath.row] = tapCount.max()! + 1
@@ -59,6 +80,7 @@ class ModelQuizGames {
                 showAnswer.textColor = UIColor("ef5285", alpha: 1)
                 SIRSpeakerManager.sharedInstance.stop()
                 SIRSpeakerManager.sharedInstance.speakUS(showAnswer.text!)
+                scale()
             }
             editColor[indexPath.row] = false
         } else {
@@ -71,11 +93,14 @@ class ModelQuizGames {
             }
             if showAnswer.text != stringAfterRandom {
                 showAnswer.textColor = .black
+                
             }
             tapCount[indexPath.row] = 0
             editColor[indexPath.row] = true
         }
+        
     }
+    
     
     func tinh() -> Int {
         if manager.vocabularys!.count == 0 {

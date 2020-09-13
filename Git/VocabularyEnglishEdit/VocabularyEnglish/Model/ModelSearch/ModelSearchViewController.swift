@@ -14,7 +14,7 @@ class ModelSearchViewController {
     var url: URL?
     
     
-    func search(searchTextField: UITextField, alertLabel: UILabel, selecteSegment: UISegmentedControl, dictionaryWeb: UIWebView) {
+    func search(searchTextField: UITextField, alertLabel: UILabel, selecteSegment: UISegmentedControl, dictionaryWeb: UIWebView, viewSearch: UIView) {
         if !isConnectedToNetwork() {
             searchTextField.resignFirstResponder()
             alertLabel.isHidden = false
@@ -26,7 +26,7 @@ class ModelSearchViewController {
         } else if searchTextField.text!.isEmpty {
             searchTextField.resignFirstResponder()
             alertLabel.isHidden = false
-            alertLabel.text = "please enter a word you want to search ."
+            alertLabel.text = "please enter a word you want to search."
             let _ = Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { (time) in
                 alertLabel.isHidden = true
             }
@@ -51,7 +51,13 @@ class ModelSearchViewController {
             }
             
             dictionaryWeb.loadRequest(URLRequest(url: url ?? URL(string: "google.com")!))
+            UIView.animate(withDuration: 1) {
+                viewSearch.transform = CGAffineTransform(translationX: 0, y: -30)
+            }
+           
         }
+        
+        
     }
     
     

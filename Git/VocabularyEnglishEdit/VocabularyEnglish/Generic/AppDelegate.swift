@@ -46,6 +46,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         navi4.title = "Dictionary"
         
         let settingController = SettingViewController()
+        
         let navi2 = UINavigationController(rootViewController: settingController)
         navi2.tabBarItem.image = UIImage(named: "setting")
         navi2.title = "Setting"

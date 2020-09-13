@@ -14,6 +14,8 @@ class GamesViewController: UIViewController {
     let manager = VocabularyManger.sharedInstance
     //MARK: - @IBOUTLET
     
+    @IBOutlet weak var viewAnswer: UIView!
+    
     @IBOutlet weak var collectionView: UICollectionView!
     
     @IBOutlet weak var imageQuestion: UIImageView!
@@ -80,7 +82,7 @@ extension GamesViewController: UICollectionViewDelegate, UICollectionViewDataSou
         
         modelGamesVC.changeColorCell(showAnswer: showAnswer,
                                      indexPath: indexPath,
-                                     cell: cell)
+                                     cell: cell, viewAnswer: viewAnswer)
         
     }
     

@@ -11,7 +11,9 @@ import UIKit
 class DictionaryViewController: UIViewController {
     
     let modelDicitonVC = ModelDictionaryViewController.shared
-
+    
+    //MARK: - @IBOUTLET
+    
     @IBOutlet weak var table: UITableView!
     
     @IBOutlet weak var collection: UICollectionView!
@@ -22,6 +24,7 @@ class DictionaryViewController: UIViewController {
     
     @IBOutlet weak var searchTextField: UITextField!
     
+    //MARK: - @ACTION
     
     @IBAction func speech(_ sender: Any) {
         SpeechToText.shared.startMicrophone(viewController: self, showText: searchTextField)
@@ -34,6 +37,7 @@ class DictionaryViewController: UIViewController {
         speechLayer.isHidden = false
         cancelLayer.isHidden = true
     }
+    //MARK: - LIFE CYCLE VIEW
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,8 +45,16 @@ class DictionaryViewController: UIViewController {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        table.isHidden = true
+        navigationController?.setNavigationBarHidden(false, animated: true)
+        tabBarController?.tabBar.isHidden = false
+    }
+    
     
 }
+    //MARK: - EXTENSION UITABLE VIEW
 
 extension DictionaryViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -57,18 +69,17 @@ extension DictionaryViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = table.cellForRow(at: indexPath) as! DictionaryTableViewCell
-            
         cell.selectionStyle = .none
-            modelDicitonVC.passData(cell: cell)
-            
-            let transVC = TranslateViewController()
-            transVC.translate = modelDicitonVC.vocabulary
-            self.navigationController?.pushViewController(transVC, animated: true)
+        modelDicitonVC.passData(cell: cell)
+        let transVC = TranslateViewController()
+        transVC.trans = modelDicitonVC.vocabulary
+        self.navigationController?.pushViewController(transVC, animated: true)
         
     }
     
     
 }
+    //MARK: - EXTENSION UICOLLECTION VIEW
 
 extension DictionaryViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -87,6 +98,7 @@ extension DictionaryViewController: UICollectionViewDelegate, UICollectionViewDa
     
     
 }
+    //MARK: - EXTENSION UITEXT FIELD
 
 extension DictionaryViewController: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
@@ -108,18 +120,15 @@ extension DictionaryViewController: UITextFieldDelegate {
         return true
     }
     
-    func textFieldDidEndEditing(_ textField: UITextField, reason: UITextField.DidEndEditingReason) {
-        table.isHidden = true
-    }
-    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if modelDicitonVC.filterDataVocab.isEmpty {
             modelDicitonVC.alert(viewController: self, searchTextFiled: searchTextField, table: table)
         } else {
-        let trans = TranslateViewController()
-        trans.translate = modelDicitonVC.vocabulary
-        self.navigationController?.pushViewController(trans, animated: true)
-        textField.resignFirstResponder()
+            
+            let transVC = TranslateViewController()
+            transVC.trans = modelDicitonVC.vocabulary
+            self.navigationController?.pushViewController(transVC, animated: true)
+            textField.resignFirstResponder()
         }
         return true
         
@@ -127,6 +136,8 @@ extension DictionaryViewController: UITextFieldDelegate {
     
     
 }
+
+//MARK: - EXTENSION DICTIONARY VIEW CONTROLLER
 
 extension DictionaryViewController {
     func initUI() {

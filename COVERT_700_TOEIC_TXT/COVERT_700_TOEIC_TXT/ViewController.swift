@@ -205,7 +205,7 @@ class ViewController: UIViewController {
 //            print(technical)
 //            print(economic)
             let majorTechnicalAndEconomic = sumMajor.replacingOccurrences(of: "@", with: "").replacingOccurrences(of: "\\n", with: "\n")
-            let main = mainMeaning.replacingOccurrences(of: "\\n", with: "")
+            let main = mainMeaning.replacingOccurrences(of: "\\n", with: "\n")
             
             para.setValue(main, forKey: "mainMeaning")
             para.setValue(majorTechnicalAndEconomic, forKey: "Faculty")

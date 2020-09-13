@@ -29,8 +29,12 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tmj-sd-FZR">
                             <rect key="frame" x="50" y="0.0" width="314" height="34"/>
                             <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="magnifyingglass" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Pfn-oz-M1l">
-                                    <rect key="frame" x="0.0" y="8" width="20" height="18"/>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search" translatesAutoresizingMaskIntoConstraints="NO" id="Pfn-oz-M1l">
+                                    <rect key="frame" x="0.0" y="7" width="20" height="20"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="20" id="NWz-rh-ikq"/>
+                                        <constraint firstAttribute="height" constant="20" id="cQa-jt-Fd2"/>
+                                    </constraints>
                                 </imageView>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search dictionary..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JPx-mB-OXP">
                                     <rect key="frame" x="20" y="0.0" width="264" height="34"/>
@@ -38,19 +42,24 @@
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
                                 <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NwM-rQ-yjl">
-                                    <rect key="frame" x="284" y="3.5" width="25" height="27"/>
+                                    <rect key="frame" x="289" y="7" width="19" height="20"/>
                                     <constraints>
-                                        <constraint firstAttribute="width" constant="25" id="n85-d8-aad"/>
+                                        <constraint firstAttribute="width" constant="19" id="Thr-tj-j0I"/>
+                                        <constraint firstAttribute="height" constant="20" id="pyR-0r-cHu"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                    <state key="normal" image="mic" catalog="system"/>
+                                    <state key="normal" image="microphone"/>
                                     <connections>
                                         <action selector="speech:" destination="-1" eventType="touchUpInside" id="UXI-Fq-k0w"/>
                                     </connections>
                                 </button>
                                 <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cqC-1y-3BA">
-                                    <rect key="frame" x="284" y="3.5" width="25" height="27"/>
-                                    <state key="normal" image="xmark" catalog="system"/>
+                                    <rect key="frame" x="289" y="7" width="20" height="20"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="20" id="L38-kT-yFk"/>
+                                        <constraint firstAttribute="height" constant="20" id="d3t-mc-5ti"/>
+                                    </constraints>
+                                    <state key="normal" image="cancel1"/>
                                     <connections>
                                         <action selector="cancel:" destination="-1" eventType="touchUpInside" id="icr-IQ-BRd"/>
                                     </connections>
@@ -59,15 +68,13 @@
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <constraints>
                                 <constraint firstItem="Pfn-oz-M1l" firstAttribute="centerY" secondItem="Tmj-sd-FZR" secondAttribute="centerY" id="0B1-Px-dOP"/>
-                                <constraint firstItem="cqC-1y-3BA" firstAttribute="height" secondItem="NwM-rQ-yjl" secondAttribute="height" id="4qc-A6-YK6"/>
-                                <constraint firstItem="NwM-rQ-yjl" firstAttribute="leading" secondItem="JPx-mB-OXP" secondAttribute="trailing" id="9WC-QJ-HCG"/>
+                                <constraint firstItem="NwM-rQ-yjl" firstAttribute="centerY" secondItem="Tmj-sd-FZR" secondAttribute="centerY" id="85s-sS-3Os"/>
                                 <constraint firstAttribute="bottom" secondItem="JPx-mB-OXP" secondAttribute="bottom" id="A1z-eW-gE6"/>
-                                <constraint firstItem="cqC-1y-3BA" firstAttribute="width" secondItem="NwM-rQ-yjl" secondAttribute="width" id="Fz8-bH-Aqy"/>
-                                <constraint firstItem="cqC-1y-3BA" firstAttribute="centerY" secondItem="NwM-rQ-yjl" secondAttribute="centerY" id="PJC-xZ-Q12"/>
+                                <constraint firstItem="NwM-rQ-yjl" firstAttribute="leading" secondItem="JPx-mB-OXP" secondAttribute="trailing" constant="5" id="DtD-Bm-ju5"/>
+                                <constraint firstAttribute="trailing" secondItem="NwM-rQ-yjl" secondAttribute="trailing" constant="6" id="IgO-zB-Hwc"/>
+                                <constraint firstItem="cqC-1y-3BA" firstAttribute="centerY" secondItem="Tmj-sd-FZR" secondAttribute="centerY" id="MgF-ST-cpm"/>
                                 <constraint firstItem="Pfn-oz-M1l" firstAttribute="leading" secondItem="Tmj-sd-FZR" secondAttribute="leading" id="S04-is-HfF"/>
-                                <constraint firstAttribute="trailing" secondItem="cqC-1y-3BA" secondAttribute="trailing" constant="5" id="SRC-lo-OKf"/>
-                                <constraint firstItem="NwM-rQ-yjl" firstAttribute="centerY" secondItem="Tmj-sd-FZR" secondAttribute="centerY" id="oXl-P7-Gub"/>
-                                <constraint firstAttribute="trailing" secondItem="NwM-rQ-yjl" secondAttribute="trailing" constant="5" id="pkf-oO-zsH"/>
+                                <constraint firstAttribute="trailing" secondItem="cqC-1y-3BA" secondAttribute="trailing" constant="5" id="cPF-Nk-R0r"/>
                                 <constraint firstItem="JPx-mB-OXP" firstAttribute="top" secondItem="Tmj-sd-FZR" secondAttribute="top" id="rXh-Wo-qJx"/>
                                 <constraint firstItem="JPx-mB-OXP" firstAttribute="leading" secondItem="Pfn-oz-M1l" secondAttribute="trailing" id="ttE-TZ-yDD"/>
                                 <constraint firstAttribute="height" constant="34" id="we1-F6-eCu"/>
@@ -130,8 +137,8 @@
         </view>
     </objects>
     <resources>
-        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
-        <image name="mic" catalog="system" width="108" height="128"/>
-        <image name="xmark" catalog="system" width="128" height="113"/>
+        <image name="cancel1" width="50" height="50"/>
+        <image name="microphone" width="50" height="50"/>
+        <image name="search" width="25" height="25"/>
     </resources>
 </document>

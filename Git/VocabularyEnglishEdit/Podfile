@@ -18,6 +18,8 @@ target 'VocabularyEnglish' do
   pod 'Localize-Swift'
   pod 'DeviceKit'
   pod 'iCarousel'
+  pod 'XLPagerTabStrip'
+	
 
   target 'VocabularyEnglishTests' do
     inherit! :search_paths

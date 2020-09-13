@@ -32,7 +32,7 @@
                                 <color key="textColor" red="0.14059297279999999" green="0.34242966380000001" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yiG-qE-l1O">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yiG-qE-l1O">
                                 <rect key="frame" x="10" y="56" width="303" height="115"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -67,6 +67,13 @@
                                     <action selector="speaker:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Jjf-dl-fx7"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1PZ-MU-GtW">
+                                <rect key="frame" x="20" y="171" width="353" height="1"/>
+                                <color key="backgroundColor" systemColor="systemGray3Color" red="0.78039215689999997" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="0aX-wz-Qx2"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -76,14 +83,17 @@
                             <constraint firstItem="Eoh-YJ-zjp" firstAttribute="leading" secondItem="90s-OB-aEb" secondAttribute="trailing" constant="7" id="AGF-Xm-RWs"/>
                             <constraint firstAttribute="bottom" secondItem="yiG-qE-l1O" secondAttribute="bottom" constant="3" id="FiY-7I-enR"/>
                             <constraint firstItem="Eoh-YJ-zjp" firstAttribute="centerY" secondItem="Nj6-rL-3rV" secondAttribute="centerY" id="Hpn-zy-nz1"/>
+                            <constraint firstAttribute="bottom" secondItem="1PZ-MU-GtW" secondAttribute="bottom" constant="2" id="O7q-qC-b3s"/>
                             <constraint firstItem="90s-OB-aEb" firstAttribute="leading" secondItem="yiG-qE-l1O" secondAttribute="trailing" constant="8" id="Q09-ky-Xqp"/>
                             <constraint firstItem="90s-OB-aEb" firstAttribute="centerY" secondItem="Nj6-rL-3rV" secondAttribute="centerY" id="Y3F-Jg-NoC"/>
                             <constraint firstItem="gqj-gn-IPx" firstAttribute="leading" secondItem="x4k-O9-Tbb" secondAttribute="trailing" constant="12" id="cMe-7c-IEZ"/>
+                            <constraint firstAttribute="trailing" secondItem="1PZ-MU-GtW" secondAttribute="trailing" id="eY5-yx-Byh"/>
                             <constraint firstItem="x4k-O9-Tbb" firstAttribute="top" secondItem="Nj6-rL-3rV" secondAttribute="top" constant="2" id="h2v-6h-53C"/>
                             <constraint firstItem="wys-nc-bmD" firstAttribute="leading" secondItem="Nj6-rL-3rV" secondAttribute="leading" constant="10" id="nu2-AN-6Z5"/>
                             <constraint firstItem="wys-nc-bmD" firstAttribute="top" secondItem="x4k-O9-Tbb" secondAttribute="bottom" constant="6" id="uTC-QO-FTx"/>
                             <constraint firstAttribute="trailing" secondItem="Eoh-YJ-zjp" secondAttribute="trailing" constant="7" id="vsy-AN-8mS"/>
                             <constraint firstItem="gqj-gn-IPx" firstAttribute="centerY" secondItem="x4k-O9-Tbb" secondAttribute="centerY" id="wiP-gs-T3g"/>
+                            <constraint firstItem="1PZ-MU-GtW" firstAttribute="leading" secondItem="Nj6-rL-3rV" secondAttribute="leading" constant="20" id="xlr-ed-tTE"/>
                         </constraints>
                     </view>
                 </subviews>

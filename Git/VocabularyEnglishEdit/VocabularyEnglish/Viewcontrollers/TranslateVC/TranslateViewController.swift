@@ -7,78 +7,65 @@
 //
 
 import UIKit
+import XLPagerTabStrip
 
-class TranslateViewController: UIViewController {
+class TranslateViewController: ButtonBarPagerTabStripViewController {
     
     let transModel = ModelTranslateViewController.shared
+    var trans = [String:String]()
     
-    var translate = [String:String]()
-    
-    @IBOutlet weak var collection: UICollectionView!
-    
-    @IBOutlet weak var vocabularyLabel: UILabel!
-    
-    @IBOutlet weak var ipaLabel: UILabel!
-    
-    @IBOutlet weak var typeLabel: UILabel!
-    
-    @IBOutlet weak var mainMeaningLabel: UILabel!
+    //MARK: - LIFE CYCLE VIEW
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadData()
+        tabBarController?.tabBar.isHidden = true
         initUI()
         
     }
     
-    func loadData() {
-        vocabularyLabel.text = translate["vocabulary"]
-        ipaLabel.text = translate["IPA"]
-        typeLabel.text = translate["type"]
-        mainMeaningLabel.text = translate["mainMeaning"]
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        tabBarController?.tabBar.isHidden = false
     }
-
+    
+    override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
+        let mean = MeaningViewController()
+        mean.meaning = trans
+        let special = SpecializedViewController()
+        special.special = trans
+        return [mean, special]
+    }
+    
 }
 
-extension TranslateViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 2
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let collec = collection.dequeueReusableCell(withReuseIdentifier: TranslateCollectionViewCell.identifier, for: indexPath) as! TranslateCollectionViewCell
-        collec.titleLabel.text = transModel.title[indexPath.row].title
-        return collec
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = UIScreen.main.bounds.size.width / 2
-        let height = collectionView.bounds.size.height
-        return CGSize(width: width, height: height)
-    }
-    
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        <#code#>
-//    }
-    
-    
-}
+    //MARK: - EXTENSION TRANSLATE VIEW CONTROLLER
 
 extension TranslateViewController {
     func initUI() {
+        configureButtonBar()
+    }
+    func configureButtonBar() {
+        settings.style.buttonBarBackgroundColor = .white
+        settings.style.buttonBarItemBackgroundColor = .white
         
-        regist()
-        transModel.loadTitles()
+        settings.style.buttonBarItemFont = UIFont(name: "Helvetica", size: 16.0)!
+        settings.style.buttonBarItemTitleColor = .gray
+        
+        settings.style.buttonBarMinimumLineSpacing = 0
+        settings.style.buttonBarItemsShouldFillAvailableWidth = true
+        settings.style.buttonBarLeftContentInset = 0
+        settings.style.buttonBarRightContentInset = 0
+        
+        settings.style.selectedBarHeight = 3.0
+        settings.style.selectedBarBackgroundColor = .orange
+        
+        // Changing item text color on swipe
+        changeCurrentIndexProgressive = { [weak self] (oldCell: ButtonBarViewCell?, newCell: ButtonBarViewCell?, progressPercentage: CGFloat, changeCurrentIndex: Bool, animated: Bool) -> Void in
+            guard changeCurrentIndex == true else { return }
+            oldCell?.label.textColor = .gray
+            newCell?.label.textColor = .orange
+        }
     }
-    
-    func regist() {
-        collection.delegate = self
-        collection.dataSource = self
-        collection.register(TranslateCollectionViewCell.nib(), forCellWithReuseIdentifier: TranslateCollectionViewCell.identifier)
-    }
-    
     
 }
 

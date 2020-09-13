@@ -11,12 +11,14 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchViewController" customModule="VocabularyEnglish" customModuleProvider="target">
             <connections>
                 <outlet property="alertLabel" destination="vdA-lg-vOd" id="7V8-SM-VOs"/>
+                <outlet property="constraintView" destination="huq-5c-4Ub" id="JhV-TL-nwK"/>
                 <outlet property="dictionaryWeb" destination="1Ny-wn-k94" id="eKO-yq-VkU"/>
                 <outlet property="layerSearch" destination="St8-zj-9zb" id="JCj-DY-TFx"/>
                 <outlet property="searchTextField" destination="hUU-1o-wao" id="h5N-x4-36R"/>
                 <outlet property="selecteSegment" destination="nzI-Si-C4y" id="lfI-63-TcI"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="viewContent" destination="JF5-Bb-75X" id="OAu-iU-FH1"/>
+                <outlet property="viewSearch" destination="JF5-Bb-75X" id="xsW-YP-L5i"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

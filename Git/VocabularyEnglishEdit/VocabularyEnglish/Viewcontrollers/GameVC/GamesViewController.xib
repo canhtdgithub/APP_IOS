@@ -16,6 +16,7 @@
                 <outlet property="layerSpeakerQuestion" destination="E9Q-e8-CJp" id="4po-SZ-vrR"/>
                 <outlet property="showAnswer" destination="jTR-D7-Opm" id="QiU-jC-TYQ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewAnswer" destination="fW0-bh-Wt8" id="K7X-1z-HT4"/>
                 <outlet property="viewLayer" destination="fW0-bh-Wt8" id="7tL-HB-Isd"/>
             </connections>
         </placeholder>

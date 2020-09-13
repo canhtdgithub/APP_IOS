@@ -1,0 +1,6 @@
+framework module Pods_SlideTabBarDemo {
+  umbrella header "Pods-SlideTabBarDemo-umbrella.h"
+
+  export *
+  module * { export * }
+}

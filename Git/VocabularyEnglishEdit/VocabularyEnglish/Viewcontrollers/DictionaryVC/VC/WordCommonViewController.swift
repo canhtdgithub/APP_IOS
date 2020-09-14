@@ -12,6 +12,7 @@ class WordCommonViewController: UIViewController, MyViewDelegate {
     
     var word = [Word3000Common]()
     var fillDataVocab = [Word3000Common]()
+    var arr = [Bool]()
     
     @IBOutlet weak var layerDeleteButton: UIButton!
     
@@ -63,6 +64,21 @@ extension WordCommonViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = table.dequeueReusableCell(withIdentifier: WordCommonTableViewCell.identifier, for: indexPath) as! WordCommonTableViewCell
+//        cell.accessoryType = .detailDisclosureButton
+        cell.actionButton = { (key) in
+            guard var star = UserDefaults.standard.value(forKey: "word3000") as? Array<Bool> else {
+                return
+            }
+            if key == "unStar" {
+                star[indexPath.row] = true
+                UserDefaults.standard.set(star, forKey: "word3000")
+            } else {
+                star[indexPath.row] = false
+                UserDefaults.standard.set(star, forKey: "word3000")
+            }
+           
+        }
+        
         if fillDataVocab.isEmpty {
             cell.config(value: word[indexPath.row])
         } else {
@@ -72,6 +88,10 @@ extension WordCommonViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+//    func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
+//        print(indexPath.row)
+//    }
+//
     
 }
     //MARK: - EXTENSION UITEXT FIELD
@@ -100,6 +120,7 @@ extension WordCommonViewController {
     func initUI() {
         register()
         loadDataWord()
+        showStar()
         table.rowHeight = UITableView.automaticDimension
         // Add Home View
         let view1 = Bundle.main.loadNibNamed("HomeView", owner: self, options: nil)?.first as? HomeView
@@ -121,6 +142,18 @@ extension WordCommonViewController {
         let data = try! Data(contentsOf: URL(fileURLWithPath: path!))
         
         word = try! JSONDecoder().decode([Word3000Common].self, from: data)
+        
+    }
+    
+    func showStar() {
+        guard let _ = UserDefaults.standard.value(forKey: "word3000") as? Array<Bool> else {
+            for _ in 0...word.count - 1 {
+                arr.append(false)
+            }
+            UserDefaults.standard.set(arr, forKey: "word3000")
+            return
+        }
+        
     }
     
     // Protocol MyViewDelegate
@@ -140,6 +173,8 @@ extension WordCommonViewController {
             self.table.reloadData()
         }
     }
+    
+    
 }
 
 

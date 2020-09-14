@@ -71,7 +71,7 @@ class ModelSetting {
         if sender.tag == indexButton && arr[indexButton] {
             arr[indexButton] = false
             defaults.set(arr, forKey: "arrayBool")
-            print(defaults.set(arr, forKey: "arrayBool"))
+            
             sender.backgroundColor = .gray
         } else {
             arr[indexButton] = true

@@ -9,14 +9,15 @@
 import UIKit
 
 
-class MyView: UIView {
 
-    @IBOutlet weak var layerView: UIView!
+class MyView: UIView {
     
     @IBOutlet weak var imageVocab: UIImageView!
     
-    
     @IBOutlet weak var starLayer: UIButton!
+    
+    @IBOutlet weak var unStarLayer: UIButton!
+    
     @IBOutlet weak var vocabulary: UILabel!
     
     @IBOutlet weak var typeVocab: UILabel!
@@ -24,20 +25,55 @@ class MyView: UIView {
     @IBOutlet weak var example: UILabel!
     
     @IBAction func starButton(_ sender: UIButton) {
+        if starLayer.isHidden {
+            starLayer.isHidden = false
+            unStarLayer.isHidden = true
+            test(show: true)
+        } else {
+            starLayer.isHidden = true
+            unStarLayer.isHidden = false
+            test(show: false)
+        }
         
-        sender.setImage(UIImage(named: "star.fill"), for: .normal)
-        sender.tintColor = .yellow
+        
+    }
+    
+    func test(show: Bool) {
+        let a = ToeicViewController()
+        let b = a.vocab
+        for i in 0...b.count - 1 {
+            if vocabulary.text == b[i].vocabulary {
+                guard var starShow = UserDefaults.standard.value(forKey: "star_toeic") as? Array<Bool> else {
+                    return
+                }
+                starShow[i] = show
+                UserDefaults.standard.set(starShow, forKey: "star_toeic")
+            }
+        }
+    }
+    
+    func testShowStar(index: Int) {
+        guard let star = UserDefaults.standard.value(forKey: "star_toeic") as? Array<Bool> else {
+            return
+        }
+        if star[index] {
+            starLayer.isHidden = false
+            unStarLayer.isHidden = true
+        } else {
+            
+        }
+        
     }
     
     
     @IBAction func speakUS(_ sender: UIButton) {
-    
+        
         SIRSpeakerManager.sharedInstance.stop()
         SIRSpeakerManager.sharedInstance.speakUS(vocabulary.text!)
     }
     
     @IBAction func speakUK(_ sender: UIButton) {
-      
+        
         SIRSpeakerManager.sharedInstance.stop()
         SIRSpeakerManager.sharedInstance.speakUK(vocabulary.text!)
     }

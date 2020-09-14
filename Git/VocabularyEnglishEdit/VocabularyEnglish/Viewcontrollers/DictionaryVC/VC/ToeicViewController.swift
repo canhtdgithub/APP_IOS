@@ -9,18 +9,17 @@
 import UIKit
 import iCarousel
 
-
 class ToeicViewController: UIViewController, MyViewDelegate {
     
     var vocab = [Word700]()
-    var favourite = [Bool]()
-    
+    var star = [Bool]()
+   
     //MARK: - @IBOUTLET
 
     @IBOutlet weak var viewHome: UIView!
     @IBOutlet weak var myIcarousel: iCarousel!
     
-    //MARK: - @ACTION
+    //MARK: - @IBACTION
     
     @IBAction func back(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
@@ -48,18 +47,12 @@ extension ToeicViewController: iCarouselDelegate, iCarouselDataSource {
         
     }
     
-    
-    
     func carousel(_ carousel: iCarousel, viewForItemAt index: Int, reusing view: UIView?) -> UIView {
-        
         
         let a = Bundle.main.loadNibNamed("MyView", owner: self, options: nil)?.first as? MyView
         a?.backgroundColor = .clear
-        a?.starLayer.setImage(UIImage(named: "starfill"), for: .normal)
-        a?.layerView.layer.cornerRadius = 20
-        a?.layerView.layer.borderWidth = 1
-        a?.layerView.layer.borderColor = UIColor.black.cgColor
         a?.config(value: vocab[index])
+        a?.testShowStar(index: index)
         return a!
     }
     
@@ -80,6 +73,9 @@ extension ToeicViewController {
         view1?.dele = self
         view1!.frame = viewHome.bounds
         viewHome.addSubview(view1!)
+        
+        // Get data star in user default
+        getDataStar()
     }
     func getData() {
         let path = Bundle.main.path(forResource: "700_TOEIC", ofType: "json")
@@ -87,10 +83,21 @@ extension ToeicViewController {
         
         vocab = try! JSONDecoder().decode([Word700].self, from: get)
         myIcarousel.reloadData()
+        print(vocab)
     }
+    // Protocol
     func didTapButton(viewController: UIViewController) {
         self.navigationController?.pushViewController(viewController, animated: true)
     }
+    
+    func getDataStar() {
+        for _ in 0...vocab.count - 1 {
+            star.append(false)
+        }
+        UserDefaults.standard.set(star, forKey: "star_toeic")
+    }
+    
+   
 }
     //MARK: - STRUCT WORD 700
 

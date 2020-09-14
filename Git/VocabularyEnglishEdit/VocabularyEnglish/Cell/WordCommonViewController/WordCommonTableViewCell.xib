@@ -44,9 +44,9 @@
                                     <constraint firstAttribute="width" constant="18" id="S3f-gq-1YB"/>
                                     <constraint firstAttribute="height" constant="18" id="bXZ-KF-Iy6"/>
                                 </constraints>
-                                <state key="normal" image="star" catalog="system"/>
+                                <state key="normal" image="star1"/>
                                 <connections>
-                                    <action selector="favourite:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="uir-RM-GYm"/>
+                                    <action selector="unStarButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="5tg-O9-cv6"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gqj-gn-IPx">
@@ -74,6 +74,17 @@
                                     <constraint firstAttribute="height" constant="1" id="0aX-wz-Qx2"/>
                                 </constraints>
                             </view>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CNb-jM-qu3">
+                                <rect key="frame" x="348" y="78" width="18" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="18" id="e7A-3T-M4D"/>
+                                    <constraint firstAttribute="height" constant="18" id="tNw-ZU-9L0"/>
+                                </constraints>
+                                <state key="normal" image="star2"/>
+                                <connections>
+                                    <action selector="starButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="gYm-HF-gyv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -81,11 +92,13 @@
                             <constraint firstItem="x4k-O9-Tbb" firstAttribute="leading" secondItem="Nj6-rL-3rV" secondAttribute="leading" constant="10" id="6j9-dO-L2J"/>
                             <constraint firstItem="yiG-qE-l1O" firstAttribute="top" secondItem="wys-nc-bmD" secondAttribute="bottom" constant="6" id="8tl-9f-DRc"/>
                             <constraint firstItem="Eoh-YJ-zjp" firstAttribute="leading" secondItem="90s-OB-aEb" secondAttribute="trailing" constant="7" id="AGF-Xm-RWs"/>
+                            <constraint firstItem="CNb-jM-qu3" firstAttribute="centerY" secondItem="Nj6-rL-3rV" secondAttribute="centerY" id="Czc-Ke-cns"/>
                             <constraint firstAttribute="bottom" secondItem="yiG-qE-l1O" secondAttribute="bottom" constant="3" id="FiY-7I-enR"/>
                             <constraint firstItem="Eoh-YJ-zjp" firstAttribute="centerY" secondItem="Nj6-rL-3rV" secondAttribute="centerY" id="Hpn-zy-nz1"/>
                             <constraint firstAttribute="bottom" secondItem="1PZ-MU-GtW" secondAttribute="bottom" constant="2" id="O7q-qC-b3s"/>
                             <constraint firstItem="90s-OB-aEb" firstAttribute="leading" secondItem="yiG-qE-l1O" secondAttribute="trailing" constant="8" id="Q09-ky-Xqp"/>
                             <constraint firstItem="90s-OB-aEb" firstAttribute="centerY" secondItem="Nj6-rL-3rV" secondAttribute="centerY" id="Y3F-Jg-NoC"/>
+                            <constraint firstAttribute="trailing" secondItem="CNb-jM-qu3" secondAttribute="trailing" constant="7" id="YrM-bO-wnB"/>
                             <constraint firstItem="gqj-gn-IPx" firstAttribute="leading" secondItem="x4k-O9-Tbb" secondAttribute="trailing" constant="12" id="cMe-7c-IEZ"/>
                             <constraint firstAttribute="trailing" secondItem="1PZ-MU-GtW" secondAttribute="trailing" id="eY5-yx-Byh"/>
                             <constraint firstItem="x4k-O9-Tbb" firstAttribute="top" secondItem="Nj6-rL-3rV" secondAttribute="top" constant="2" id="h2v-6h-53C"/>
@@ -106,10 +119,11 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="favouriteLayer" destination="Eoh-YJ-zjp" id="oAJ-EJ-3jP"/>
                 <outlet property="ipaLabel" destination="gqj-gn-IPx" id="XzI-sS-l1b"/>
                 <outlet property="meaningLabel" destination="yiG-qE-l1O" id="fsd-Ql-Awg"/>
+                <outlet property="starLayer" destination="CNb-jM-qu3" id="63I-eg-TSj"/>
                 <outlet property="typeLabel" destination="wys-nc-bmD" id="Nx5-EC-R3a"/>
+                <outlet property="unStarLayer" destination="Eoh-YJ-zjp" id="vyP-Y7-MI7"/>
                 <outlet property="vocabLabel" destination="x4k-O9-Tbb" id="0lt-g5-NFf"/>
             </connections>
             <point key="canvasLocation" x="176.08695652173915" y="140.95982142857142"/>
@@ -117,6 +131,7 @@
     </objects>
     <resources>
         <image name="speaker.3.fill" catalog="system" width="128" height="90"/>
-        <image name="star" catalog="system" width="128" height="116"/>
+        <image name="star1" width="50" height="50"/>
+        <image name="star2" width="48" height="48"/>
     </resources>
 </document>

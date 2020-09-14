@@ -9,9 +9,8 @@
 import UIKit
 
 class WordCommonTableViewCell: UITableViewCell {
-
-    @IBOutlet weak var favouriteLayer: UIButton!
     
+    var actionButton: ((String) -> Void)? = nil
     static var identifier = "wordcell"
     static func nib() -> UINib {
         return UINib(nibName: "WordCommonTableViewCell", bundle: nil)
@@ -31,17 +30,25 @@ class WordCommonTableViewCell: UITableViewCell {
         SIRSpeakerManager.sharedInstance.speakUS(vocabLabel.text!)
         
     }
-    var selec = false
-    @IBAction func favourite(_ sender: UIButton) {
-        if !selec {
-            selec = true
-            sender.tintColor = .red
-        } else {
-            sender.tintColor = .blue
-        }
-        
+   
+  
+    @IBOutlet weak var unStarLayer: UIButton!
+    
+    @IBOutlet weak var starLayer: UIButton!
+    
+    @IBAction func unStarButton(_ sender: Any) {
+        actionButton?("unStar")
+        unStarLayer.isHidden = true
+        starLayer.isHidden = false
     }
     
+    @IBAction func starButton(_ sender: Any) {
+        actionButton?("star")
+        starLayer.isHidden = true
+        unStarLayer.isHidden = false
+    }
+    
+   
     func config(value: Word3000Common) {
         vocabLabel.text = value.vocabulary
         ipaLabel.text = value.IPA

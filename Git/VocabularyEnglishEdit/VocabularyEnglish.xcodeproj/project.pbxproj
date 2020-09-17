@@ -51,6 +51,7 @@
 		4E35326824BD87D200415CC9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E35326624BD87D200415CC9 /* LaunchScreen.storyboard */; };
 		4E35327324BD87D200415CC9 /* VocabularyEnglishTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E35327224BD87D200415CC9 /* VocabularyEnglishTests.swift */; };
 		4E35327E24BD87D200415CC9 /* VocabularyEnglishUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E35327D24BD87D200415CC9 /* VocabularyEnglishUITests.swift */; };
+		4E43FF3E2510A9E200F579F8 /* lauch.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E43FF3D2510A9E100F579F8 /* lauch.png */; };
 		4E4D2BAA250104F800340BD1 /* DictionaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4D2BA8250104F800340BD1 /* DictionaryViewController.swift */; };
 		4E4D2BAB250104F800340BD1 /* DictionaryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E4D2BA9250104F800340BD1 /* DictionaryViewController.xib */; };
 		4E4D2BAF2501084F00340BD1 /* DictionaryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4D2BAD2501084F00340BD1 /* DictionaryTableViewCell.swift */; };
@@ -841,6 +842,7 @@
 		4E35327924BD87D200415CC9 /* VocabularyEnglishUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VocabularyEnglishUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E35327D24BD87D200415CC9 /* VocabularyEnglishUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocabularyEnglishUITests.swift; sourceTree = "<group>"; };
 		4E35327F24BD87D300415CC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4E43FF3D2510A9E100F579F8 /* lauch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lauch.png; sourceTree = "<group>"; };
 		4E4D2BA8250104F800340BD1 /* DictionaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryViewController.swift; sourceTree = "<group>"; };
 		4E4D2BA9250104F800340BD1 /* DictionaryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DictionaryViewController.xib; sourceTree = "<group>"; };
 		4E4D2BAD2501084F00340BD1 /* DictionaryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryTableViewCell.swift; sourceTree = "<group>"; };
@@ -1602,6 +1604,7 @@
 				4E7677902503319A00880C5E /* image */,
 				0AED7C4724F877CD001DFF28 /* Gif */,
 				4E6A3FB724C1FABE00345714 /* vocabulary.png */,
+				4E43FF3D2510A9E100F579F8 /* lauch.png */,
 				4E4D2BB925010CC400340BD1 /* vocab_dictionary.txt */,
 				4E6B25F3250E2CC1002666CC /* dictionary.json */,
 				4E1922C325039CB0005DE8E3 /* 3000_vocabulary_common.json */,
@@ -3327,6 +3330,7 @@
 				4E767C33250331A100880C5E /* alternative.jpg in Resources */,
 				4E767BDF250331A100880C5E /* portfolio.jpg in Resources */,
 				4E767C78250331A100880C5E /* satisfaction.jpg in Resources */,
+				4E43FF3E2510A9E200F579F8 /* lauch.png in Resources */,
 				4E767C74250331A100880C5E /* prefer.jpg in Resources */,
 				4E767A5D250331A000880C5E /* occur.jpg in Resources */,
 				4EF39035250291F300839E39 /* DictionaryCollectionViewCell.xib in Resources */,

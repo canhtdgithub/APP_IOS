@@ -139,14 +139,14 @@ class ModelSetting {
         content.sound = UNNotificationSound.default
         content.badge = 1
         
-        guard let url =  Bundle.main.url(forResource: "vocabulary", withExtension: "png") else {
+        guard let url =  Bundle.main.url(forResource: "lauch", withExtension: "png") else {
             return
         }
         
         let attech = try! UNNotificationAttachment(identifier: "", url: url, options: .none)
         content.attachments = [attech]
         
-        let triger = UNTimeIntervalNotificationTrigger(timeInterval: 30*60, repeats: true)
+        let triger = UNTimeIntervalNotificationTrigger(timeInterval: 61, repeats: true)
         let request = UNNotificationRequest(identifier: "vocabulary", content: content, trigger: triger)
         UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
     }
